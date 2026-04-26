@@ -1,157 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>紅樓夢互動遊戲 - 大觀園初探</title>
     <style>
-        :root {
-            --primary-color: #8b0000; /* 深紅色，象徵紅樓 */
-            --bg-color: #f5f5dc;      /* 米白色，象徵宣紙 */
-            --text-color: #333;
-        }
+      :root {
+        --primary-color: #8b0000; /* 深紅色，象徵紅樓 */
+        --bg-color: #f5f5dc; /* 米白色，象徵宣紙 */
+        --text-color: #333;
+      }
 
-        body {
-            font-family: "Microsoft JhengHei", "微軟正黑體", serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+      body {
+        font-family: "Microsoft JhengHei", "微軟正黑體", serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
 
-        #game-container {
-            width: 90%;
-            max-width: 600px;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 2px solid var(--primary-color);
-            text-align: center;
-        }
+      #game-container {
+        width: 90%;
+        max-width: 600px;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border: 2px solid var(--primary-color);
+        text-align: center;
+      }
 
-        h1 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 0.5rem;
-        }
+      h1 {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+      }
 
-        #story-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin: 2rem 0;
-            min-height: 100px;
-        }
+      #story-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin: 2rem 0;
+        min-height: 100px;
+      }
 
-        .options-container {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+      .options-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-        button {
-            background-color: white;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            border-radius: 4px;
-        }
+      button {
+        background-color: white;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        border-radius: 4px;
+      }
 
-        button:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
+      button:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
 
-        .footer {
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            color: #888;
-        }
+      .footer {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        color: #888;
+      }
     </style>
-</head>
-<body>
-
-<div id="game-container">
-    <h1>紅樓夢：大觀園初探</h1>
-    <div id="story-text">
+  </head>
+  <body>
+    <div id="game-container">
+      <h1>紅樓夢：大觀園初探</h1>
+      <div id="story-text">
         正值暮春時節，大觀園內落紅成陣。你漫步在沁芳橋畔，忽見前方有一纖弱身影，正低頭收拾落花。那人正是林黛玉。
-    </div>
-    <div class="options-container" id="options">
+      </div>
+      <div class="options-container" id="options">
         <button onclick="choose(1)">上前詢問她在做什麼</button>
         <button onclick="choose(2)">默默在旁觀看，不忍打擾</button>
+      </div>
     </div>
-    <div class="footer">
-        學習筆記：這是一個使用 HTML/CSS/JS 製作的互動網頁
-    </div>
-</div>
 
-<script>
-    const story = {
+    <script>
+      const story = {
         start: {
-            text: "正值暮春時節，大觀園內落紅成陣。你漫步在沁芳橋畔，忽見前方有一纖弱身影，正低頭收拾落花。那人正是林黛玉。",
-            options: [
-                { text: "上前詢問她在做什麼", next: "ask" },
-                { text: "默默在旁觀看，不忍打擾", next: "watch" }
-            ]
+          text: "正值暮春時節，大觀園內落紅成陣。你漫步在沁芳橋畔，忽見前方有一纖弱身影，正低頭收拾落花。那人正是林黛玉。",
+          options: [
+            { text: "上前詢問她在做什麼", next: "ask" },
+            { text: "默默在旁觀看，不忍打擾", next: "watch" },
+          ],
         },
         ask: {
-            text: "黛玉抬頭看你，眼圈微紅，輕聲道：『與其讓這些殘花被踐踏，不如將它們收進花塚，隨土而化。』你感受到了她的多愁善感。",
-            options: [
-                { text: "與她一同葬花", next: "end1" },
-                { text: "勸她莫要憂傷", next: "end2" }
-            ]
+          text: "黛玉抬頭看你，眼圈微紅，輕聲道：『與其讓這些殘花被踐踏，不如將它們收進花塚，隨土而化。』你感受到了她的多愁善感。",
+          options: [
+            { text: "與她一同葬花", next: "end1" },
+            { text: "勸她莫要憂傷", next: "end2" },
+          ],
         },
         watch: {
-            text: "你遠遠看著她將花瓣一一收起，背影孤單。這時，寶玉從另一頭走來，也看到了這一幕。",
-            options: [
-                { text: "走向寶玉與他打招呼", next: "baoyu" },
-                { text: "悄悄離開", next: "leave" }
-            ]
+          text: "你遠遠看著她將花瓣一一收起，背影孤單。這時，寶玉從另一頭走來，也看到了這一幕。",
+          options: [
+            { text: "走向寶玉與他打招呼", next: "baoyu" },
+            { text: "悄悄離開", next: "leave" },
+          ],
         },
-        end1: { text: "你們共同葬花，成了知心好友。遊戲結束。", options: [{ text: "重新開始", next: "start" }] },
-        end2: { text: "她嘆了口氣，轉身離去。看來你還不夠懂她的心。遊戲結束。", options: [{ text: "重新開始", next: "start" }] },
-        baoyu: { text: "寶玉熱情地拉著你去看新寫的詩，大觀園的一天充滿了驚喜。遊戲結束。", options: [{ text: "重新開始", next: "start" }] },
-        leave: { text: "你悄悄離開了，大觀園的秘密仍等待你去發掘。遊戲結束。", options: [{ text: "重新開始", next: "start" }] }
-    };
+        end1: {
+          text: "你們共同葬花，成了知心好友。遊戲結束。",
+          options: [{ text: "重新開始", next: "start" }],
+        },
+        end2: {
+          text: "她嘆了口氣，轉身離去。看來你還不夠懂她的心。遊戲結束。",
+          options: [{ text: "重新開始", next: "start" }],
+        },
+        baoyu: {
+          text: "寶玉熱情地拉著你去看新寫的詩，大觀園的一天充滿了驚喜。遊戲結束。",
+          options: [{ text: "重新開始", next: "start" }],
+        },
+        leave: {
+          text: "你悄悄離開了，大觀園的秘密仍等待你去發掘。遊戲結束。",
+          options: [{ text: "重新開始", next: "start" }],
+        },
+      };
 
-    function choose(choiceIndex) {
-        const currentText = document.getElementById('story-text').innerText;
+      function choose(choiceIndex) {
+        const currentText = document.getElementById("story-text").innerText;
         let currentState;
-        
+
         // 找出目前的狀態
         for (let key in story) {
-            if (story[key].text === currentText) {
-                currentState = story[key];
-                break;
-            }
+          if (story[key].text === currentText) {
+            currentState = story[key];
+            break;
+          }
         }
-        
+
         if (!currentState) currentState = story.start;
 
         const nextKey = currentState.options[choiceIndex - 1].next;
         updatePage(nextKey);
-    }
+      }
 
-    function updatePage(key) {
+      function updatePage(key) {
         const state = story[key];
-        document.getElementById('story-text').innerText = state.text;
-        const optionsDiv = document.getElementById('options');
-        optionsDiv.innerHTML = '';
-        
-        state.options.forEach((opt, index) => {
-            const btn = document.createElement('button');
-            btn.innerText = opt.text;
-            btn.onclick = () => updatePage(opt.next);
-            optionsDiv.appendChild(btn);
-        });
-    }
-</script>
+        document.getElementById("story-text").innerText = state.text;
+        const optionsDiv = document.getElementById("options");
+        optionsDiv.innerHTML = "";
 
-</body>
+        state.options.forEach((opt, index) => {
+          const btn = document.createElement("button");
+          btn.innerText = opt.text;
+          btn.onclick = () => updatePage(opt.next);
+          optionsDiv.appendChild(btn);
+        });
+      }
+    </script>
+  </body>
 </html>
