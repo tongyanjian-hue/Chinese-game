@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>紅樓夢互動遊戲 - 大觀園初探</title>
+    <title>紅樓夢遊戲</title>
     <style>
       :root {
         --primary-color: #8b0000; /* 深紅色，象徵紅樓 */
@@ -71,53 +71,53 @@
   </head>
   <body>
     <div id="game-container">
-      <h1>紅樓夢：大觀園初探</h1>
+      <h1>賈寶玉的喜好</h1>
       <div id="story-text">
-        正值暮春時節，大觀園內落紅成陣。你漫步在沁芳橋畔，忽見前方有一纖弱身影，正低頭收拾落花。那人正是林黛玉。
+        大觀園的姐姐妹妹們都各有特色，你將選擇其中一位與他創造美好結局。請先選擇喜歡的特質
       </div>
       <div class="options-container" id="options">
-        <button onclick="choose(1)">上前詢問她在做什麼</button>
-        <button onclick="choose(2)">默默在旁觀看，不忍打擾</button>
+        <button onclick="choose(1)">口齒伶俐，個性率真</button>
+        <button onclick="choose(2)">競競業業，處事圓融</button>
       </div>
     </div>
 
     <script>
       const story = {
         start: {
-          text: "正值暮春時節，大觀園內落紅成陣。你漫步在沁芳橋畔，忽見前方有一纖弱身影，正低頭收拾落花。那人正是林黛玉。",
+          text: "大觀園的姐姐妹妹們都各有特色，你將選擇其中一位與他創造美好結局。請先選擇喜歡的特質",
           options: [
-            { text: "上前詢問她在做什麼", next: "ask" },
-            { text: "默默在旁觀看，不忍打擾", next: "watch" },
+            { text: "口齒伶俐，個性率真", next: "ask1" },
+            { text: "競競業業，處事圓融", next: "ask2" },
           ],
         },
-        ask: {
-          text: "黛玉抬頭看你，眼圈微紅，輕聲道：『與其讓這些殘花被踐踏，不如將它們收進花塚，隨土而化。』你感受到了她的多愁善感。",
+        ask1: {
+          text: "請繼續選擇",
           options: [
-            { text: "與她一同葬花", next: "end1" },
-            { text: "勸她莫要憂傷", next: "end2" },
+            { text: "大家閨秀", next: "end1" },
+            { text: "地位較低", next: "end2" },
           ],
         },
-        watch: {
-          text: "你遠遠看著她將花瓣一一收起，背影孤單。這時，寶玉從另一頭走來，也看到了這一幕。",
+        ask2: {
+          text: "請繼續選擇",
           options: [
-            { text: "走向寶玉與他打招呼", next: "baoyu" },
-            { text: "悄悄離開", next: "leave" },
+            { text: "希望你上進", next: "end3" },
+            { text: "順從", next: "end4" },
           ],
         },
         end1: {
-          text: "你們共同葬花，成了知心好友。遊戲結束。",
+          text: "你選擇了林黛玉",
           options: [{ text: "重新開始", next: "start" }],
         },
         end2: {
-          text: "她嘆了口氣，轉身離去。看來你還不夠懂她的心。遊戲結束。",
+          text: "你選擇了晴雯",
           options: [{ text: "重新開始", next: "start" }],
         },
-        baoyu: {
-          text: "寶玉熱情地拉著你去看新寫的詩，大觀園的一天充滿了驚喜。遊戲結束。",
+        end3: {
+          text: "你選擇了薛寶釵",
           options: [{ text: "重新開始", next: "start" }],
         },
-        leave: {
-          text: "你悄悄離開了，大觀園的秘密仍等待你去發掘。遊戲結束。",
+        end4: {
+          text: "你選擇了襲人",
           options: [{ text: "重新開始", next: "start" }],
         },
       };
