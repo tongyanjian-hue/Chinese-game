@@ -40,6 +40,5 @@ function updatePage(key) {
     });
 }
 
-// 這是啟動遊戲的第一步
 updatePage('start');
 
