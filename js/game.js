@@ -1,44 +1,120 @@
-const story = {
-    start: {
-        text: "正值暮春時節，大觀園內落紅成陣。你漫步在沁芳橋畔，忽見前方有一纖弱身影，正低頭收拾落花。那人正是林黛玉。",
-        options: [
-            { text: "上前詢問她在做什麼", next: "ask" },
-            { text: "默默在旁觀看，不忍打擾", next: "watch" }
-        ]
-    },
-    ask: {
-        text: "黛玉抬頭看你，眼圈微紅，輕聲道：『與其讓這些殘花被踐踏，不如將它們收進花塚，隨土而化。』",
-        options: [
-            { text: "與她一同葬花", next: "end1" },
-            { text: "勸她莫要憂傷", next: "end2" }
-        ]
-    },
-    watch: {
-        text: "你遠遠看著她將花瓣一一收起，背影孤單。這時，寶玉從另一頭走來，也看到了這一幕。",
-        options: [
-            { text: "走向寶玉與他打招呼", next: "baoyu" },
-            { text: "悄悄離開", next: "leave" }
-        ]
-    },
-    end1: { text: "你們共同葬花，成了知心好友。遊戲結束。", options: [{ text: "重新開始", next: "start" }] },
-    end2: { text: "她嘆了口氣，轉身離去。看來你還不夠懂她的心。遊戲結束。", options: [{ text: "重新開始", next: "start" }] },
-    baoyu: { text: "寶玉熱情地拉著你去看新寫的詩，大觀園的一天充滿了驚喜。遊戲結束。", options: [{ text: "重新開始", next: "start" }] },
-    leave: { text: "你悄悄離開了，大觀園的秘密仍等待你去發掘。遊戲結束。", options: [{ text: "重新開始", next: "start" }] }
+/**
+ * 劇本
+ */
+const GAME_DATA = {
+    // 性格測驗題庫
+    quiz: [
+        { 
+            question: "暮春時節，落花滿地，你的第一反應是？", 
+            options: [
+                { text: "感傷花落，想將它們掩埋", role: "daiyu" },
+                { text: "欣賞殘韻，覺得是自然之理", role: "baocha" },
+                { text: "邀友飲酒，及時行樂", role: "xiangyun" }
+            ] 
+        },
+        { 
+            question: "若要選一件隨身物件，你會選？", 
+            options: [
+                { text: "一卷詩集", role: "daiyu" },
+                { text: "一只金鎖", role: "baocha" },
+                { text: "一塊玉珮", role: "xiangyun" }
+            ] 
+        },
+        // 編劇可以繼續增加到五題...
+    ],
+    // 角色劇情與結局
+    stories: {
+        daiyu: {
+            name: "林黛玉",
+            start: {
+                text: "【瀟湘館】你見黛玉正獨自對著殘花垂淚，這一次你決定...",
+                options: [
+                    { text: "陪她一起葬花，訴說衷腸", next: "happy" },
+                    { text: "勸她想開點，別總傷身", next: "sad" }
+                ]
+            },
+            happy: { text: "結局：你們心意相通，改寫了淚盡而逝的命運。遊戲結束。", options: [{text: "重玩遊戲", next: "restart"}] },
+            sad: { text: "結局：她覺得你終究不解她的心，最終鬱鬱而終。遊戲結束。", options: [{text: "重玩遊戲", next: "restart"}] }
+        },
+        baocha: {
+            name: "薛寶釵",
+            start: {
+                text: "【蘅蕪苑】寶釵正優雅地撲蝶，你走上前去...",
+                options: [
+                    { text: "與她談論經濟仕途", next: "happy" },
+                    { text: "只想與她談論詩詞歌賦", next: "sad" }
+                ]
+            },
+            happy: { text: "結局：你們舉案齊眉，成了人人稱羨的模範夫妻。遊戲結束。", options: [{text: "重玩遊戲", next: "restart"}] },
+            sad: { text: "結局：雖然成婚，但始終隔著一層心牆。遊戲結束。", options: [{text: "重玩遊戲", next: "restart"}] }
+        }
+        // 史湘雲的部分可以依此類推增加...
+    }
 };
 
-function updatePage(key) {
-    const state = story[key];
-    document.getElementById('story-text').innerText = state.text;
+/**
+ * 遊戲執行
+ */
+let currentStep = 0;
+let scores = { daiyu: 0, baocha: 0, xiangyun: 0 };
+
+function initGame() {
+    currentStep = 0;
+    scores = { daiyu: 0, baocha: 0, xiangyun: 0 };
+    renderQuiz();
+}
+
+function renderQuiz() {
+    const q = GAME_DATA.quiz[currentStep];
+    const storyText = document.getElementById('story-text');
     const optionsDiv = document.getElementById('options');
+    
+    storyText.innerText = `【測驗中 ${currentStep + 1}/5】\n${q.question}`;
     optionsDiv.innerHTML = '';
     
-    state.options.forEach((opt) => {
+    q.options.forEach(opt => {
         const btn = document.createElement('button');
         btn.innerText = opt.text;
-        btn.onclick = () => updatePage(opt.next);
+        btn.onclick = () => {
+            scores[opt.role]++;
+            currentStep++;
+            if (currentStep < GAME_DATA.quiz.length) {
+                renderQuiz();
+            } else {
+                determineRole();
+            }
+        };
         optionsDiv.appendChild(btn);
     });
 }
 
-updatePage('start');
+function determineRole() {
+    // 找出分數最高的角色
+    let maxRole = 'daiyu';
+    if (scores.baocha > scores.daiyu) maxRole = 'baocha';
+    if (scores.xiangyun > scores[maxRole]) maxRole = 'xiangyun';
+    
+    alert(`測驗結束！你即將互動的角色是：${GAME_DATA.stories[maxRole].name}`);
+    renderStory(maxRole, 'start');
+}
 
+function renderStory(role, nodeKey) {
+    if (nodeKey === 'restart') {
+        initGame();
+        return;
+    }
+    
+    const node = GAME_DATA.stories[role][nodeKey];
+    document.getElementById('story-text').innerText = node.text;
+    const optionsDiv = document.getElementById('options');
+    optionsDiv.innerHTML = '';
+    
+    node.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.innerText = opt.text;
+        btn.onclick = () => renderStory(role, opt.next);
+        optionsDiv.appendChild(btn);
+    });
+}
+
+initGame();
