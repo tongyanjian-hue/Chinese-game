@@ -1,95 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>紅樓夢遊戲</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紅樓夢互動遊戲</title>
+    <!-- 這裡連結了外部的長相 -->
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div id="game-container">
-      <h1>賈寶玉的喜好</h1>
-      <div id="story-text">
-        你是賈寶玉。大觀園的姐姐妹妹們都各有特色，你將選擇其中一位與他創造美好結局。請先選擇喜歡的特質
-      </div>
-      <div class="options-container" id="options">
-        <button onclick="choose(1)">口齒伶俐，個性率真</button>
-        <button onclick="choose(2)">競競業業，處事圓融</button>
-      </div>
-    </div>
+</head>
+<body>
 
-    <script>
-      const story = {
-        start: {
-          text: "你是賈寶玉。大觀園的姐姐妹妹們都各有特色，你將選擇其中一位與他創造美好結局。請先選擇喜歡的特質",
-          options: [
-            { text: "口齒伶俐，個性率真", next: "ask1" },
-            { text: "競競業業，處事圓融", next: "ask2" },
-          ],
-        },
-        ask1: {
-          text: "請繼續選擇",
-          options: [
-            { text: "大家閨秀", next: "end1" },
-            { text: "地位較低", next: "end2" },
-          ],
-        },
-        ask2: {
-          text: "請繼續選擇",
-          options: [
-            { text: "希望你上進", next: "end3" },
-            { text: "順從", next: "end4" },
-          ],
-        },
-        end1: {
-          text: "你選擇了林黛玉",
-          options: [{ text: "重新開始", next: "start" }],
-        },
-        end2: {
-          text: "你選擇了晴雯",
-          options: [{ text: "重新開始", next: "start" }],
-        },
-        end3: {
-          text: "你選擇了薛寶釵",
-          options: [{ text: "重新開始", next: "start" }],
-        },
-        end4: {
-          text: "你選擇了襲人",
-          options: [{ text: "重新開始", next: "start" }],
-        },
-      };
+<div id="game-container">
+    <h1>紅樓夢：大觀園初探</h1>
+    <div id="story-text">載入中...</div>
+    <div class="options-container" id="options"></div>
+</div>
 
-      function choose(choiceIndex) {
-        const currentText = document.getElementById("story-text").innerText;
-        let currentState;
-
-        // 找出目前的狀態
-        for (let key in story) {
-          if (story[key].text === currentText) {
-            currentState = story[key];
-            break;
-          }
-        }
-
-        if (!currentState) currentState = story.start;
-
-        const nextKey = currentState.options[choiceIndex - 1].next;
-        updatePage(nextKey);
-      }
-
-      function updatePage(key) {
-        const state = story[key];
-        document.getElementById("story-text").innerText = state.text;
-        const optionsDiv = document.getElementById("options");
-        optionsDiv.innerHTML = "";
-
-        state.options.forEach((opt, index) => {
-          const btn = document.createElement("button");
-          btn.innerText = opt.text;
-          btn.onclick = () => updatePage(opt.next);
-          optionsDiv.appendChild(btn);
-        });
-      }
-    </script>
-  </body>
+<!-- 這裡連結了外部的大腦 -->
+<script src="js/game.js"></script>
+</body>
 </html>
