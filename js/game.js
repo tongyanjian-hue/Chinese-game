@@ -1,3 +1,5 @@
+// --- 劇情 ---
+
 const GAME_DATA = {
     quizConfig: {
         music: "quiz_theme.mp3",
@@ -60,12 +62,13 @@ const GAME_DATA = {
         }
     ],
     stories: {
+        //---林黛玉---
         daiyu: {
             name: "林黛玉",
             music: "daiyu.mp3",
             start: {
                 text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-                bg: "xiaoxiang.jpg",
+                bg: "xiaoxiang.png",
                 img: "daiyu_angry.png",
                 options: [
                     { text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』", next: "scene2", effect: 2 }, // 大加分
@@ -97,13 +100,13 @@ const GAME_DATA = {
                 options: [{ text: "重玩遊戲", next: "restart" }]
             }
         },
-
+        //---襲人---
         xiren: {
             name: "襲人",
             music: "xiren.mp3",
             start: {
                 text: "【襲人】襲人正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-                bg: "xiren_bg.jpg",
+                bg: "xiren_bg.png",
                 img: "xiren_angry.png",
                 options: [
                     { text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』", next: "scene2", effect: 2 }, // 大加分
@@ -135,45 +138,7 @@ const GAME_DATA = {
                 options: [{ text: "重玩遊戲", next: "restart" }]
             }
         },
-
-        xiren: {
-            name: "襲人",
-            music: "xiren.mp3",
-            start: {
-                text: "【襲人】襲人正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-                bg: "xiren_bg.jpg",
-                img: "xiren_angry.png",
-                options: [
-                    { text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』", next: "scene2", effect: 2 }, // 大加分
-                    { text: "有些惱了：『你總是這般多心，倒叫人沒趣。』", next: "scene2", effect: -1 }      // 扣分
-                ]
-            },
-            scene2: {
-                text: "襲人臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-                img: "xiren_sad.png",
-                options: [
-                    { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
-                    { text: "一時語塞，支支吾吾地找藉口", next: "final_check", effect: -2 }
-                ]
-            },
-            // 結局判定點
-            final_check: {
-                isEnding: true,
-                text: "（正在結算好感度...）",
-                options: [] // 這裡不需要選項，程式會自動跳轉
-            },
-            happy_end: {
-                text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-                img: "xiren_happy.png",
-                options: [{ text: "重玩遊戲", next: "restart" }]
-            },
-            sad_end: {
-                text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-                img: "xiren_dead.png",
-                options: [{ text: "重玩遊戲", next: "restart" }]
-            }
-        },
-
+        //---寶釵---
         baocha: {
             name: "寶釵",
             music: "baocha.mp3",
@@ -211,7 +176,7 @@ const GAME_DATA = {
                 options: [{ text: "重玩遊戲", next: "restart" }]
             }
         },
-
+        //---湘雲---
         xiangyun: {
             name: "湘雲",
             music: "xiangyun.mp3",
@@ -249,7 +214,7 @@ const GAME_DATA = {
                 options: [{ text: "重玩遊戲", next: "restart" }]
             }
         },
-
+        //---晴雯---
         qingwen: {
             name: "晴雯",
             music: "qingwen.mp3",
@@ -287,46 +252,58 @@ const GAME_DATA = {
                 options: [{ text: "重玩遊戲", next: "restart" }]
             }
         },
-
+        //---妙玉---
         miaoyu: {
             name: "妙玉",
             music: "miaoyu.mp3",
+            // --- 事件一：品茶 ---
             start: {
-                text: "【妙玉】妙玉正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-                bg: "miaoyu_bg.jpg",
-                img: "miaoyu_angry.png",
+                text: "【品茶】你與黛玉、寶釵在櫳翠庵品茶。妙玉竟拿出她平日私用的「綠玉斗」斟茶給你...",
+                bg: "longcui_interior.jpg",
+                img: "miaoyu_tea.png",
                 options: [
-                    { text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』", next: "scene2", effect: 2 }, // 大加分
-                    { text: "有些惱了：『你總是這般多心，倒叫人沒趣。』", next: "scene2", effect: -1 }      // 扣分
+                    { text: "笑道：『這真真是一件俗器。』", next: "tea_response", effect: 3 },
+                    { text: "木然接過：『看不出有什麼特別。』", next: "tea_response", effect: -3 }
                 ]
             },
-            scene2: {
-                text: "妙玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-                img: "miaoyu_sad.png",
+            tea_response: {
+                text: "妙玉冷笑：『這若是俗器，賈府未必找得出第二件。』喝完茶後，你想到劉姥姥用過的茶杯被棄在一旁...",
                 options: [
-                    { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
-                    { text: "一時語塞，支支吾吾地找藉口", next: "final_check", effect: -2 }
+                    { text: "建議妙玉：『給劉姥姥拿去賣錢度日吧。』", next: "qimei_choice", cupChoice: "A" },
+                    { text: "對妙玉說：『那杯子留著很髒，不如給我保管。』", next: "qimei_choice", cupChoice: "B" }
                 ]
             },
-            // 結局判定點
+            // --- 事件二：乞梅 ---
+            qimei_choice: {
+                text: "【乞梅】冬日紅梅傲雪，你想向妙玉乞紅梅。你要如何進入？",
+                bg: "longcui_snow.jpg",
+                options: [
+                    { text: "叫人向妙玉傳達來意", next: "qimei_ask", effect: 1 },
+                    { text: "直接走進櫳翠庵", next: "qimei_direct", effect: 0 }
+                ]
+            },
+            qimei_ask: {
+                text: "小尼傳話問為何要梅？",
+                options: [
+                    { text: "如實交代", next: "qimei_result_A", effect: 0 },
+                    { text: "說欣賞這番美景", next: "qimei_result_B", effect: 2 }
+                ]
+            },
+            
+            // --- 結局判定點 ---
             final_check: {
                 isEnding: true,
-                text: "（正在結算好感度...）",
-                options: [] // 這裡不需要選項，程式會自動跳轉
+                text: "（命運交織的時刻...）",
+                options: []
             },
-            happy_end: {
-                text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-                img: "miaoyu_happy.png",
-                options: [{ text: "重玩遊戲", next: "restart" }]
-            },
-            sad_end: {
-                text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-                img: "miaoyu_dead.png",
-                options: [{ text: "重玩遊戲", next: "restart" }]
-            }
-        },
+            bad_end: { text: "結局：【入紅塵俗世】抄家後兩人斷了交集。", img: "miaoyu_sad.png", options: [{text:"重玩", next:"restart"}] },
+            another_end: { text: "結局：【為救寶玉從順親王】妙玉用自由換了你的自由。", img: "miaoyu_sacrifice.png", options: [{text:"重玩", next:"restart"}] },
+            true_end: { text: "結局：【與君訣別】你是她唯一的知己，可惜時代終無果。", img: "miaoyu_true.png", options: [{text:"重玩", next:"restart"}] }
+        }
     }
 };
+
+// --- 遊戲邏輯 ---
 
 let currentStep = 0;
 let scores = { A: 0, B: 0, C: 0, D: 0 };
@@ -338,6 +315,7 @@ function initGame() {
     scores = { A: 0, B: 0, C: 0, D: 0 };
     userChoices = [];
     favorability = 0; // 重置好感度
+    let cupChoice = ""; // 妙玉專用旗標
 
     // 播放測驗音樂與背景
     changeMusic(GAME_DATA.quizConfig.music);
