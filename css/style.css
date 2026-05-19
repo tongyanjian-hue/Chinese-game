@@ -2,123 +2,125 @@
     1. 全局設定與古典配色
    ========================================== */
 :root {
-    --primary-color: #8b0000;    /* 深紅色，象徵紅樓夢主色調 */
-    --text-color: #2c3e50;
-    --transition-speed: 0.8s;    /* 切換場景的平滑速度 */
+  --primary-color: #8b0000; /* 深紅色，象徵紅樓夢主色調 */
+  --text-color: #2c3e50;
+  --transition-speed: 0.8s; /* 切換場景的平滑速度 */
 }
 
 /* 導入 Google 古典字體 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Serif TC', 'Microsoft JhengHei', serif;
-    background-color: #222; 
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
-    transition: background-image var(--transition-speed) ease-in-out;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+  background-color: #fae5ab;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: background-image var(--transition-speed) ease-in-out;
 }
 
 /* ==========================================
     2. 遊戲主容器 (對話框)
    ========================================== */
 #game-container {
-    width: 90%;
-    max-width: 850px;
-    min-height: 450px;
-    
-    /* 完全依賴 JS 動態設定背景圖片，這裡不設定預設背景 */
-    background-image: none; 
-    background-size: 100% 100%; 
-    background-color: transparent; 
-    border: none; 
-    box-shadow: none;
-    
-    padding: 40px;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 90%;
+  max-width: 850px;
+  min-height: 450px;
+
+  /* 完全依賴 JS 動態設定背景圖片，這裡不設定預設背景 */
+  background-image: none;
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-top: 0;
-    letter-spacing: 4px;
-    border-bottom: 1px double var(--primary-color);
-    padding-bottom: 10px;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-top: 0;
+  letter-spacing: 4px;
+  border-bottom: 1px double var(--primary-color);
+  padding-bottom: 10px;
 }
 
 /* ==========================================
     3. 角色立繪表現
    ========================================== */
 #character-box {
-    position: absolute;
-    bottom: 100%; 
-    left: 50%;
-    transform: translateX(-50%);
-    height: 450px; 
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    pointer-events: none; 
-    z-index: 5;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 5;
 }
 
 #character-img {
-    max-height: 100%;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-    transition: opacity var(--transition-speed) ease, transform 0.5s ease;
+  max-height: 100%;
+  filter: drop-shadow(0 10px 20px rgb(246, 222, 170));
+  transition:
+    opacity var(--transition-speed) ease,
+    transform 0.5s ease;
 }
 
 /* ==========================================
     4. 劇情文字與選項按鈕
    ========================================== */
 #story-text {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: var(--text-color);
-    margin: 20px 0;
-    min-height: 120px;
-    white-space: pre-line; 
-    text-align: left; 
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin: 20px 0;
+  min-height: 120px;
+  white-space: pre-line;
+  text-align: left;
 }
 
 .options-container {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 button {
-    /* background-image: url("C:\\Users\\tongy\\chinese20260425\\images\\button_bg.png");
+  /* background-image: url("C:\\Users\\tongy\\chinese20260425\\images\\button_bg.png");
     background-size: cover;
     border: none; */
-    background-color: rgba(255, 255, 255, 0.7);
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-family: inherit;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 button:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-    transform: translateX(5px); 
-    box-shadow: -5px 0 0 var(--accent-color); 
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateX(5px);
+  box-shadow: -5px 0 0 var(--accent-color);
 }
