@@ -62,106 +62,106 @@ const GAME_DATA = {
     },
   ],
   stories: {
-    //---林黛玉---
-    daiyu: {
-      name: "林黛玉",
-      music: "music.mp3",
-      start: {
-        text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-        bg: "xiaoxiang.png",
-        // img: "daiyu_angry.png",
-        options: [
-          {
-            text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
-            next: "scene2",
-            effect: 2,
-          }, // 大加分
-          {
-            text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
-            next: "scene2",
-            effect: -1,
-          }, // 扣分
-        ],
-      },
-      scene2: {
-        text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "daiyu_sad.png",
-        options: [
-          { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
-          {
-            text: "一時語塞，支支吾吾地找藉口",
-            next: "final_check",
-            effect: -2,
-          },
-        ],
-      },
-      // 結局判定點
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [], // 這裡不需要選項，程式會自動跳轉
-      },
-      happy_end: {
-        text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "daiyu_happy.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-      sad_end: {
-        text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "daiyu_dead.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-    },
-    //---襲人---
-    xiren: {
-      name: "襲人",
-      music: "music.mp3",
-      start: {
-        text: "【襲人】襲人正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-        bg: "xiaoxiang.png",
-        // img: "xiren_angry.png",
-        options: [
-          {
-            text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
-            next: "scene2",
-            effect: 2,
-          }, // 大加分
-          {
-            text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
-            next: "scene2",
-            effect: -1,
-          }, // 扣分
-        ],
-      },
-      scene2: {
-        text: "襲人臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "xiren_sad.png",
-        options: [
-          { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
-          {
-            text: "一時語塞，支支吾吾地找藉口",
-            next: "final_check",
-            effect: -2,
-          },
-        ],
-      },
-      // 結局判定點
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [], // 這裡不需要選項，程式會自動跳轉
-      },
-      happy_end: {
-        text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "xiren_happy.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-      sad_end: {
-        text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "xiren_dead.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-    },
+    // //---林黛玉---
+    // daiyu: {
+    //   name: "林黛玉",
+    //   music: "music.mp3",
+    //   start: {
+    //     text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+    //     bg: "xiaoxiang.png",
+    //     // img: "daiyu_angry.png",
+    //     options: [
+    //       {
+    //         text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
+    //         next: "scene2",
+    //         effect: 2,
+    //       }, // 大加分
+    //       {
+    //         text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
+    //         next: "scene2",
+    //         effect: -1,
+    //       }, // 扣分
+    //     ],
+    //   },
+    //   scene2: {
+    //     text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+    //     // img: "daiyu_sad.png",
+    //     options: [
+    //       { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
+    //       {
+    //         text: "一時語塞，支支吾吾地找藉口",
+    //         next: "final_check",
+    //         effect: -2,
+    //       },
+    //     ],
+    //   },
+    //   // 結局判定點
+    //   final_check: {
+    //     isEnding: true,
+    //     text: "（正在結算好感度...）",
+    //     options: [], // 這裡不需要選項，程式會自動跳轉
+    //   },
+    //   happy_end: {
+    //     text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
+    //     // img: "daiyu_happy.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    //   sad_end: {
+    //     text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
+    //     // img: "daiyu_dead.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    // },
+    // //---襲人---
+    // xiren: {
+    //   name: "襲人",
+    //   music: "music.mp3",
+    //   start: {
+    //     text: "【襲人】襲人正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+    //     bg: "xiaoxiang.png",
+    //     // img: "xiren_angry.png",
+    //     options: [
+    //       {
+    //         text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
+    //         next: "scene2",
+    //         effect: 2,
+    //       }, // 大加分
+    //       {
+    //         text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
+    //         next: "scene2",
+    //         effect: -1,
+    //       }, // 扣分
+    //     ],
+    //   },
+    //   scene2: {
+    //     text: "襲人臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+    //     // img: "xiren_sad.png",
+    //     options: [
+    //       { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
+    //       {
+    //         text: "一時語塞，支支吾吾地找藉口",
+    //         next: "final_check",
+    //         effect: -2,
+    //       },
+    //     ],
+    //   },
+    //   // 結局判定點
+    //   final_check: {
+    //     isEnding: true,
+    //     text: "（正在結算好感度...）",
+    //     options: [], // 這裡不需要選項，程式會自動跳轉
+    //   },
+    //   happy_end: {
+    //     text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
+    //     // img: "xiren_happy.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    //   sad_end: {
+    //     text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
+    //     // img: "xiren_dead.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    // },
     //---寶釵---
     baocha: {
       name: "薛寶釵",
@@ -316,106 +316,106 @@ const GAME_DATA = {
         options: [{ text: "重玩", next: "restart" }],
       },
     },
-    //---湘雲---
-    xiangyun: {
-      name: "湘雲",
-      music: "music.mp3",
-      start: {
-        text: "【湘雲】湘雲正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-        bg: "xiaoxiang.png",
-        // img: "xiangyun_angry.png",
-        options: [
-          {
-            text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
-            next: "scene2",
-            effect: 2,
-          }, // 大加分
-          {
-            text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
-            next: "scene2",
-            effect: -1,
-          }, // 扣分
-        ],
-      },
-      scene2: {
-        text: "湘雲臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "xiangyun_sad.png",
-        options: [
-          { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
-          {
-            text: "一時語塞，支支吾吾地找藉口",
-            next: "final_check",
-            effect: -2,
-          },
-        ],
-      },
-      // 結局判定點
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [], // 這裡不需要選項，程式會自動跳轉
-      },
-      happy_end: {
-        text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "xiangyun_happy.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-      sad_end: {
-        text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "xiangyun_dead.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-    },
-    //---晴雯---
-    qingwen: {
-      name: "晴雯",
-      music: "music.mp3",
-      start: {
-        text: "【晴雯】晴雯正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-        bg: "xiaoxiang.png",
-        // img: "qingwen_angry.png",
-        options: [
-          {
-            text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
-            next: "scene2",
-            effect: 2,
-          }, // 大加分
-          {
-            text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
-            next: "scene2",
-            effect: -1,
-          }, // 扣分
-        ],
-      },
-      scene2: {
-        text: "晴雯臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "qingwen_sad.png",
-        options: [
-          { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
-          {
-            text: "一時語塞，支支吾吾地找藉口",
-            next: "final_check",
-            effect: -2,
-          },
-        ],
-      },
-      // 結局判定點
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [], // 這裡不需要選項，程式會自動跳轉
-      },
-      happy_end: {
-        text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "qingwen_happy.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-      sad_end: {
-        text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "qingwen_dead.png",
-        options: [{ text: "重玩遊戲", next: "restart" }],
-      },
-    },
+    // //---湘雲---
+    // xiangyun: {
+    //   name: "湘雲",
+    //   music: "music.mp3",
+    //   start: {
+    //     text: "【湘雲】湘雲正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+    //     bg: "xiaoxiang.png",
+    //     // img: "xiangyun_angry.png",
+    //     options: [
+    //       {
+    //         text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
+    //         next: "scene2",
+    //         effect: 2,
+    //       }, // 大加分
+    //       {
+    //         text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
+    //         next: "scene2",
+    //         effect: -1,
+    //       }, // 扣分
+    //     ],
+    //   },
+    //   scene2: {
+    //     text: "湘雲臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+    //     // img: "xiangyun_sad.png",
+    //     options: [
+    //       { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
+    //       {
+    //         text: "一時語塞，支支吾吾地找藉口",
+    //         next: "final_check",
+    //         effect: -2,
+    //       },
+    //     ],
+    //   },
+    //   // 結局判定點
+    //   final_check: {
+    //     isEnding: true,
+    //     text: "（正在結算好感度...）",
+    //     options: [], // 這裡不需要選項，程式會自動跳轉
+    //   },
+    //   happy_end: {
+    //     text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
+    //     // img: "xiangyun_happy.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    //   sad_end: {
+    //     text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
+    //     // img: "xiangyun_dead.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    // },
+    // //---晴雯---
+    // qingwen: {
+    //   name: "晴雯",
+    //   music: "music.mp3",
+    //   start: {
+    //     text: "【晴雯】晴雯正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+    //     bg: "xiaoxiang.png",
+    //     // img: "qingwen_angry.png",
+    //     options: [
+    //       {
+    //         text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
+    //         next: "scene2",
+    //         effect: 2,
+    //       }, // 大加分
+    //       {
+    //         text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
+    //         next: "scene2",
+    //         effect: -1,
+    //       }, // 扣分
+    //     ],
+    //   },
+    //   scene2: {
+    //     text: "晴雯臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+    //     // img: "qingwen_sad.png",
+    //     options: [
+    //       { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
+    //       {
+    //         text: "一時語塞，支支吾吾地找藉口",
+    //         next: "final_check",
+    //         effect: -2,
+    //       },
+    //     ],
+    //   },
+    //   // 結局判定點
+    //   final_check: {
+    //     isEnding: true,
+    //     text: "（正在結算好感度...）",
+    //     options: [], // 這裡不需要選項，程式會自動跳轉
+    //   },
+    //   happy_end: {
+    //     text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
+    //     // img: "qingwen_happy.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    //   sad_end: {
+    //     text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
+    //     // img: "qingwen_dead.png",
+    //     options: [{ text: "重玩遊戲", next: "restart" }],
+    //   },
+    // },
     //---妙玉---
     miaoyu: {
       name: "妙玉",
