@@ -108,7 +108,7 @@ const GAME_DATA = {
       },
       sad_end: {
         text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        img: "daiyu_dead.png",
+        // img: "daiyu_dead.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
     },
@@ -165,8 +165,8 @@ const GAME_DATA = {
     //---寶釵---
     baocha: {
       name: "薛寶釵",
-      music: "baocha_theme.mp3",
-      dialogBoxBg: "dialog_baocha.png",
+      music: "music.mp3",
+      dialogBoxBg: "baocha_dialog.png",
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
         bg: "xiaoxiang.png",
@@ -248,7 +248,7 @@ const GAME_DATA = {
       },
       scene6: {
         text: "你挨老爺一頓打後，寶釵托著一丸藥，眼匡微紅並說道：「別說老太太心疼，就是我們看著，心裏也…。」",
-        img: "baocha_cry.png",
+        // img: "baocha_cry.png",
         options: [
           {
             text: "忍著痛，感動地說道：「今日姐姐為我落淚，我這頓挨打也無足歎惜了。」",
@@ -279,7 +279,7 @@ const GAME_DATA = {
       },
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
-        bg: "wedding_night.jpg",
+        bg: "xiaoxiang.png",
         // img: "baocha_bride.png",
         options: [
           {
@@ -319,7 +319,7 @@ const GAME_DATA = {
     //---湘雲---
     xiangyun: {
       name: "湘雲",
-      music: "xiangyun.mp3",
+      music: "music.mp3",
       start: {
         text: "【湘雲】湘雲正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
         bg: "xiaoxiang.png",
@@ -369,10 +369,10 @@ const GAME_DATA = {
     //---晴雯---
     qingwen: {
       name: "晴雯",
-      music: "qingwen.mp3",
+      music: "music.mp3",
       start: {
         text: "【晴雯】晴雯正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-        bg: "qingwen_bg.jpg",
+        bg: "xiaoxiang.png",
         // img: "qingwen_angry.png",
         options: [
           {
@@ -419,11 +419,11 @@ const GAME_DATA = {
     //---妙玉---
     miaoyu: {
       name: "妙玉",
-      music: "miaoyu.mp3",
+      music: "music.mp3",
       // --- 事件一：品茶 ---
       start: {
         text: "【品茶】你與黛玉、寶釵在櫳翠庵品茶。妙玉竟拿出她平日私用的「綠玉斗」斟茶給你...",
-        bg: "longcui_interior.jpg",
+        bg: "xiaoxiang.png",
         // img: "miaoyu_tea.png",
         options: [
           {
@@ -456,7 +456,7 @@ const GAME_DATA = {
       // --- 事件二：乞梅 ---
       qimei_choice: {
         text: "【乞梅】冬日紅梅傲雪，你想向妙玉乞紅梅。你要如何進入？",
-        bg: "longcui_snow.jpg",
+        bg: "xiaoxiang.png",
         options: [
           { text: "叫人向妙玉傳達來意", next: "qimei_ask", effect: 1 },
           { text: "直接走進櫳翠庵", next: "qimei_direct", effect: 0 },
