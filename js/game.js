@@ -69,7 +69,7 @@ const GAME_DATA = {
       start: {
         text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
         bg: "xiaoxiang.png",
-        // img: "daiyu_angry.png",
+        img: "test.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -85,7 +85,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "daiyu_sad.png",
+        img: "test.png",
         options: [
           { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
           {
@@ -103,12 +103,12 @@ const GAME_DATA = {
       },
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "daiyu_happy.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
       sad_end: {
         text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "daiyu_dead.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
     },
@@ -119,7 +119,7 @@ const GAME_DATA = {
       start: {
         text: "【襲人】襲人正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
         bg: "xiaoxiang.png",
-        // img: "xiren_angry.png",
+        img: "test.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -135,7 +135,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "襲人臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "xiren_sad.png",
+        img: "test.png",
         options: [
           { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
           {
@@ -153,12 +153,12 @@ const GAME_DATA = {
       },
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "xiren_happy.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
       sad_end: {
         text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "xiren_dead.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
     },
@@ -170,7 +170,7 @@ const GAME_DATA = {
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
         bg: "xiaoxiang.png",
-        // img: "baocha_normal.png",
+        img: "test.png",
         options: [
           {
             text: "姐姐這鎖上的字，倒與我的玉是一對兒。",
@@ -186,7 +186,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "你忽然聞到一陣幽香，這並非衣服上的熏香，竟像是從骨子裡散出來的。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
-        // img: "baocha_daiyu.png",
+        img: "test.png",
         options: [
           {
             text: "你不理會黛玉的調侃，好奇地問寶姐姐：「這香氣實在奇特，姐姐是吃了什麼藥？教我也長長見識。」",
@@ -217,7 +217,7 @@ const GAME_DATA = {
       },
       scene4: {
         text: "寶釵褪下左腕上的香串子，你在一旁看著那雪白的肐膊，空氣彷彿停止在一瞬間。",
-        // img: "baocha_arm.png",
+        img: "test.png",
         options: [
           {
             text: "目不轉睛地盯著寶姐姐，悄悄說道：「若是長在林姑娘身上，說不定還能摸一摸。」",
@@ -248,7 +248,7 @@ const GAME_DATA = {
       },
       scene6: {
         text: "你挨老爺一頓打後，寶釵托著一丸藥，眼匡微紅並說道：「別說老太太心疼，就是我們看著，心裏也…。」",
-        // img: "baocha_cry.png",
+        img: "test.png",
         options: [
           {
             text: "忍著痛，感動地說道：「今日姐姐為我落淚，我這頓挨打也無足歎惜了。」",
@@ -280,7 +280,7 @@ const GAME_DATA = {
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
         bg: "xiaoxiang.png",
-        // img: "baocha_bride.png",
+        img: "test.png",
         options: [
           {
             text: "既然金玉姻緣的命運是如此，往後餘生，我便真心相待。",
@@ -297,22 +297,22 @@ const GAME_DATA = {
       final_check: { isEnding: true, text: "（命運判定中...）" },
       ending_1: {
         text: "結局：【雪裡冷梅】\n熬過冰雪，柴米油鹽皆是真情。你背負期望進京趕考，她在家中深閨靜待，在平凡歲月中守候到了一室暖意與歸人。",
-        // img: "baocha_end1.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
       ending_2: {
         text: "結局：【舉案齊眉】\n你們相敬如賓，並肩重振家業。此生雖無熾熱的愛情，卻有著如磐石般的相濡以沫。",
-        // img: "baocha_end2.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
       ending_3: {
         text: "結局：【金簪雪埋】\n你深愛她的靈魂，卻不願受禮教束縛。大雪落盡之時你轉身離去，留下她獨守回憶的荒涼，金簪終被雪埋。",
-        // img: "baocha_end3.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
       ending_4: {
         text: "結局：【荒塚孤飛】\n你對她無情，這場錯位的婚姻成了牢籠。你決定流浪天涯，兩人一生都被這座名為「金玉」的牢籠遍體鱗傷。",
-        // img: "baocha_end4.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
     },
@@ -323,7 +323,7 @@ const GAME_DATA = {
       start: {
         text: "【湘雲】湘雲正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
         bg: "xiaoxiang.png",
-        // img: "xiangyun_angry.png",
+        img: "test.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -339,7 +339,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "湘雲臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "xiangyun_sad.png",
+        img: "test.png",
         options: [
           { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
           {
@@ -357,12 +357,12 @@ const GAME_DATA = {
       },
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "xiangyun_happy.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
       sad_end: {
         text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "xiangyun_dead.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
     },
@@ -373,7 +373,7 @@ const GAME_DATA = {
       start: {
         text: "【晴雯】晴雯正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
         bg: "xiaoxiang.png",
-        // img: "qingwen_angry.png",
+        img: "test.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -389,7 +389,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "晴雯臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-        // img: "qingwen_sad.png",
+        img: "test.png",
         options: [
           { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
           {
@@ -407,12 +407,12 @@ const GAME_DATA = {
       },
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-        // img: "qingwen_happy.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
       sad_end: {
         text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-        // img: "qingwen_dead.png",
+        img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
     },
@@ -424,7 +424,7 @@ const GAME_DATA = {
       start: {
         text: "【品茶】你與黛玉、寶釵在櫳翠庵品茶。妙玉竟拿出她平日私用的「綠玉斗」斟茶給你...",
         bg: "xiaoxiang.png",
-        // img: "miaoyu_tea.png",
+        img: "test.png",
         options: [
           {
             text: "笑道：『這真真是一件俗器。』",
@@ -478,17 +478,17 @@ const GAME_DATA = {
       },
       bad_end: {
         text: "結局：【入紅塵俗世】抄家後兩人斷了交集。",
-        // img: "miaoyu_sad.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
       another_end: {
         text: "結局：【為救寶玉從順親王】妙玉用自由換了你的自由。",
-        // img: "miaoyu_sacrifice.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
       true_end: {
         text: "結局：【與君訣別】你是她唯一的知己，可惜時代終無果。",
-        // img: "miaoyu_true.png",
+        img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
     },
