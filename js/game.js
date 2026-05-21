@@ -1,5 +1,4 @@
-// --- 劇情 ---
-
+// --- 劇情資料庫 ---
 const GAME_DATA = {
   quizConfig: {
     music: "music.mp3",
@@ -75,12 +74,12 @@ const GAME_DATA = {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
             next: "scene2",
             effect: 2,
-          }, // 大加分
+          },
           {
             text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
             next: "scene2",
             effect: -1,
-          }, // 扣分
+          },
         ],
       },
       scene2: {
@@ -95,12 +94,7 @@ const GAME_DATA = {
           },
         ],
       },
-      // 結局判定點
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [], // 這裡不需要選項，程式會自動跳轉
-      },
+      final_check: { isEnding: true, text: "（正在結算好感度...）" },
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
         img: "test.png",
@@ -117,47 +111,46 @@ const GAME_DATA = {
       name: "襲人",
       music: "music.mp3",
       start: {
-        text: "【襲人】襲人正低頭整理衣物，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+        text: "【怡紅院】襲人正低頭整理衣物，見你來了，嘆了口氣：『你這會子又從哪裡淘氣過來？快把這身衣服換了。』",
         bg: "xiaoxiang.png",
         img: "test.png",
         options: [
           {
-            text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
+            text: "聽話地張開雙臂：『好姐姐，都聽你的，快幫我換吧。』",
             next: "scene2",
             effect: 2,
-          }, // 大加分
+          },
           {
-            text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
+            text: "不耐煩地躲開：『天天嘮叨，比老爺還麻煩。』",
             next: "scene2",
             effect: -1,
-          }, // 扣分
+          },
         ],
       },
       scene2: {
-        text: "襲人臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+        text: "襲人一邊幫你理著衣領，一邊幽幽地說：『你心裡若真有這個家，往後便少和那些不長進的人廝混。』",
         img: "test.png",
         options: [
-          { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
           {
-            text: "一時語塞，支支吾吾地找藉口",
+            text: "握住她的手認真點頭：『我知道姐姐都是為我好。』",
+            next: "final_check",
+            effect: 2,
+          },
+          {
+            text: "敷衍地看著窗外：『知道了知道了，真囉唆。』",
             next: "final_check",
             effect: -2,
           },
         ],
       },
-      // 結局判定點
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [], // 這裡不需要選項，程式會自動跳轉
-      },
+      final_check: { isEnding: true, text: "（正在結算好感度...）" },
       happy_end: {
-        text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
+        text: "結局：【溫柔解語花】你體貼她的付出，兩人雖無大富大貴，卻在平凡中相守一生。遊戲結束。",
         img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
       sad_end: {
-        text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
+        text: "結局：【桃花逐水流】你的任性讓她心灰意冷，在賈府敗落之際，她只能流落他鄉嫁與他人。遊戲結束。",
         img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
@@ -166,9 +159,8 @@ const GAME_DATA = {
     baocha: {
       name: "薛寶釵",
       music: "music.mp3",
-      dialogBoxBg: "baocha_dialog.png",
       start: {
-        text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
+        text: "【梨香院】寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
         bg: "xiaoxiang.png",
         img: "test.png",
         options: [
@@ -185,23 +177,23 @@ const GAME_DATA = {
         ],
       },
       scene2: {
-        text: "你忽然聞到一陣幽香，這並非衣服上的熏香，竟像是從骨子裡散出來的。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
+        text: "你忽然聞到一陣幽香。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
         img: "test.png",
         options: [
           {
-            text: "你不理會黛玉的調侃，好奇地問寶姐姐：「這香氣實在奇特，姐姐是吃了什麼藥？教我也長長見識。」",
+            text: "你不理會黛玉的調侃，好奇地問寶姐姐：「這香氣實在奇特，姐姐是吃了什麼藥？」",
             next: "scene3",
             effect: { lengXiang: 2 },
           },
           {
-            text: "你尷尬地推了一步，對黛玉賠笑，又對寶姐姐說道：「姐姐服這藥，是為了壓制體內的熱毒，黛玉妹妹是心疼你，你別見怪。」",
+            text: "你尷尬地退一步，對黛玉賠笑：「黛玉妹妹是心疼姐姐，寶姐姐妳別見怪。」",
             next: "scene3",
             effect: { jinYu: 1, lengXiang: 1 },
           },
         ],
       },
       scene3: {
-        text: "寶釵向你解釋《寄生草》的楚辭，念到：「赤條條，來去無牽掛。」聽完這楚辭，你說道",
+        text: "寶釵向你解釋《寄生草》的楚辭，念到：「赤條條，來去無牽掛。」聽完這楚辭，你說道：",
         options: [
           {
             text: "姐姐才華洋溢，飽讀詩書，實在是無書不知啊。",
@@ -209,7 +201,7 @@ const GAME_DATA = {
             effect: { lengXiang: 2 },
           },
           {
-            text: "姐姐既看透了這詞的核心，又為何要我讀經世之書？考取功名？",
+            text: "姐姐既看透了這詞的核心，又為何要我讀經世之書、考取功名？",
             next: "scene4",
             effect: { jinYu: -2 },
           },
@@ -227,7 +219,7 @@ const GAME_DATA = {
           {
             text: "移開視線，臉不自覺地泛紅，忽然想起金鎖一事。",
             next: "scene5",
-            effect: { lengXiang: 1, jinYu: 1 },
+            effect: { jinYu: 2 },
           },
         ],
       },
@@ -242,12 +234,12 @@ const GAME_DATA = {
           {
             text: "姐姐請別的屋裡坐坐罷。說完便提起腳來就走了。",
             next: "scene6",
-            effect: { jinYu: -2, lengXiang: -1 },
+            effect: { jinYu: -2 },
           },
         ],
       },
       scene6: {
-        text: "你挨老爺一頓打後，寶釵托著一丸藥，眼匡微紅並說道：「別說老太太心疼，就是我們看著，心裏也…。」",
+        text: "你挨老爺一頓打後，寶釵托著一丸藥，眼眶微紅並說道：「別說老太太心疼，就是我們看著，心裏也…。」",
         img: "test.png",
         options: [
           {
@@ -263,10 +255,10 @@ const GAME_DATA = {
         ],
       },
       scene7: {
-        text: "寶釵在你的床旁邊繡鴛鴦，忽然間，你在夢中喊罵：「什麼『金玉姻緣！』我偏說『木石前盟！』",
+        text: "寶釵在你的床旁邊繡鴛鴦，忽然間，你在夢中喊罵：「什麼『金玉姻緣！』我偏說『木石前盟！』」",
         options: [
           {
-            text: "醒後見她神色黯然，你假裝夢話為胡言亂語，溫柔地安覆她。",
+            text: "醒後見她神色黯然，你假裝夢話為胡言亂語，溫柔地安撫她。",
             next: "scene8",
             effect: { lengXiang: 2 },
           },
@@ -279,31 +271,29 @@ const GAME_DATA = {
       },
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
-        bg: "xiaoyang.png",
+        bg: "xiaoxiang.png",
         img: "test.png",
         options: [
           {
             text: "既然金玉姻緣的命運是如此，往後餘生，我便真心相待。",
             next: "final_check",
-            effect: { jinYu: 3, lengXiang: 1 },
+            effect: { jinYu: 3 },
           },
           {
             text: "絕望地看着她的雙眼，結巴地說道：「你為何要配合他們來騙我？」",
             next: "final_check",
-            effect: { jinYu: -3, lengXiang: -1 },
+            effect: { jinYu: -3 },
           },
         ],
       },
       final_check: { isEnding: true, text: "（命運判定中...）" },
       happy_end: {
-        // 配合通用的結局判定
-        text: "結局：【雪裡冷梅】\n熬過冰雪，柴米油鹽皆是真情。你背負期望進京趕考，她在家中深閨靜待，在平凡歲歲中守候到了一室暖意與歸人。",
+        text: "結局：【雪裡冷梅 / 舉案齊眉】\n熬過冰雪，柴米油鹽皆是真情。你背負期望進京趕考，與寶釵相敬如賓、重振家業。雖無熾熱愛情，卻有磐石般的相濡以沫。",
         img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
       sad_end: {
-        // 配合通用的結局判定
-        text: "結局：【金簪雪埋】\n你對她無情，這場錯位的婚姻成了牢籠。大雪落盡之時你轉身離去，留下她獨守回憶的荒涼，金簪終被雪埋。",
+        text: "結局：【金簪雪埋 / 荒塚孤飛】\n這場婚姻終成牢籠。大雪落盡之時你轉身出家離去，留下她獨守回憶的荒涼，兩人在命運的捉弄下遍體鱗傷。",
         img: "test.png",
         options: [{ text: "重玩", next: "restart" }],
       },
@@ -345,11 +335,7 @@ const GAME_DATA = {
           },
         ],
       },
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [],
-      },
+      final_check: { isEnding: true, text: "（正在結算好感度...）" },
       happy_end: {
         text: "結局：【因麒麟伏白首雙星】大觀園散盡，你與湘雲在落魄中重逢，相濡以沫，白頭偕老。遊戲結束。",
         img: "test.png",
@@ -387,7 +373,7 @@ const GAME_DATA = {
         img: "test.png",
         options: [
           {
-            text: "笑說：『一把握子值什麼，你喜歡撕，拿一包來五撕著玩。』並遞扇子給她",
+            text: "笑說：『妳喜歡撕，拿一包來撕著玩。』並遞扇子給她",
             next: "final_check",
             effect: 2,
           },
@@ -398,11 +384,7 @@ const GAME_DATA = {
           },
         ],
       },
-      final_check: {
-        isEnding: true,
-        text: "（正在結算好感度...）",
-        options: [],
-      },
+      final_check: { isEnding: true, text: "（正在結算好感度...）" },
       happy_end: {
         text: "結局：【芙蓉女兒誄】你用包容呵護了她的高傲，她成為了你心中最美的芙蓉仙子。遊戲結束。",
         img: "test.png",
@@ -455,7 +437,7 @@ const GAME_DATA = {
         bg: "xiaoxiang.png",
         options: [
           { text: "叫人向妙玉傳達來意", next: "qimei_ask", effect: 1 },
-          { text: "直接走進櫳翠庵", next: "final_check", effect: 0 }, // 簡化流程至終點
+          { text: "直接走進櫳翠庵", next: "final_check", effect: 0 },
         ],
       },
       qimei_ask: {
@@ -465,11 +447,7 @@ const GAME_DATA = {
           { text: "說欣賞這番美景", next: "final_check", effect: 2 },
         ],
       },
-      final_check: {
-        isEnding: true,
-        text: "（命運交織的時刻...）",
-        options: [],
-      },
+      final_check: { isEnding: true, text: "（命運交織的時刻...）" },
       happy_end: {
         text: "結局：【與君訣別】你是她紅塵中唯一的知己，雖然為世俗不容，但心靈相通。遊戲結束。",
         img: "test.png",
@@ -485,26 +463,27 @@ const GAME_DATA = {
 };
 
 // --- 遊戲邏輯 ---
-
 let currentStep = 0;
 let scores = { A: 0, B: 0, C: 0, D: 0 };
 let userChoices = [];
-let favorability = 0; // 新增好感度變數
+let favorability = 0;
 
 function initGame() {
   currentStep = 0;
   scores = { A: 0, B: 0, C: 0, D: 0 };
   userChoices = [];
-  favorability = 0; // 重置好感度
+  favorability = 0;
 
-  // 【核心修正】初始化只處理畫面與背景，不強制 play() 音樂以免被瀏覽器擋掉
   changeBackground(GAME_DATA.quizConfig.bg);
 
-  // 預先設定音源，但不呼叫 play()
   const audio = document.getElementById("bg-music");
   if (audio) {
     audio.src = `sound/${GAME_DATA.quizConfig.music}`;
   }
+
+  // 隱藏立繪
+  const imgEl = document.getElementById("character-img");
+  if (imgEl) imgEl.style.display = "none";
 
   renderQuiz();
 }
@@ -513,10 +492,7 @@ function changeMusic(fileName) {
   const audio = document.getElementById("bg-music");
   if (!audio) return;
   audio.src = `sound/${fileName}`;
-  // 加上 catch 防止非使用者觸發時報錯而中斷 JS
-  audio
-    .play()
-    .catch((e) => console.log("音樂播放被瀏覽器阻擋，等待玩家點擊：", e));
+  audio.play().catch((e) => console.log("等待玩家點擊後播放音樂"));
 }
 
 function changeBackground(fileName) {
@@ -534,7 +510,7 @@ function renderQuiz() {
     const btn = document.createElement("button");
     btn.innerText = opt.text;
     btn.onclick = () => {
-      // 在玩家點擊任何按鈕時，嘗試播放音樂（這時已經有了使用者互動，瀏覽器會允許）
+      // 確保點擊時有聲音
       const audio = document.getElementById("bg-music");
       if (audio && audio.paused) {
         audio.play().catch((e) => console.log(e));
@@ -543,8 +519,12 @@ function renderQuiz() {
       scores[opt.category]++;
       userChoices[currentStep] = opt.category;
       currentStep++;
-      if (currentStep < GAME_DATA.quiz.length) renderQuiz();
-      else determineRole();
+
+      if (currentStep < GAME_DATA.quiz.length) {
+        renderQuiz();
+      } else {
+        determineRole();
+      }
     };
     optionsDiv.appendChild(btn);
   });
@@ -554,15 +534,10 @@ function determineRole() {
   const maxScore = Math.max(scores.A, scores.B, scores.C, scores.D);
 
   let winner = "";
-  if (scores.A === maxScore) {
-    winner = "A";
-  } else if (scores.D === maxScore) {
-    winner = "D";
-  } else if (scores.B === maxScore) {
-    winner = "B";
-  } else {
-    winner = "C";
-  }
+  if (scores.A === maxScore) winner = "A";
+  else if (scores.D === maxScore) winner = "D";
+  else if (scores.B === maxScore) winner = "B";
+  else winner = "C";
 
   let finalRole = "";
   if (winner === "A") {
@@ -570,14 +545,17 @@ function determineRole() {
   } else if (winner === "D") {
     finalRole = "miaoyu";
   } else if (winner === "B") {
+    // 第六題索引為 5
     finalRole = userChoices[5] === "B" ? "xiren" : "baocha";
   } else if (winner === "C") {
+    // 第二題索引為 1
     finalRole = userChoices[1] === "C" ? "xiangyun" : "qingwen";
   }
 
   if (!GAME_DATA.stories[finalRole]) {
     finalRole = "daiyu";
   }
+
   changeMusic(GAME_DATA.stories[finalRole].music);
   renderStory(finalRole, "start");
 }
@@ -591,10 +569,13 @@ function renderStory(role, nodeKey) {
   if (nodeKey === "start") favorability = 0;
 
   const node = GAME_DATA.stories[role][nodeKey];
+  if (!node) {
+    console.error(`找不到劇情節點: role=${role}, nodeKey=${nodeKey}`);
+    return;
+  }
 
   // --- 結局判定邏輯 ---
   if (node.isEnding) {
-    // 統一好感度判定：大於等於 2 分走 happy_end，否則走 sad_end
     const nextNode = favorability >= 2 ? "happy_end" : "sad_end";
     setTimeout(() => renderStory(role, nextNode), 1000);
     return;
@@ -602,12 +583,15 @@ function renderStory(role, nodeKey) {
 
   // 更新畫面
   if (node.bg) changeBackground(node.bg);
+
   const imgEl = document.getElementById("character-img");
-  if (node.img) {
-    imgEl.src = `images/${node.img}`;
-    imgEl.style.display = "block";
-  } else {
-    imgEl.style.display = "none";
+  if (imgEl) {
+    if (node.img) {
+      imgEl.src = `images/${node.img}`;
+      imgEl.style.display = "block";
+    } else {
+      imgEl.style.display = "none";
+    }
   }
 
   document.getElementById("story-text").innerText = node.text;
@@ -619,11 +603,10 @@ function renderStory(role, nodeKey) {
       const btn = document.createElement("button");
       btn.innerText = opt.text;
       btn.onclick = () => {
-        // 處理好感度累加 (支援數字或薛寶釵物件計分制的相容)
+        // 【核心相容修正】處理物件分數（寶釵線）或純數字分數
         if (typeof opt.effect === "number") {
           favorability += opt.effect;
         } else if (opt.effect && typeof opt.effect === "object") {
-          // 薛寶釵專用的特殊屬性（轉為通用好感度）
           let val = (opt.effect.jinYu || 0) + (opt.effect.lengXiang || 0);
           favorability += val;
         }
