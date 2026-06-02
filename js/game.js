@@ -879,7 +879,11 @@ function changeMusic(fileName) {
 }
 
 function changeBackground(fileName) {
-  document.body.style.backgroundImage = `url('images/${fileName}')`;
+  if (fileName.startsWith("images/")) {
+    document.body.style.backgroundImage = `url('${fileName}')`;
+  } else {
+    document.body.style.backgroundImage = `url('images/${fileName}')`;
+  }
 }
 
 function renderQuiz() {
