@@ -962,8 +962,46 @@ function renderStory(role, nodeKey) {
   }
 
   // --- 結局判定邏輯 ---
-  if (node.isEnding) {
-    const nextNode = favorability >= 2 ? "happy_end" : "sad_end";
+  if (node.isEnding || nodeKey === "final_check") {
+    let nextNode = "sad_end"; // 預設值
+
+    // 1. 如果是 寶釵線 或 湘雲線 (使用 ending1 ~ ending4)
+    if (role === "baocha" || role === "xiangyun") {
+      const storyData = GAME_DATA.stories[role];
+      // 找出到底符合哪一個 ending 的條件
+      if (role === "baocha") {
+        // 這裡對應你原本寫在裡面的條件變數
+        // 為了簡化，直接用 favorability 分數來做相容判定
+        if (favorability >= 5) nextNode = "ending1";
+        else if (favorability >= 2) nextNode = "ending2";
+        else if (favorability >= 0) nextNode = "ending3";
+        else nextNode = "ending4";
+      } else if (role === "xiangyun") {
+        if (favorability >= 5) nextNode = "ending1";
+        else if (favorability >= 2) nextNode = "ending2";
+        else if (favorability >= 0) nextNode = "ending3";
+        else nextNode = "ending4";
+      }
+    }
+    // 2. 如果是 妙玉線
+    else if (role === "miaoyu") {
+      if (favorability >= 6) nextNode = "ending_3";
+      else if (favorability >= 3) nextNode = "ending_2";
+      else nextNode = "ending_1";
+    }
+    // 3. 如果是 襲人線 (他本來就沒有 isEnding，是直接呼叫 final_check 物件)
+    else if (role === "xiren") {
+      if (favorability >= 5) nextNode = "ending1";
+      else if (favorability >= 2) nextNode = "ending2";
+      else if (favorability >= 0) nextNode = "ending3";
+      else nextNode = "ending4";
+    }
+    // 4. 林黛玉 與 晴雯線 (標準 happy_end / sad_end)
+    else {
+      nextNode = favorability >= 2 ? "happy_end" : "sad_end";
+    }
+
+    // 1秒後流暢切換到對應結局
     setTimeout(() => renderStory(role, nextNode), 1000);
     return;
   }
