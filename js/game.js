@@ -2,7 +2,7 @@
 const GAME_DATA = {
   quizConfig: {
     music: "music.mp3",
-    bg: "dakuanyuan.png",
+    bg: "images/dakuanyuan.png",
   },
   quiz: [
     {
