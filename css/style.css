@@ -64,7 +64,7 @@ h1 {
    ========================================== */
 #character-box {
   position: absolute;
-  bottom: 50%;
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   height: 450px;
