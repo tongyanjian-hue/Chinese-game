@@ -2,7 +2,7 @@
 const GAME_DATA = {
   quizConfig: {
     music: "music.mp3",
-    bg: "dakuanyuan.png",
+    bg: "images/dakuanyuan.png",
   },
   quiz: [
     {
@@ -74,7 +74,7 @@ const GAME_DATA = {
             img: "daiyu.png",
           },
         ],
-        bg: "xiaoxiang.png",
+        bg: "images/xiaoxiang.png",
         img: "daiyu.png",
         options: [
           {
@@ -140,7 +140,7 @@ const GAME_DATA = {
       music: "music.mp3",
       start: {
         text: "你纔合上眼，便恍惚的睡去。自太虛幻境醒來後，襲人起身替你解懷整衣，無意間發現你的秘密，遂與你同領警幻所訊雲雨之事。",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xiren.png",
         options: [
           {
@@ -159,7 +159,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "某日，襲人向你提到：「如今我們家要來贖我，正是該叫去的，我去了，仍舊又有好的來，不是沒了我就使不得的。」，聽完她說的一席話，你心裏越發急了，淚痕滿面地說道：",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xirencry.png",
         options: [
           {
@@ -178,7 +178,7 @@ const GAME_DATA = {
       },
       scene3: {
         text: "這時，襲人接著說道：「我說出三件事來，你依了，那我便不走。其一，不許你毀僧謗道。第二，不許你信口胡說。第三，不許你再吃人嘴上胭脂。」聽完這番規勸，你說道：",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xirensmile.png",
         options: [
           {
@@ -197,7 +197,7 @@ const GAME_DATA = {
       },
       scene4: {
         text: "這日，姐妹們聚在怡紅院閒聊，襲人私下對湘雲和寶釵稱讚你，轉頭，卻正經地向你說道：「你也該常常會會這些為官作臣的，也好將來應酬事務。」說完，便憂心忡忡地看著你。此時你說到:",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xirenveryworry.png",
         options: [
           {
@@ -216,7 +216,7 @@ const GAME_DATA = {
       },
       scene5: {
         text: "端陽佳節，你心中悶悶不樂，忽見晴雯不小心跌折了扇子，你便發了脾氣，在一旁的襲人連连忙趕了過來勸架，你卻將怒氣發在她身上",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xirenworry.png",
         options: [
           {
@@ -235,7 +235,7 @@ const GAME_DATA = {
       },
       scene6: {
         text: "一日，寶玉被老爺訓斥一番，被打得皮開肉綻，襲人含淚坐在寶玉床邊經心服侍，整夜不敢闔眼。當你醒後，看到襲人在身旁，你虛弱地說：",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xirencry.png",
         options: [
           {
@@ -254,7 +254,7 @@ const GAME_DATA = {
       },
       scene7: {
         text: "壽怡紅群芳開夜宴，襲人抽到了桃花籤，題詞寫著：「竹外桃花三兩枝。」你看到這籤，打趣地說道：",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xiren.png",
         options: [
           {
@@ -273,7 +273,7 @@ const GAME_DATA = {
       },
       scene8: {
         text: "賈府敗落，襲人被迫外嫁蔣玉菡。臨走前的寒夜，她紅著眼眶，最後一次為你整理那件猩紅大氅。你走上前……",
-        bg: "yihongyuan.png",
+        bg: "images/yihongyuan.png",
         img: "xirencry.png",
         options: [
           {
@@ -320,7 +320,7 @@ const GAME_DATA = {
       music: "music.mp3",
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baochasmile.png",
         options: [
           {
@@ -339,7 +339,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "你忽然聞到一陣幽香，這並非衣服上的熏香，竟像是從骨子裡散出來的。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baochaserious.png",
         options: [
           {
@@ -358,7 +358,7 @@ const GAME_DATA = {
       },
       scene3: {
         text: "寶釵向你解釋《寄生草》的楚辭，念到：「赤條條，來去無牽掛。」聽完這楚辭，你說道：",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baochaserious.png",
         options: [
           {
@@ -377,7 +377,7 @@ const GAME_DATA = {
       },
       scene4: {
         text: "寶釵褪下左腕上的香串子，你在一旁看著那雪白的肐膊，空氣彷彿停止在一瞬間。",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baocha.png",
         options: [
           {
@@ -396,7 +396,7 @@ const GAME_DATA = {
       },
       scene5: {
         text: "寶釵語帶嚴肅地勸你與做官之人結為朋友，你接著說道：",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baochaserious.png",
         options: [
           {
@@ -416,7 +416,7 @@ const GAME_DATA = {
       scene6: {
         text: "你挨老爺一頓打後，寶釵托著一丸藥，眼眶微紅並說道：「別說老太太心疼，就是我們看著，心裏也…。」",
         img: "baochacry.png",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         options: [
           {
             text: "忍著痛，感動地說道：「今日姐姐為我落淚，我這頓挨打也無足歎惜了。」",
@@ -434,7 +434,7 @@ const GAME_DATA = {
       },
       scene7: {
         text: "寶釵在你的床旁邊繡鴛鴦，忽然間，你在夢中喊罵：「什麼『金玉姻緣！』我偏說『木石前盟！』」",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baochaserious.png",
         options: [
           {
@@ -453,7 +453,7 @@ const GAME_DATA = {
       },
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
-        bg: "hangwuyuan.png",
+        bg: "images/hangwuyuan.png",
         img: "baocha.png",
         options: [
           {
@@ -500,7 +500,7 @@ const GAME_DATA = {
       music: "music.mp3",
       start: {
         text: "你在清虛觀打醮，看中了一隻金麒麟，心裏想著：「正好與湘雲那只湊成一對。」",
-        bg: "xiaoxiang.png",
+        bg: "images/xiaoxiang.png",
         img: "xiangyun.png",
         options: [
           {
@@ -624,7 +624,7 @@ const GAME_DATA = {
       },
       scene8: {
         text: "賈府衰敗，湘雲被迫出嫁，多年後，你與她在江邊重逢，你看著她眼底蓄滿的淚水，迎著江風，你上前一步，開口的第一句話是：",
-        bg: "xiaoxiang.png",
+        bg: "images/xiaoxiang.png",
         img: "xiangyun.png",
         options: [
           {
@@ -678,7 +678,7 @@ const GAME_DATA = {
             img: "test.png",
           },
         ],
-        bg: "xiaoxiang.png",
+        bg: "images/xiaoxiang.png",
         img: "test.png",
         options: [
           {
@@ -757,7 +757,7 @@ const GAME_DATA = {
             img: "miaoyu_tea.png",
           },
         ],
-        bg: "longcui_gate.jpg",
+        bg: "images/longcui_gate.jpg",
         options: [
           {
             text: "妙玉親自捧了小茶盤，將平日自己吃茶的那隻綠玉斗斟與你。",
@@ -774,7 +774,7 @@ const GAME_DATA = {
             img: "miaoyu_tea.png",
           },
         ],
-        bg: "longcui_interior.jpg",
+        bg: "images/longcui_interior.jpg",
         img: "miaoyu_tea.png",
         options: [
           {
@@ -861,7 +861,7 @@ const GAME_DATA = {
             img: "miaoyu_plum.png",
           },
         ],
-        bg: "longcui_snow.jpg",
+        bg: "images/longcui_snow.jpg",
         img: "miaoyu_plum.png",
         options: [
           { text: "喚人向妙玉傳達來意", next: "plum_a", effect: { favor: 1 } },
