@@ -71,11 +71,11 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
-            img: "images/daiyu.png",
+            img: "daiyu.png",
           },
         ],
-        img: "images/daiyu.png",
         bg: "xiaoxiang.png",
+        img: "images/daiyu.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -95,7 +95,7 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
-            img: "images/daiyu.png",
+            img: "daiyu.png",
           },
         ],
         img: "images/daiyu.png",
@@ -115,7 +115,7 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
-            img: "images/happy_end.png",
+            img: "happy_end.png",
           },
         ],
         img: "images/happy_end.png",
@@ -127,7 +127,7 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
-            img: "images/sad_end.png",
+            img: "sad_end.png",
           },
         ],
         img: "images/sad_end.png",
@@ -291,6 +291,7 @@ const GAME_DATA = {
         ],
       },
       final_check: {
+        isEnding: true,
         ending1: {
           title: "桃紅柳綠",
           condition: "infatuation >= 6 && advise >= 5",
@@ -319,8 +320,8 @@ const GAME_DATA = {
       music: "music.mp3",
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
-        img: "images/baochasmile.png",
         bg: "hangwuyuan.png",
+        img: "images/baochasmile.png",
         options: [
           {
             text: "姐姐這鎖上的字，倒與我的玉是一對兒。",
@@ -338,8 +339,8 @@ const GAME_DATA = {
       },
       scene2: {
         text: "你忽然聞到一陣幽香，這並非衣服上的熏香，竟像是從骨子裡散出來的。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
-        img: "images/baochaserious.png",
         bg: "hangwuyuan.png",
+        img: "images/baochaserious.png",
         options: [
           {
             text: "你不理會黛玉的調侃，好奇地問寶姐姐：「這香氣實在奇特，姐姐是吃了什麼藥？教我也長長見識。」",
@@ -357,8 +358,8 @@ const GAME_DATA = {
       },
       scene3: {
         text: "寶釵向你解釋《寄生草》的楚辭，念到：「赤條條，來去無牽掛。」聽完這楚辭，你說道：",
-        img: "images/baochaserious.png",
         bg: "hangwuyuan.png",
+        img: "images/baochaserious.png",
         options: [
           {
             text: "姐姐才華洋溢，飽讀詩書，實在是無書不知啊。",
@@ -376,8 +377,8 @@ const GAME_DATA = {
       },
       scene4: {
         text: "寶釵褪下左腕上的香串子，你在一旁看著那雪白的肐膊，空氣彷彿停止在一瞬間。",
-        img: "images/baocha.png",
         bg: "hangwuyuan.png",
+        img: "images/baocha.png",
         options: [
           {
             text: "目不轉睛地盯著寶姐姐，悄悄說道：「若是長在林姑娘身上，說不定還能摸一摸。」",
@@ -395,8 +396,8 @@ const GAME_DATA = {
       },
       scene5: {
         text: "寶釵語帶嚴肅地勸你與做官之人結為朋友，你接著說道：",
-        img: "images/baochaserious.png",
         bg: "hangwuyuan.png",
+        img: "images/baochaserious.png",
         options: [
           {
             text: "既然是姐姐說的，我以後多留心便是了。",
@@ -433,8 +434,8 @@ const GAME_DATA = {
       },
       scene7: {
         text: "寶釵在你的床旁邊繡鴛鴦，忽然間，你在夢中喊罵：「什麼『金玉姻緣！』我偏說『木石前盟！』」",
-        img: "images/baochaserious.png",
         bg: "hangwuyuan.png",
+        img: "images/baochaserious.png",
         options: [
           {
             text: "醒後見她神色黯然，你假裝夢話為胡言亂語，溫柔地安撫她。",
@@ -452,8 +453,8 @@ const GAME_DATA = {
       },
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
-        img: "images/baocha.png",
         bg: "hangwuyuan.png",
+        img: "images/baocha.png",
         options: [
           {
             text: "既然金玉姻緣的命運是如此，往後餘生，我便真心相待。",
@@ -470,6 +471,7 @@ const GAME_DATA = {
         ],
       },
       final_check: {
+        isEnding: true,
         ending1: {
           title: "雪裡冷梅",
           condition: "jinYu >= 5 && lengXiang >= 10",
@@ -640,6 +642,7 @@ const GAME_DATA = {
         ],
       },
       final_check: {
+        isEnding: true,
         ending1: {
           title: "白首雙星",
           condition: "kylin >= 5 && mingshi >= 6",
@@ -1046,8 +1049,10 @@ function changeMusic(fileName) {
   const audio = document.getElementById("bg-music");
   if (!audio) return;
   const path = fileName.startsWith("sound/") ? fileName : `sound/${fileName}`;
+  if (audio.src.endsWith(path.split("/").pop()) && !audio.paused) return; // 同首曲不重播
   audio.src = path;
-  audio.play().catch((e) => console.log("等待玩家點擊後播放音樂"));
+  audio.currentTime = 0;
+  audio.play().catch((e) => console.log("音樂等待用戶互動後播放"));
 }
 
 function changeBackground(fileName) {
@@ -1150,11 +1155,13 @@ function renderDialogLine() {
   if (imgEl) {
     const imgSrc = line.img || null;
     if (imgSrc) {
-      // 支援帶路徑或裸檔名
-      imgEl.src =
-        imgSrc.startsWith("images/") || imgSrc.startsWith("http")
+      const resolvedImg =
+        imgSrc.startsWith("images/") ||
+        imgSrc.startsWith("http") ||
+        imgSrc.startsWith("./")
           ? imgSrc
           : `images/${imgSrc}`;
+      imgEl.src = resolvedImg;
       imgEl.style.display = "block";
     } else {
       imgEl.style.display = "none";
@@ -1275,72 +1282,77 @@ function renderStory(role, nodeKey) {
     return;
   }
 
-  if (nodeKey === "start") favorability = 0;
+  if (nodeKey === "start") {
+    favorability = 0;
+    roleScores = {};
+  }
 
   const node = GAME_DATA.stories[role][nodeKey];
   if (!node) {
-    console.error(`找不到劇情節點: role=${role}, nodeKey=${nodeKey}`);
+    console.error("找不到劇情節點: role=" + role + ", nodeKey=" + nodeKey);
     return;
   }
 
-  // --- 結局判定邏輯 ---
+  // ── 結局判定 ─────────────────────────────────────────────────
   if (node.isEnding) {
     let nextNode;
+
     if (typeof node.decide === "function") {
       // 妙玉線：自訂 decide()
       nextNode = node.decide();
     } else if (node.ending1) {
-      // 多結局格式（襲人／寶釵／湘雲）：遍歷 condition 字串
-      const sc = roleScores;
-      nextNode = "ending4"; // 預設最壞結局
+      // 多結局格式（襲人／寶釵／湘雲）：逐一判定 condition
+      nextNode = "ending4";
       for (const key of ["ending1", "ending2", "ending3", "ending4"]) {
-        if (!node[key]) continue;
-        // 把 condition 字串轉成 JS 執行
-        // condition 用到的變數名即 roleScores 的 key
+        const e = node[key];
+        if (!e || !e.condition) continue;
         try {
-          const vars = Object.entries(sc)
-            .map(([k, v]) => `const ${k}=${v}`)
-            .join(";");
-          if (eval(`${vars}; ${node[key].condition}`)) {
+          const sc = roleScores;
+          let condStr = e.condition;
+          // 把 roleScores 的 key 注入成區域變數
+          Object.entries(sc).forEach(([k, v]) => {
+            condStr = "var " + k + " = " + v + "; " + condStr;
+          });
+          if (Function('"use strict"; ' + condStr)()) {
             nextNode = key;
             break;
           }
-        } catch (e) {
-          /* skip */
+        } catch (err) {
+          /* condition 語法錯誤時跳過 */
         }
       }
     } else {
       // 簡單模式（黛玉／晴雯）
       nextNode = favorability >= 2 ? "happy_end" : "sad_end";
     }
-    setTimeout(() => renderStory(role, nextNode), 800);
+
+    setTimeout(function () {
+      renderStory(role, nextNode);
+    }, 400);
     return;
   }
-  // 多結局節點本身（ending1~4 物件，有 title + text）
-  if (node.title && node.text && !node.options) {
-    // 直接顯示為結局畫面，加重玩按鈕
+
+  // ── 多結局子節點（ending1~4，有 title 沒有 options）──────────
+  if (node.title && !node.options) {
     if (node.bg) changeBackground(node.bg);
     currentRole = role;
     currentNodeKey = nodeKey;
-    dialogLines = buildDialogLines(node);
+    dialogLines = [
+      { speaker: "✦ 結局", text: node.title, img: node.img || null },
+      { speaker: "旁白", text: node.text, img: node.img || null },
+    ];
     dialogIndex = 0;
-    // 在最後一行後注入重玩按鈕
     node._injectedRestart = true;
     renderDialogLine();
     return;
   }
 
-  // 更新背景
+  // ── 一般節點 ─────────────────────────────────────────────────
   if (node.bg) changeBackground(node.bg);
-
-  // 儲存目前狀態供對話框使用
   currentRole = role;
   currentNodeKey = nodeKey;
-
-  // 建立對話行陣列並從第 0 行開始
   dialogLines = buildDialogLines(node);
   dialogIndex = 0;
-
   renderDialogLine();
 }
 
