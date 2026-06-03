@@ -68,10 +68,14 @@ const GAME_DATA = {
       start: {
         text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
         lines: [
-          {speaker: "旁白", text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』", img: "images/daiyu.png"},
+          {
+            speaker: "旁白",
+            text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+            img: "images/daiyu.png",
+          },
         ],
-        bg: "xiaoxiang.png",
         img: "images/daiyu.png",
+        bg: "xiaoxiang.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -88,7 +92,11 @@ const GAME_DATA = {
       scene2: {
         text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
         lines: [
-          {speaker: "旁白", text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』", img: "images/daiyu.png"},
+          {
+            speaker: "旁白",
+            text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+            img: "images/daiyu.png",
+          },
         ],
         img: "images/daiyu.png",
         options: [
@@ -104,7 +112,11 @@ const GAME_DATA = {
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
         lines: [
-          {speaker: "旁白", text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。", img: "images/happy_end.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
+            img: "images/happy_end.png",
+          },
         ],
         img: "images/happy_end.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
@@ -112,7 +124,11 @@ const GAME_DATA = {
       sad_end: {
         text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
         lines: [
-          {speaker: "旁白", text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。", img: "images/sad_end.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【終身誤】你的猶豫讓她傷透了心，最終她焚稿斷癡情，魂歸離恨天。遊戲結束。",
+            img: "images/sad_end.png",
+          },
         ],
         img: "images/sad_end.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
@@ -303,8 +319,8 @@ const GAME_DATA = {
       music: "music.mp3",
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
-        bg: "hangwuyuan.png",
         img: "images/baochasmile.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "姐姐這鎖上的字，倒與我的玉是一對兒。",
@@ -322,8 +338,8 @@ const GAME_DATA = {
       },
       scene2: {
         text: "你忽然聞到一陣幽香，這並非衣服上的熏香，竟像是從骨子裡散出來的。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
-        bg: "hangwuyuan.png",
         img: "images/baochaserious.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "你不理會黛玉的調侃，好奇地問寶姐姐：「這香氣實在奇特，姐姐是吃了什麼藥？教我也長長見識。」",
@@ -341,8 +357,8 @@ const GAME_DATA = {
       },
       scene3: {
         text: "寶釵向你解釋《寄生草》的楚辭，念到：「赤條條，來去無牽掛。」聽完這楚辭，你說道：",
-        bg: "hangwuyuan.png",
         img: "images/baochaserious.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "姐姐才華洋溢，飽讀詩書，實在是無書不知啊。",
@@ -360,8 +376,8 @@ const GAME_DATA = {
       },
       scene4: {
         text: "寶釵褪下左腕上的香串子，你在一旁看著那雪白的肐膊，空氣彷彿停止在一瞬間。",
-        bg: "hangwuyuan.png",
         img: "images/baocha.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "目不轉睛地盯著寶姐姐，悄悄說道：「若是長在林姑娘身上，說不定還能摸一摸。」",
@@ -379,8 +395,8 @@ const GAME_DATA = {
       },
       scene5: {
         text: "寶釵語帶嚴肅地勸你與做官之人結為朋友，你接著說道：",
-        bg: "hangwuyuan.png",
         img: "images/baochaserious.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "既然是姐姐說的，我以後多留心便是了。",
@@ -417,8 +433,8 @@ const GAME_DATA = {
       },
       scene7: {
         text: "寶釵在你的床旁邊繡鴛鴦，忽然間，你在夢中喊罵：「什麼『金玉姻緣！』我偏說『木石前盟！』」",
-        bg: "hangwuyuan.png",
         img: "images/baochaserious.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "醒後見她神色黯然，你假裝夢話為胡言亂語，溫柔地安撫她。",
@@ -436,8 +452,8 @@ const GAME_DATA = {
       },
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
-        bg: "hangwuyuan.png",
         img: "images/baocha.png",
+        bg: "hangwuyuan.png",
         options: [
           {
             text: "既然金玉姻緣的命運是如此，往後餘生，我便真心相待。",
@@ -653,7 +669,11 @@ const GAME_DATA = {
       start: {
         text: "【怡紅院】晴雯正坐在榻上嗑瓜子，見你進來，冷哼一聲：『二爺可回來了，今兒又是哪位姑娘留你喝茶了？』",
         lines: [
-          {speaker: "旁白", text: "【怡紅院】晴雯正坐在榻上嗑瓜子，見你進來，冷哼一聲：『二爺可回來了，今兒又是哪位姑娘留你喝茶了？』", img: "test.png"},
+          {
+            speaker: "旁白",
+            text: "【怡紅院】晴雯正坐在榻上嗑瓜子，見你進來，冷哼一聲：『二爺可回來了，今兒又是哪位姑娘留你喝茶了？』",
+            img: "test.png",
+          },
         ],
         bg: "xiaoxiang.png",
         img: "test.png",
@@ -673,7 +693,11 @@ const GAME_DATA = {
       scene2: {
         text: "晴雯一不小心把扇子跌在地上跌折了骨子，冷笑道：『嫌我笨，就把我打發了去！』",
         lines: [
-          {speaker: "旁白", text: "晴雯一不小心把扇子跌在地上跌折了骨子，冷笑道：『嫌我笨，就把我打發了去！』", img: "test.png"},
+          {
+            speaker: "旁白",
+            text: "晴雯一不小心把扇子跌在地上跌折了骨子，冷笑道：『嫌我笨，就把我打發了去！』",
+            img: "test.png",
+          },
         ],
         img: "test.png",
         options: [
@@ -693,7 +717,11 @@ const GAME_DATA = {
       happy_end: {
         text: "結局：【芙蓉女兒誄】你用包容呵護了她的高傲，她成為了你心中最美的芙蓉仙子。遊戲結束。",
         lines: [
-          {speaker: "旁白", text: "結局：【芙蓉女兒誄】你用包容呵護了她的高傲，她成為了你心中最美的芙蓉仙子。遊戲結束。", img: "test.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【芙蓉女兒誄】你用包容呵護了她的高傲，她成為了你心中最美的芙蓉仙子。遊戲結束。",
+            img: "test.png",
+          },
         ],
         img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
@@ -701,7 +729,11 @@ const GAME_DATA = {
       sad_end: {
         text: "結局：【霽月難逢】晴雯病重被逐，最終抱恨夭亡。你只能看著枯萎的芙蓉花痛哭。遊戲結束。",
         lines: [
-          {speaker: "旁白", text: "結局：【霽月難逢】晴雯病重被逐，最終抱恨夭亡。你只能看著枯萎的芙蓉花痛哭。遊戲結束。", img: "test.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【霽月難逢】晴雯病重被逐，最終抱恨夭亡。你只能看著枯萎的芙蓉花痛哭。遊戲結束。",
+            img: "test.png",
+          },
         ],
         img: "test.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
@@ -716,7 +748,11 @@ const GAME_DATA = {
       start: {
         text: "賈母等人帶了劉姥姥至櫳翠庵來，只見妙玉親自捧了小茶盤，裡面放一個成窯五彩小蓋鍾，捧與賈母。賈母吃了半盞，笑著遞與劉姥姥，眾人後笑了起來。那妙玉便把寶釵黛玉的衣襟一拉，二人隨他出去。寶玉便輕輕走進來，笑道：「你們吃己茶呢。」妙玉剛要去取杯，只見道婆收了上面茶盞來，忙命：「將那成窯的茶杯別收了，擱在外頭去罷。」寶玉會意，知為劉姥姥吃了，他嫌腌臢，不要了。又見妙玉另拿出兩隻杯奇珍古玩之杯與黛玉和寶釵，仍將前番自己常日吃茶的那隻綠玉斗來斟與寶玉。",
         lines: [
-          {speaker: "旁白", text: "賈母等人帶了劉姥姥至櫳翠庵來，只見妙玉親自捧了小茶盤，裡面放一個成窯五彩小蓋鍾，捧與賈母。賈母吃了半盞，笑著遞與劉姥姥，眾人後笑了起來。那妙玉便把寶釵黛玉的衣襟一拉，二人隨他出去。寶玉便輕輕走進來，笑道：「你們吃己茶呢。」妙玉剛要去取杯，只見道婆收了上面茶盞來，忙命：「將那成窯的茶杯別收了，擱在外頭去罷。」寶玉會意，知為劉姥姥吃了，他嫌腌臢，不要了。又見妙玉另拿出兩隻杯奇珍古玩之杯與黛玉和寶釵，仍將前番自己常日吃茶的那隻綠玉斗來斟與寶玉。", img: "miaoyu_tea.png"},
+          {
+            speaker: "旁白",
+            text: "賈母等人帶了劉姥姥至櫳翠庵來，只見妙玉親自捧了小茶盤，裡面放一個成窯五彩小蓋鍾，捧與賈母。賈母吃了半盞，笑著遞與劉姥姥，眾人後笑了起來。那妙玉便把寶釵黛玉的衣襟一拉，二人隨他出去。寶玉便輕輕走進來，笑道：「你們吃己茶呢。」妙玉剛要去取杯，只見道婆收了上面茶盞來，忙命：「將那成窯的茶杯別收了，擱在外頭去罷。」寶玉會意，知為劉姥姥吃了，他嫌腌臢，不要了。又見妙玉另拿出兩隻杯奇珍古玩之杯與黛玉和寶釵，仍將前番自己常日吃茶的那隻綠玉斗來斟與寶玉。",
+            img: "miaoyu_tea.png",
+          },
         ],
         bg: "longcui_gate.jpg",
         options: [
@@ -729,7 +765,11 @@ const GAME_DATA = {
       tea_event_actual: {
         text: "【你笑道：「常言『世法平等』。他兩個就用那樣古玩奇珍，我就是個俗器了。」妙玉道：「這是俗器？不是我說狂話：只怕你家裡未必找的出這麼一個俗器來呢。」此時你說：",
         lines: [
-          {speaker: "旁白", text: "【你笑道：「常言『世法平等』。他兩個就用那樣古玩奇珍，我就是個俗器了。」妙玉道：「這是俗器？不是我說狂話：只怕你家裡未必找的出這麼一個俗器來呢。」此時你說：", img: "miaoyu_tea.png"},
+          {
+            speaker: "旁白",
+            text: "【你笑道：「常言『世法平等』。他兩個就用那樣古玩奇珍，我就是個俗器了。」妙玉道：「這是俗器？不是我說狂話：只怕你家裡未必找的出這麼一個俗器來呢。」此時你說：",
+            img: "miaoyu_tea.png",
+          },
         ],
         bg: "longcui_interior.jpg",
         img: "miaoyu_tea.png",
@@ -749,7 +789,11 @@ const GAME_DATA = {
       tea_choice_a: {
         text: "妙玉聽如此說，十分歡喜，遂又尋出一隻九曲十環出來，笑道：「就剩了這一個。你可吃的了這一海？」寶玉喜的忙道：「吃的了。」妙玉笑道：「你雖吃的了，也沒這些茶你糟蹋！豈不聞『一杯為品，二杯即是解渴的蠢物，三杯便是飲驢了？』你吃這一海，更成什麼？」",
         lines: [
-          {speaker: "旁白", text: "妙玉聽如此說，十分歡喜，遂又尋出一隻九曲十環出來，笑道：「就剩了這一個。你可吃的了這一海？」寶玉喜的忙道：「吃的了。」妙玉笑道：「你雖吃的了，也沒這些茶你糟蹋！豈不聞『一杯為品，二杯即是解渴的蠢物，三杯便是飲驢了？』你吃這一海，更成什麼？」", img: null},
+          {
+            speaker: "旁白",
+            text: "妙玉聽如此說，十分歡喜，遂又尋出一隻九曲十環出來，笑道：「就剩了這一個。你可吃的了這一海？」寶玉喜的忙道：「吃的了。」妙玉笑道：「你雖吃的了，也沒這些茶你糟蹋！豈不聞『一杯為品，二杯即是解渴的蠢物，三杯便是飲驢了？』你吃這一海，更成什麼？」",
+            img: null,
+          },
         ],
         options: [
           {
@@ -767,7 +811,11 @@ const GAME_DATA = {
       tea_choice_b: {
         text: "妙玉道：「剩一海你可吃？」寶玉喜的忙道：「吃的了。」妙玉：「不能給你吃，誰讓你道我的綠玉斗為俗器呢？」",
         lines: [
-          {speaker: "旁白", text: "妙玉道：「剩一海你可吃？」寶玉喜的忙道：「吃的了。」妙玉：「不能給你吃，誰讓你道我的綠玉斗為俗器呢？」", img: null},
+          {
+            speaker: "旁白",
+            text: "妙玉道：「剩一海你可吃？」寶玉喜的忙道：「吃的了。」妙玉：「不能給你吃，誰讓你道我的綠玉斗為俗器呢？」",
+            img: null,
+          },
         ],
         options: [
           {
@@ -781,7 +829,11 @@ const GAME_DATA = {
       cup_event: {
         text: "吃茶後你想到劉姥姥用過的茶杯丟了可惜，你對妙玉說：",
         lines: [
-          {speaker: "旁白", text: "吃茶後你想到劉姥姥用過的茶杯丟了可惜，你對妙玉說：", img: null},
+          {
+            speaker: "旁白",
+            text: "吃茶後你想到劉姥姥用過的茶杯丟了可惜，你對妙玉說：",
+            img: null,
+          },
         ],
         options: [
           {
@@ -800,7 +852,11 @@ const GAME_DATA = {
       plum_event: {
         text: "【乞梅】冬日紅梅傲雪，你來到櫳翠庵門前，想向妙玉乞紅梅。",
         lines: [
-          {speaker: "旁白", text: "【乞梅】冬日紅梅傲雪，你來到櫳翠庵門前，想向妙玉乞紅梅。", img: "miaoyu_plum.png"},
+          {
+            speaker: "旁白",
+            text: "【乞梅】冬日紅梅傲雪，你來到櫳翠庵門前，想向妙玉乞紅梅。",
+            img: "miaoyu_plum.png",
+          },
         ],
         bg: "longcui_snow.jpg",
         img: "miaoyu_plum.png",
@@ -812,7 +868,11 @@ const GAME_DATA = {
       plum_a: {
         text: "小兒傳達師傅問為何要梅？你答道：",
         lines: [
-          {speaker: "旁白", text: "小兒傳達師傅問為何要梅？你答道：", img: null},
+          {
+            speaker: "旁白",
+            text: "小兒傳達師傅問為何要梅？你答道：",
+            img: null,
+          },
         ],
         options: [
           { text: "如實交代來意。", next: "plum_result", effect: { favor: 0 } },
@@ -826,7 +886,11 @@ const GAME_DATA = {
       plum_b: {
         text: "妙玉道：『你來此有何事？』你答道：",
         lines: [
-          {speaker: "旁白", text: "妙玉道：『你來此有何事？』你答道：", img: null},
+          {
+            speaker: "旁白",
+            text: "妙玉道：『你來此有何事？』你答道：",
+            img: null,
+          },
         ],
         options: [
           { text: "如實交代來意。", next: "plum_result", effect: { favor: 0 } },
@@ -840,7 +904,11 @@ const GAME_DATA = {
       plum_result: {
         text: "妙玉聽罷，親自挑選一支紅梅贈與你。你欣然收下。",
         lines: [
-          {speaker: "旁白", text: "妙玉聽罷，親自挑選一支紅梅贈與你。你欣然收下。", img: null},
+          {
+            speaker: "旁白",
+            text: "妙玉聽罷，親自挑選一支紅梅贈與你。你欣然收下。",
+            img: null,
+          },
         ],
         options: [
           { text: "時光飛逝，到了寶玉生日當天...", next: "birthday_event" },
@@ -850,7 +918,11 @@ const GAME_DATA = {
       birthday_event: {
         text: "【生日】你收到一張粉紅箋紙，上面寫著：『檻外人妙玉恭肅遙叩芳辰。』你忙尋找岫煙請教如何回帖。",
         lines: [
-          {speaker: "旁白", text: "【生日】你收到一張粉紅箋紙，上面寫著：『檻外人妙玉恭肅遙叩芳辰。』你忙尋找岫煙請教如何回帖。", img: null},
+          {
+            speaker: "旁白",
+            text: "【生日】你收到一張粉紅箋紙，上面寫著：『檻外人妙玉恭肅遙叩芳辰。』你忙尋找岫煙請教如何回帖。",
+            img: null,
+          },
         ],
         options: [
           {
@@ -868,7 +940,11 @@ const GAME_DATA = {
       birthday_reply: {
         text: "岫煙聽了，這才告訴你回帖當自稱『檻內人』。你如獲至寶，親自回帖投進櫳翠庵。",
         lines: [
-          {speaker: "旁白", text: "岫煙聽了，這才告訴你回帖當自稱『檻內人』。你如獲至寶，親自回帖投進櫳翠庵。", img: null},
+          {
+            speaker: "旁白",
+            text: "岫煙聽了，這才告訴你回帖當自稱『檻內人』。你如獲至寶，親自回帖投進櫳翠庵。",
+            img: null,
+          },
         ],
         options: [{ text: "命運之日終將到來...", next: "final_check" }],
       },
@@ -876,7 +952,11 @@ const GAME_DATA = {
         isEnding: true,
         text: "（命運判定中...）",
         lines: [
-          {speaker: "旁白", text: "（命運判定中...）", img: "miaoyu_end1.png"},
+          {
+            speaker: "旁白",
+            text: "（命運判定中...）",
+            img: "miaoyu_end1.png",
+          },
         ],
         decide: () => {
           if (cupChoice === "A") {
@@ -889,7 +969,11 @@ const GAME_DATA = {
       ending_1: {
         text: "結局：【入紅塵俗世】\n賈府被抄家後，妙玉為生活被迫再次面對骯髒醜陋的俗世。兩人此後再無交集。",
         lines: [
-          {speaker: "旁白", text: "結局：【入紅塵俗世】賈府被抄家後，妙玉為生活被迫再次面對骯髒醜陋的俗世。兩人此後再無交集。", img: "miaoyu_end1.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【入紅塵俗世】賈府被抄家後，妙玉為生活被迫再次面對骯髒醜陋的俗世。兩人此後再無交集。",
+            img: "miaoyu_end1.png",
+          },
         ],
         img: "miaoyu_end1.png",
         options: [{ text: "重玩", next: "restart" }],
@@ -897,7 +981,11 @@ const GAME_DATA = {
       ending_2: {
         text: "結局：【為救寶玉從順親王】\n你深陷牢獄之災，妙玉攜平日收於暗處之財，自願獻身順親王，換得你的自由。",
         lines: [
-          {speaker: "旁白", text: "結局：【為救寶玉從順親王】你深陷牢獄之災，妙玉攜平日收於暗處之財，自願獻身順親王，換得你的自由。", img: "miaoyu_end2.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【為救寶玉從順親王】你深陷牢獄之災，妙玉攜平日收於暗處之財，自願獻身順親王，換得你的自由。",
+            img: "miaoyu_end2.png",
+          },
         ],
         img: "miaoyu_end2.png",
         options: [{ text: "重玩", next: "restart" }],
@@ -905,7 +993,11 @@ const GAME_DATA = {
       ending_3: {
         text: "結局：【與君訣別】\n妙玉悟透繁華終是一場空。欲行之日，兩人知心一會，此後妙玉深山修行，坐化而終。",
         lines: [
-          {speaker: "旁白", text: "結局：【與君訣別】妙玉悟透繁華終是一場空。欲行之日，兩人知心一會，此後妙玉深山修行，坐化而終。", img: "miaoyu_end3.png"},
+          {
+            speaker: "旁白",
+            text: "結局：【與君訣別】妙玉悟透繁華終是一場空。欲行之日，兩人知心一會，此後妙玉深山修行，坐化而終。",
+            img: "miaoyu_end3.png",
+          },
         ],
         img: "miaoyu_end3.png",
         options: [{ text: "重玩", next: "restart" }],
@@ -921,8 +1013,8 @@ let userChoices = [];
 let favorability = 0;
 
 // 各角色線專用分數
-let roleScores = {};  // e.g. { infatuation: 0, advise: 0 }
-let cupChoice = "";   // 妙玉線茶杯選擇
+let roleScores = {}; // e.g. { infatuation: 0, advise: 0 }
+let cupChoice = ""; // 妙玉線茶杯選擇
 
 function initGame() {
   currentStep = 0;
@@ -960,9 +1052,10 @@ function changeMusic(fileName) {
 
 function changeBackground(fileName) {
   // Support both bare filenames and paths that already include a folder
-  const path = (fileName.startsWith("images/") || fileName.startsWith("http"))
-    ? fileName
-    : `images/${fileName}`;
+  const path =
+    fileName.startsWith("images/") || fileName.startsWith("http")
+      ? fileName
+      : `images/${fileName}`;
   document.body.style.backgroundImage = `url('${path}')`;
 }
 
@@ -1028,10 +1121,10 @@ function determineRole() {
 }
 
 // --- 對話框模式狀態 ---
-let dialogLines = [];      // 目前節點的對話行陣列
-let dialogIndex = 0;       // 目前顯示到第幾行
-let currentRole = "";      // 目前角色
-let currentNodeKey = "";   // 目前節點
+let dialogLines = []; // 目前節點的對話行陣列
+let dialogIndex = 0; // 目前顯示到第幾行
+let currentRole = ""; // 目前角色
+let currentNodeKey = ""; // 目前節點
 let _typewriterTimer = null; // 打字機計時器 ID
 
 /**
@@ -1058,8 +1151,10 @@ function renderDialogLine() {
     const imgSrc = line.img || null;
     if (imgSrc) {
       // 支援帶路徑或裸檔名
-      imgEl.src = (imgSrc.startsWith("images/") || imgSrc.startsWith("http"))
-        ? imgSrc : `images/${imgSrc}`;
+      imgEl.src =
+        imgSrc.startsWith("images/") || imgSrc.startsWith("http")
+          ? imgSrc
+          : `images/${imgSrc}`;
       imgEl.style.display = "block";
     } else {
       imgEl.style.display = "none";
@@ -1087,7 +1182,7 @@ function renderDialogLine() {
     nextBtn.innerText = "繼續 ▶";
     nextBtn.className = "btn-next";
     nextBtn.onclick = () => {
-      cancelTypewriter();  // 取消上一行的打字機
+      cancelTypewriter(); // 取消上一行的打字機
       dialogIndex++;
       renderDialogLine();
     };
@@ -1117,13 +1212,20 @@ function renderDialogLine() {
           }
           // 2. effect 物件（妙玉 favor）
           else if (opt.effect && typeof opt.effect === "object") {
-            favorability += (opt.effect.favor || 0);
+            favorability += opt.effect.favor || 0;
           }
           // 3. 直接寫在選項上的 favor（妙玉舊格式）
           if (typeof opt.favor === "number") favorability += opt.favor;
 
           // 4. 各角色線專用分數（襲人／寶釵／湘雲）
-          const roleFields = ["infatuation","advise","jinYu","lengXiang","kylin","mingshi"];
+          const roleFields = [
+            "infatuation",
+            "advise",
+            "jinYu",
+            "lengXiang",
+            "kylin",
+            "mingshi",
+          ];
           for (const field of roleFields) {
             if (typeof opt[field] === "number") {
               roleScores[field] = (roleScores[field] || 0) + opt[field];
@@ -1191,17 +1293,21 @@ function renderStory(role, nodeKey) {
       // 多結局格式（襲人／寶釵／湘雲）：遍歷 condition 字串
       const sc = roleScores;
       nextNode = "ending4"; // 預設最壞結局
-      for (const key of ["ending1","ending2","ending3","ending4"]) {
+      for (const key of ["ending1", "ending2", "ending3", "ending4"]) {
         if (!node[key]) continue;
         // 把 condition 字串轉成 JS 執行
         // condition 用到的變數名即 roleScores 的 key
         try {
-          const vars = Object.entries(sc).map(([k,v])=>`const ${k}=${v}`).join(";");
+          const vars = Object.entries(sc)
+            .map(([k, v]) => `const ${k}=${v}`)
+            .join(";");
           if (eval(`${vars}; ${node[key].condition}`)) {
             nextNode = key;
             break;
           }
-        } catch(e) { /* skip */ }
+        } catch (e) {
+          /* skip */
+        }
       }
     } else {
       // 簡單模式（黛玉／晴雯）
