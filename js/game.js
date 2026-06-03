@@ -75,7 +75,7 @@ const GAME_DATA = {
           },
         ],
         bg: "xiaoxiang.png",
-        img: "images/daiyu.png",
+        img: "daiyu.png",
         options: [
           {
             text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
@@ -98,7 +98,7 @@ const GAME_DATA = {
             img: "daiyu.png",
           },
         ],
-        img: "images/daiyu.png",
+        img: "daiyu.png",
         options: [
           { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
           {
@@ -118,7 +118,7 @@ const GAME_DATA = {
             img: "happy_end.png",
           },
         ],
-        img: "images/happy_end.png",
+        img: "happy_end.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
       sad_end: {
@@ -130,7 +130,7 @@ const GAME_DATA = {
             img: "sad_end.png",
           },
         ],
-        img: "images/sad_end.png",
+        img: "sad_end.png",
         options: [{ text: "重玩遊戲", next: "restart" }],
       },
     },
@@ -141,7 +141,7 @@ const GAME_DATA = {
       start: {
         text: "你纔合上眼，便恍惚的睡去。自太虛幻境醒來後，襲人起身替你解懷整衣，無意間發現你的秘密，遂與你同領警幻所訊雲雨之事。",
         bg: "yihongyuan.png",
-        img: "images/xiren.png",
+        img: "xiren.png",
         options: [
           {
             text: "好姐姐，今日之事只有我倆知曉，萬萬不能告訴別人。",
@@ -160,7 +160,7 @@ const GAME_DATA = {
       scene2: {
         text: "某日，襲人向你提到：「如今我們家要來贖我，正是該叫去的，我去了，仍舊又有好的來，不是沒了我就使不得的。」，聽完她說的一席話，你心裏越發急了，淚痕滿面地說道：",
         bg: "yihongyuan.png",
-        img: "images/xirencry.png",
+        img: "xirencry.png",
         options: [
           {
             text: "「你要是走了，我便出家當和尚去。」說完，你緊緊拉著她的衣襟。",
@@ -179,7 +179,7 @@ const GAME_DATA = {
       scene3: {
         text: "這時，襲人接著說道：「我說出三件事來，你依了，那我便不走。其一，不許你毀僧謗道。第二，不許你信口胡說。第三，不許你再吃人嘴上胭脂。」聽完這番規勸，你說道：",
         bg: "yihongyuan.png",
-        img: "images/xirensmile.png",
+        img: "xirensmile.png",
         options: [
           {
             text: "只要你肯留下，我什麼都答應你。",
@@ -198,7 +198,7 @@ const GAME_DATA = {
       scene4: {
         text: "這日，姐妹們聚在怡紅院閒聊，襲人私下對湘雲和寶釵稱讚你，轉頭，卻正經地向你說道：「你也該常常會會這些為官作臣的，也好將來應酬事務。」說完，便憂心忡忡地看著你。此時你說到:",
         bg: "yihongyuan.png",
-        img: "images/xirenveryworry.png",
+        img: "xirenveryworry.png",
         options: [
           {
             text: "我知道你是為我好，擇日我便試著去見見那些人罷了。",
@@ -217,7 +217,7 @@ const GAME_DATA = {
       scene5: {
         text: "端陽佳節，你心中悶悶不樂，忽見晴雯不小心跌折了扇子，你便發了脾氣，在一旁的襲人連连忙趕了過來勸架，你卻將怒氣發在她身上",
         bg: "yihongyuan.png",
-        img: "images/xirenworry.png",
+        img: "xirenworry.png",
         options: [
           {
             text: "看著襲人委屈落淚，你立刻上前抱住她並說道：「是我不好，一時沖昏了頭。」",
@@ -236,7 +236,7 @@ const GAME_DATA = {
       scene6: {
         text: "一日，寶玉被老爺訓斥一番，被打得皮開肉綻，襲人含淚坐在寶玉床邊經心服侍，整夜不敢闔眼。當你醒後，看到襲人在身旁，你虛弱地說：",
         bg: "yihongyuan.png",
-        img: "images/xirencry.png",
+        img: "xirencry.png",
         options: [
           {
             text: "姐姐辛苦了，快來我床邊歇息一會兒。",
@@ -255,7 +255,7 @@ const GAME_DATA = {
       scene7: {
         text: "壽怡紅群芳開夜宴，襲人抽到了桃花籤，題詞寫著：「竹外桃花三兩枝。」你看到這籤，打趣地說道：",
         bg: "yihongyuan.png",
-        img: "images/xiren.png",
+        img: "xiren.png",
         options: [
           {
             text: "姐姐就是這園裡的春色，有妳在，這大觀園才像個家。",
@@ -274,7 +274,7 @@ const GAME_DATA = {
       scene8: {
         text: "賈府敗落，襲人被迫外嫁蔣玉菡。臨走前的寒夜，她紅著眼眶，最後一次為你整理那件猩紅大氅。你走上前……",
         bg: "yihongyuan.png",
-        img: "images/xirencry.png",
+        img: "xirencry.png",
         options: [
           {
             text: "輕輕地握住她冰冷的手，哽煙地說道：「好姐姐，這園子散了，以後再也沒人像你這般照顧我了。」",
@@ -321,7 +321,7 @@ const GAME_DATA = {
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
         bg: "hangwuyuan.png",
-        img: "images/baochasmile.png",
+        img: "baochasmile.png",
         options: [
           {
             text: "姐姐這鎖上的字，倒與我的玉是一對兒。",
@@ -340,7 +340,7 @@ const GAME_DATA = {
       scene2: {
         text: "你忽然聞到一陣幽香，這並非衣服上的熏香，竟像是從骨子裡散出來的。此時，黛玉走進房，見你們挨得近，冷笑道：「我的奇香有什麼好的，不如寶姐姐那冷香配著你那暖香。」",
         bg: "hangwuyuan.png",
-        img: "images/baochaserious.png",
+        img: "baochaserious.png",
         options: [
           {
             text: "你不理會黛玉的調侃，好奇地問寶姐姐：「這香氣實在奇特，姐姐是吃了什麼藥？教我也長長見識。」",
@@ -359,7 +359,7 @@ const GAME_DATA = {
       scene3: {
         text: "寶釵向你解釋《寄生草》的楚辭，念到：「赤條條，來去無牽掛。」聽完這楚辭，你說道：",
         bg: "hangwuyuan.png",
-        img: "images/baochaserious.png",
+        img: "baochaserious.png",
         options: [
           {
             text: "姐姐才華洋溢，飽讀詩書，實在是無書不知啊。",
@@ -378,7 +378,7 @@ const GAME_DATA = {
       scene4: {
         text: "寶釵褪下左腕上的香串子，你在一旁看著那雪白的肐膊，空氣彷彿停止在一瞬間。",
         bg: "hangwuyuan.png",
-        img: "images/baocha.png",
+        img: "baocha.png",
         options: [
           {
             text: "目不轉睛地盯著寶姐姐，悄悄說道：「若是長在林姑娘身上，說不定還能摸一摸。」",
@@ -397,7 +397,7 @@ const GAME_DATA = {
       scene5: {
         text: "寶釵語帶嚴肅地勸你與做官之人結為朋友，你接著說道：",
         bg: "hangwuyuan.png",
-        img: "images/baochaserious.png",
+        img: "baochaserious.png",
         options: [
           {
             text: "既然是姐姐說的，我以後多留心便是了。",
@@ -415,7 +415,7 @@ const GAME_DATA = {
       },
       scene6: {
         text: "你挨老爺一頓打後，寶釵托著一丸藥，眼眶微紅並說道：「別說老太太心疼，就是我們看著，心裏也…。」",
-        img: "images/baochacry.png",
+        img: "baochacry.png",
         bg: "hangwuyuan.png",
         options: [
           {
@@ -435,7 +435,7 @@ const GAME_DATA = {
       scene7: {
         text: "寶釵在你的床旁邊繡鴛鴦，忽然間，你在夢中喊罵：「什麼『金玉姻緣！』我偏說『木石前盟！』」",
         bg: "hangwuyuan.png",
-        img: "images/baochaserious.png",
+        img: "baochaserious.png",
         options: [
           {
             text: "醒後見她神色黯然，你假裝夢話為胡言亂語，溫柔地安撫她。",
@@ -454,7 +454,7 @@ const GAME_DATA = {
       scene8: {
         text: "大婚當天，你揭開蓋頭，紅燭搖曳，你發現新娘是寶釵。",
         bg: "hangwuyuan.png",
-        img: "images/baocha.png",
+        img: "baocha.png",
         options: [
           {
             text: "既然金玉姻緣的命運是如此，往後餘生，我便真心相待。",
@@ -501,7 +501,7 @@ const GAME_DATA = {
       start: {
         text: "你在清虛觀打醮，看中了一隻金麒麟，心裏想著：「正好與湘雲那只湊成一對。」",
         bg: "xiaoxiang.png",
-        img: "images/xiangyun.png",
+        img: "xiangyun.png",
         options: [
           {
             text: "這東西既然與你的成雙，想必我們之間必有著無法切斷的緣分",
@@ -519,7 +519,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "你看著湘雲穿著你的袍子，扮作小子樣兒，在大觀園裡大搖大擺地走著。",
-        img: "images/xiangyun.png",
+        img: "xiangyun.png",
         options: [
           {
             text: "拍手叫好，說道：「雲妹妹這般打扮，真像個俊俏的小後生！」",
@@ -554,7 +554,7 @@ const GAME_DATA = {
       },
       scene4: {
         text: "某日下了大雪，湘雲提議到蘆雪亭烤鹿肉吃，說完便自個兒往亭子走去。",
-        img: "images/xiangyun.png",
+        img: "xiangyun.png",
         options: [
           {
             text: "你聽著湘雲說道：「這才叫大快朵頤，什麼大家閨秀的禮教，我才不管！」",
@@ -589,7 +589,7 @@ const GAME_DATA = {
       },
       scene6: {
         text: "中秋之夜，湘雲與你在水邊聯詩，她吟出「寒塘渡鶴影」。",
-        img: "images/xiangyun.png",
+        img: "xiangyun.png",
         options: [
           {
             text: "你思索了一番，接出下一段淒美的詩句，與她談論人生的悲滄。",
@@ -625,7 +625,7 @@ const GAME_DATA = {
       scene8: {
         text: "賈府衰敗，湘雲被迫出嫁，多年後，你與她在江邊重逢，你看著她眼底蓄滿的淚水，迎著江風，你上前一步，開口的第一句話是：",
         bg: "xiaoxiang.png",
-        img: "images/xiangyun.png",
+        img: "xiangyun.png",
         options: [
           {
             text: "雲妹妹，這麒麟使我們再次相遇，命運兜兜轉轉，終究沒能把我們分開。",
@@ -1060,7 +1060,7 @@ function changeBackground(fileName) {
   const path =
     fileName.startsWith("images/") || fileName.startsWith("http")
       ? fileName
-      : `images/${fileName}`;
+      : `1s/${fileName}`;
   document.body.style.backgroundImage = `url('${path}')`;
 }
 
