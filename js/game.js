@@ -66,11 +66,11 @@ const GAME_DATA = {
       name: "林黛玉",
       music: "music.mp3",
       start: {
-        text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+        text: "識金鎖與金麒麟",
         lines: [
           {
             speaker: "旁白",
-            text: "【瀟湘館】黛玉正低頭葬花，見你來了，冷笑一聲：『你這會子來做什麼？不去找你的寶姐姐？』",
+            text: "一日寶玉來至梨香院，寶釵提議瞧瞧他的玉，口內念道：「莫失莫忘，仙壽恒昌。」鶯兒嘻嘻笑道：「兩句話倒象和姑娘項圈上的是一對兒。」",
             img: "daiyu.png",
           },
         ],
@@ -78,36 +78,398 @@ const GAME_DATA = {
         img: "daiyu.png",
         options: [
           {
-            text: "賠笑解釋：『心裡只記掛著妹妹，才剛從老太太那過來。』",
-            next: "scene2",
-            effect: 2,
+            text: "你聽了笑道：「原來姐姐那項圈上也有八個字，我也賞鑒賞鑒。」",
+            next: "scene1A",
+            effect: -3,
           },
           {
-            text: "有些惱了：『你總是這般多心，倒叫人沒趣。』",
-            next: "scene2",
-            effect: -1,
+            text: "你說道：「原來如此。寶姐姐今日做什麼呢？」",
+            next: "scene1B",
+            effect: 3,
           },
         ],
       },
-      scene2: {
-        text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+      scene1A: {
+        text: "選Ａ",
         lines: [
           {
             speaker: "旁白",
-            text: "黛玉臉色稍緩，幽幽地說：『你說心裡記掛著我，那這塊舊手帕你可還留著？』",
+            text: "寳釵被他纏不過將那瓔珞摘將出來。你說道：「姐姐這八個字倒與我的是一對兒。」話猶未了，黛玉進來，笑道：「哎喲！我來的不巧了。早知他來，我就不來了。」",
             img: "daiyu.png",
           },
         ],
         img: "daiyu.png",
         options: [
-          { text: "立刻從懷中掏出，視若珍寶", next: "final_check", effect: 2 },
+          { text: "點擊後繼續", 
+            next: "scene2", 
+            effect: 0 },
+        ],
+      },
+      scene1B: {
+        text: "選Ｂ",
+        lines: [
           {
-            text: "一時語塞，支支吾吾地找藉口",
-            next: "final_check",
+            speaker: "旁白",
+            text: "黛玉來了見寶玉和寶釵在一塊，沒說什麼只打聲招呼，後薛姨媽留他們喝茶。數年後張道士送禮，寶玉看見有個赤金麒麟，便拿起來揣在懷裡，惟有黛玉瞅著他點頭兒。寶玉瞅著黛玉訕笑，道：「這個東西有趣兒，到家裡穿上個穗子你帶，好不好？」黛玉將頭一扭道：「我不稀罕！」",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "你笑道：「你既不稀罕，我可就拿著了。」說著，又揣起來。",
+            next: "scene2",
             effect: -2,
+          },
+          {
+            text: "你笑道：「你既不稀罕，我也不拿罷。」說著便放回去。",
+            next: "scene2",
+            effect: 2,
           },
         ],
       },
+      scene2: {
+        text: "轉贈香串和蓑衣",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "一日你想到北靜王所贈蕶苓香串，此時你會",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "將北靜王所贈蕶苓香串，珍重取出來，轉送黛玉。",
+            next: "scene2A",
+            effect: -2,
+          },
+          {
+            text: "他人送的東西還是不要轉贈罷。",
+            next: "scene3",
+            effect: 0,
+          },
+        ],
+      },
+      scene2A: {
+        text: "選Ａ",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "黛玉說：「什麼臭男人拿過的，我不要這東西！」遂擲還不取。寶玉只得收回，暫且無話。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene3",
+            effect: 0,
+          },
+        ],
+      },
+      scene2B_1: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "數年後一日雨夜，寶玉身上披著蓑衣來找黛玉，道：「這三樣都是北靜王送的。」",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "你又道：「你喜歡這個，我也弄一套來送你。」",
+            next: "scene2B_1A",
+            effect: 0,
+          },
+          {
+            text: "心想上次轉贈北靜王的東西被拒絕，這次就別提了。",
+            next: "scene3",
+            effect: 0,
+          },
+        ],
+      },
+      scene2B_1A: {
+        text: "選A",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "黛玉笑道：「我不要他。戴上那個，成了畫兒上畫的和戲上扮的那漁婆兒了。」羞的臉飛紅。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene3",
+            effect: 0,
+          },
+        ],
+      },
+      scene3: {
+        text: "數次爭吵",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "一日黛玉誤會寶玉把她做荷包弄丟了，生氣回房將前日寶玉囑咐他沒做完的香袋兒鉸了。寶玉曾見過這香袋十分精巧，無故剪了",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "卻也可氣。",
+            next: "scene3A",
+            effect: -3,
+          },
+          {
+            text: "妹妹在氣頭上就不計較罷",
+            next: "scene3B",
+            effect: 3,
+          },
+        ],
+      },
+      scene3A: {
+        text: "選Ａ",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "一陣吵架後二人和好。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene4",
+            effect: 0,
+          },
+        ],
+      },
+      scene3B: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "寶玉道：「好妹妹，我不曾把你的東西給人。」又道：「明日另替我做個香袋兒罷！」黛玉拭淚笑道：「做個比原來更好的。」)➡️數年後寶釵生日眾人看戲，鳳姐笑道一個孩子扮上活像一個人，湘雲道像林姐姐的模樣兒。眾人留神細看，都笑說果然像！",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "忙把湘雲瞅了一眼，使個眼色",
+            next: "scene3B_1",
+            effect: -3,
+          },
+          {
+            text: "道：「長得不像罷，你們笑什麼呢？」",
+            next: "scene3B_2",
+            effect: 3,
+          },
+        ],
+      },
+      scene3B_1: {
+        text: "選A",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "和湘雲吵架後寶玉沒趣，只得又來找黛玉。黛玉冷笑道：「我原是給你們取笑兒的？拿著我比戲子？」寶玉道：「為什麼惱我呢？」黛玉道：「你不比不笑，比人家比了笑了的還利害呢！」寶玉不分辯，自己轉身回房。後三人和解，仍復如舊。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene4",
+            effect: 0,
+          },
+        ],
+      },
+      scene3B_2: {
+        text: "選A",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "一片寂靜後鳳姐出來打圓場，眾人沒事皆散了。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene4",
+            effect: 0,
+          },
+        ],
+      },
+      scene4: {
+        text: "元妃省親贈禮",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "元妃省親遊大觀園，把匾額「紅香綠玉」改作「怡紅快綠」。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "心裡不服",
+            next: "scene5",
+            effect: 0,
+          },
+          {
+            text: "反對姐姐的想法",
+            next: "scene4B",
+            effect: 0,
+          },
+        ],
+      },
+      scene4B: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "寶玉道「：依我想，『紅香綠玉』方兩全其美。」賈政當眾痛罵他一頓，懇請元妃息怒。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene4B_1",
+            effect: 0,
+          },
+        ],
+      },
+      scene4B_1: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "此時你正作詩，起稿內有「綠玉春猶卷」。寶釵推他道：「你這會子偏又用『綠玉』二字，豈不是和貴人分馳了？」你道：",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "「我這會子總想不起什麼典故出處來！",
+            next: "scene4B_1A",
+            effect: 0,
+          },
+          {
+            text: "「只是作詩罷，姐姐不會在意的。」",
+            next: "scene4B_1B",
+            effect: 0,
+          },
+        ],
+      },
+      scene4B_1A: {
+        text: "選A",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "寶釵笑道：「你只把『綠『玉』字改作『蠟』字就是了。」",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene5",
+            effect: 0,
+          },
+        ],
+      },
+      scene4B_1B: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "寶玉堅持用「綠玉」二字，元妃並無異議。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene4B_1B_1",
+            effect: 0,
+          },
+        ],
+      },
+      scene4B_1B_1: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "數日後元妃賞了端午兒的節禮，寶玉和寶釵的一樣，黛玉同三姐妹的較少，寶玉聽了，笑道：「怎麼林姑娘的倒不和我的一樣？」襲人道拿出來都寫著籤子不會錯。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "叫了紫鵑來，「你們姑娘那裡去，就說這是我得的，愛什麼便留下。」",
+            next: "scene4B_1B_1A",
+            effect: -2,
+          },
+          {
+            text: "堅持不收",
+            next: "scene4B_1B_1B",
+            effect: 2,
+          },
+        ],
+      },
+      scene4B_1B_1A: {
+        text: "選A",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "寶玉往賈母那裡請安去，只見黛玉來了，趕上去笑道：「你怎麼不揀我的東西？」黛玉說道：「比不得什麼金哪玉的，不過是個草木人兒罷了。」寶玉說道：「除了別人說什麼金什麼玉，我心裡沒有這個想頭。」黛玉聽聞與寶玉吵起來，後兩人見寶釵來便走開了。",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene5",
+            effect: 0,
+          },
+        ],
+      },
+      scene4B_1B_1B: {
+        text: "選B",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "寶玉道：「既然和妹妹的不一樣，那我就不要了。」黛玉聽聞笑道：「有什麼好不收下的？」",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "點擊後繼續",
+            next: "scene5",
+            effect: 0,
+          },
+        ],
+      },
+    },
       final_check: { isEnding: true, text: "（正在結算好感度...）" },
       happy_end: {
         text: "結局：【木石前盟】你用真心化解了她的疑慮，兩人在大觀園中許下終身。遊戲結束。",
@@ -1172,7 +1534,7 @@ function renderDialogLine() {
       if (boxEl) {
         boxEl.style.height = "750px";
         // boxEl.style.bottom = "-50px";
-        boxEl.style.left = "110%";
+        boxEl.style.left = "89%";
         boxEl.style.transform = "translateX(-50%)";
       }
     } else {
@@ -1209,6 +1571,15 @@ function renderDialogLine() {
   } else {
     // 最後一行：顯示選項按鈕
     const node = GAME_DATA.stories[currentRole][currentNodeKey];
+
+    // 只有一個選項且文字為空 → 自動跳下一節點，不顯示按鈕
+if (node.options && node.options.length === 1 && node.options[0].text === "") {
+  const opt = node.options[0];
+  if (typeof opt.effect === "number") favorability += opt.effect;
+  if (opt.favor) favorability += opt.favor;
+  setTimeout(() => renderStory(currentRole, opt.next), 800);
+  return;
+}
 
     // 多結局節點（有 title，沒有 options）—— 注入重玩按鈕
     if (node._injectedRestart) {
