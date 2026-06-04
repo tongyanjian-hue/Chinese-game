@@ -74,7 +74,7 @@ const GAME_DATA = {
             img: "daiyu.png",
           },
         ],
-        bg: "images/xiaoxiang.png",
+        bg: "images/hsiaohsaiangguan.png",
         img: "daiyu.png",
         options: [
           {
@@ -500,7 +500,7 @@ const GAME_DATA = {
       music: "music.mp3",
       start: {
         text: "你在清虛觀打醮，看中了一隻金麒麟，心裏想著：「正好與湘雲那只湊成一對。」",
-        bg: "images/xiaoxiang.png",
+        bg: "images/goodmiau.png",
         img: "xiangyun.png",
         options: [
           {
@@ -745,8 +745,7 @@ const GAME_DATA = {
     //---妙玉---
     miaoyu: {
       name: "妙玉",
-      music: "miaoyu_theme.mp3",
-      dialogBoxBg: "dialog_miaoyu.png",
+      music: "music.mp3",
       // 事件一：品茶
       start: {
         text: "賈母等人帶了劉姥姥至櫳翠庵來，只見妙玉親自捧了小茶盤，裡面放一個成窯五彩小蓋鍾，捧與賈母。賈母吃了半盞，笑著遞與劉姥姥，眾人後笑了起來。那妙玉便把寶釵黛玉的衣襟一拉，二人隨他出去。寶玉便輕輕走進來，笑道：「你們吃己茶呢。」妙玉剛要去取杯，只見道婆收了上面茶盞來，忙命：「將那成窯的茶杯別收了，擱在外頭去罷。」寶玉會意，知為劉姥姥吃了，他嫌腌臢，不要了。又見妙玉另拿出兩隻杯奇珍古玩之杯與黛玉和寶釵，仍將前番自己常日吃茶的那隻綠玉斗來斟與寶玉。",
@@ -754,13 +753,13 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "賈母等人帶了劉姥姥至櫳翠庵來，只見妙玉親自捧了小茶盤，裡面放一個成窯五彩小蓋鍾，捧與賈母。賈母吃了半盞，笑著遞與劉姥姥，眾人後笑了起來。那妙玉便把寶釵黛玉的衣襟一拉，二人隨他出去。寶玉便輕輕走進來，笑道：「你們吃己茶呢。」妙玉剛要去取杯，只見道婆收了上面茶盞來，忙命：「將那成窯的茶杯別收了，擱在外頭去罷。」寶玉會意，知為劉姥姥吃了，他嫌腌臢，不要了。又見妙玉另拿出兩隻杯奇珍古玩之杯與黛玉和寶釵，仍將前番自己常日吃茶的那隻綠玉斗來斟與寶玉。",
-            img: "miaoyu_tea.png",
+            img: "miaoyu.png",
           },
         ],
-        bg: "images/longcui_gate.jpg",
+        bg: "images/lungtsuian.jpg",
         options: [
           {
-            text: "妙玉親自捧了小茶盤，將平日自己吃茶的那隻綠玉斗斟與你。",
+            text: "下一頁",
             next: "tea_event_actual",
           },
         ],
@@ -771,11 +770,11 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "【你笑道：「常言『世法平等』。他兩個就用那樣古玩奇珍，我就是個俗器了。」妙玉道：「這是俗器？不是我說狂話：只怕你家裡未必找的出這麼一個俗器來呢。」此時你說：",
-            img: "miaoyu_tea.png",
+            img: "miaoyuhappy.png",
           },
         ],
-        bg: "images/longcui_interior.jpg",
-        img: "miaoyu_tea.png",
+        bg: "images/lungtsuian.jpg",
+        img: "miaoyu.png",
         options: [
           {
             text: "俗語說，『隨鄉入鄉』，到了你這裡，自然把這金珠玉寶一概貶為俗器了。",
@@ -858,11 +857,11 @@ const GAME_DATA = {
           {
             speaker: "旁白",
             text: "【乞梅】冬日紅梅傲雪，你來到櫳翠庵門前，想向妙玉乞紅梅。",
-            img: "miaoyu_plum.png",
+            img: "miaoyu.png",
           },
         ],
-        bg: "images/longcui_snow.jpg",
-        img: "miaoyu_plum.png",
+        bg: "lungtsuian.jpg",
+        img: "miaoyu.png",
         options: [
           { text: "喚人向妙玉傳達來意", next: "plum_a", effect: { favor: 1 } },
           { text: "直接進入", next: "plum_b", effect: { favor: 0 } },
@@ -919,6 +918,8 @@ const GAME_DATA = {
       },
       // 事件三：生日賀帖
       birthday_event: {
+        bg: "dakuanyuan.png",
+        img: "miaoyu.png",
         text: "【生日】你收到一張粉紅箋紙，上面寫著：『檻外人妙玉恭肅遙叩芳辰。』你忙尋找岫煙請教如何回帖。",
         lines: [
           {
@@ -1163,6 +1164,17 @@ function renderDialogLine() {
           : `images/${imgSrc}`;
       imgEl.src = resolvedImg;
       imgEl.style.display = "block";
+      imgEl.style.height = "750px";
+      imgEl.style.width = "auto";
+      imgEl.style.maxHeight = "none";
+
+      const boxEl = document.getElementById("character-box");
+      if (boxEl) {
+        boxEl.style.height = "750px";
+        // boxEl.style.bottom = "-50px";
+        boxEl.style.left = "110%";
+        boxEl.style.transform = "translateX(-50%)";
+      }
     } else {
       imgEl.style.display = "none";
     }
