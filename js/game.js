@@ -1,4 +1,4 @@
-let storyFlags = {}; 
+let storyFlags = {};
 // --- 劇情資料庫 ---
 const GAME_DATA = {
   quizConfig: {
@@ -66,6 +66,25 @@ const GAME_DATA = {
     daiyu: {
       name: "林黛玉",
       music: "music.mp3",
+      pre: {
+        text: "前導",
+        bg: "images/hsiaohsiangguan.png",
+        img: "daiyu.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你是賈寶玉\n你將和林黛玉互動",
+            img: "daiyu.png",
+          },
+        ],
+        options: [
+          {
+            text: "繼續",
+            next: "start",
+            effect: 0,
+          },
+        ],
+      },
       start: {
         text: "識金鎖與金麒麟",
         bg: "images/hangwuyuan.png",
@@ -103,7 +122,11 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { text: "繼續", next: "scene2", effect: 0 },
+          {
+            text: "繼續",
+            next: "scene1_1",
+            effect: 0,
+          },
         ],
       },
       scene1B: {
@@ -113,7 +136,27 @@ const GAME_DATA = {
         lines: [
           {
             speaker: "旁白",
-            text: "黛玉來了見你 and 寶釵在一塊，沒說什麼只打聲招呼，後薛姨媽留他們喝茶。數年後張道士送禮，你看見有個赤金麒麟，便拿起來揣在懷裡，惟有黛玉瞅著他點頭兒。你瞅著黛玉訕笑，道：「這個東西有趣兒，到家裡穿上個穗子你帶，好不好？」黛玉將頭一扭道：「我不稀罕！」",
+            text: "黛玉來了見你和寶釵在一塊，沒說什麼只打聲招呼，後薛姨媽留他們喝茶。",
+            img: "daiyu.png",
+          },
+        ],
+        // img: "daiyu.png",
+        options: [
+          {
+            text: "繼續",
+            next: "scene1_1",
+            effect: 0,
+          },
+        ],
+      },
+      scene1_1: {
+        text: "繼續",
+        bg: "images/hangwuyuan.png",
+        img: "daiyu.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "數年後\n張道士送禮，寶玉看見有個赤金麒麟，便拿起來揣在懷裡，惟有黛玉瞅著他點頭兒。\n寶玉瞅著黛玉訕笑，道：「這個東西有趣兒，到家裡穿上個穗子你帶，好不好？」\n黛玉將頭一扭道：「我不稀罕！」」",
             img: "daiyu.png",
           },
         ],
@@ -171,10 +214,10 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene3", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene3",
+            effect: 0,
           },
         ],
       },
@@ -215,10 +258,10 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene3", 
-            effect: 0
+          {
+            text: "繼續",
+            next: "scene3",
+            effect: 0,
           },
         ],
       },
@@ -260,10 +303,10 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene4", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene3_1",
+            effect: 0,
           },
         ],
       },
@@ -274,7 +317,27 @@ const GAME_DATA = {
         lines: [
           {
             speaker: "旁白",
-            text: "你道：「好妹妹，我不曾把你的東西給人。」又道：「明日另替我做個香袋兒罷！」黛玉拭淚笑道：「做個比原來更好的。」\n\n數年後\n寶釵生日眾人看戲，鳳姐笑道一個孩子扮上活像一個人，湘雲道像林姐姐的模樣兒。眾人留神細看，都笑說果然像！此時你的反應是？",
+            text: "你道：「好妹妹，我不曾把你的東西給人。」又道：「明日另替我做個香袋兒罷！」\n黛玉拭淚笑道：「做個比原來更好的。」",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "繼續",
+            next: "scene3_1",
+            effect: 0,
+          },
+        ],
+      },
+      scene3_1: {
+        text: "繼續",
+        bg: "images/dakuanyuan.png",
+        img: "daiyu.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "數年後\n寶釵生日眾人看戲，鳳姐笑道一個孩子扮上活像一個人，湘雲道像林姐姐的模樣兒。眾人留神細看，都笑說果然像！",
             img: "daiyu.png",
           },
         ],
@@ -282,38 +345,38 @@ const GAME_DATA = {
         options: [
           {
             text: "忙把湘雲瞅了一眼，使個眼色",
-            next: "scene3B_1",
+            next: "scene3_1A",
             effect: -3,
           },
           {
             text: "道：「長得不像罷，你們笑什麼呢？」",
-            next: "scene3B_2",
+            next: "scene3_1B",
             effect: 3,
           },
         ],
       },
-      scene3B_1: {
+      scene3_1A: {
         text: "選A",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
         lines: [
           {
             speaker: "旁白",
-            text: "和湘雲吵架後你沒趣，只得又來找黛玉。黛玉冷笑道：「我原是給你們取笑兒的？拿著我比戲子？」你道：「為什麼惱我呢？」黛玉道：「你不比不笑，比人家比了笑了的還利害呢！」你不分辯，自己轉身回房。後三人和解，仍復如舊。",
+            text: "和湘雲吵架後你沒趣，只得又來找黛玉。\n黛玉冷笑道：「我原是給你們取笑兒的？拿著我比戲子？」\n你道：「為什麼惱我呢？」\n黛玉道：「你不比不笑，比人家比了笑了的還利害呢！」\n你不分辯，自己轉身回房。後三人和解，仍復如舊。",
             img: "daiyu.png",
           },
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene4", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene4",
+            effect: 0,
           },
         ],
       },
-      scene3B_2: {
-        text: "選A",
+      scene3_1B: {
+        text: "選B",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
         lines: [
@@ -325,10 +388,10 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene4", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene4",
+            effect: 0,
           },
         ],
       },
@@ -345,15 +408,36 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "心裡不服", 
-            next: "scene5", 
-            effect: 0 },
-          { 
-            text: "反對姐姐的想法", 
-            next: "scene4B", 
-            effect: 0, 
-            increment: { daiyuEvent4BCount: 1 } 
+          {
+            text: "心裡不服",
+            next: "scene4A",
+            effect: 0,
+          },
+          {
+            text: "反對姐姐的想法",
+            next: "scene4B",
+            effect: 0,
+            increment: { daiyuEvent4BCount: 1 },
+          },
+        ],
+      },
+      scene4A: {
+        text: "選A",
+        bg: "images/dakuanyuan.png",
+        img: "daiyu.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你心裡不快但怕被罵而不反抗",
+            img: "daiyu.png",
+          },
+        ],
+        img: "daiyu.png",
+        options: [
+          {
+            text: "繼續",
+            next: "scene4_1",
+            effect: 0,
           },
         ],
       },
@@ -364,17 +448,21 @@ const GAME_DATA = {
         lines: [
           {
             speaker: "旁白",
-            text: "你道「：依我想，『紅香綠玉』方兩全其美。」賈政當眾痛罵他一頓，懇請元妃息怒。",
+            text: "你道:「依我想，『紅香綠玉』方兩全其美。」賈政當眾痛罵他一頓，懇請元妃息怒。",
             img: "daiyu.png",
           },
         ],
         img: "daiyu.png",
         options: [
-          { text: "繼續", next: "scene4B_1", effect: 0 },
+          {
+            text: "繼續",
+            next: "scene4_1",
+            effect: 0,
+          },
         ],
       },
-      scene4B_1: {
-        text: "選B",
+      scene4_1: {
+        text: "繼續",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
         lines: [
@@ -388,18 +476,18 @@ const GAME_DATA = {
         options: [
           {
             text: "「我這會子總想不起什麼典故出處來！",
-            next: "scene4B_1A",
+            next: "scene4_1A",
             effect: 0,
           },
           {
             text: "「只是作詩罷，姐姐不會在意的。」",
-            next: "scene4B_1B",
+            next: "scene4_1B",
             effect: 0,
             increment: { daiyuEvent4BCount: 1 },
           },
         ],
       },
-      scene4B_1A: {
+      scene4_1A: {
         text: "選A",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
@@ -412,10 +500,14 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { text: "繼續", next: "scene5", effect: 0 },
+          {
+            text: "繼續",
+            next: "scene4_2",
+            effect: 0,
+          },
         ],
       },
-      scene4B_1B: {
+      scene4_1B: {
         text: "選B",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
@@ -428,17 +520,21 @@ const GAME_DATA = {
         ],
         img: "daiyu.png",
         options: [
-          { text: "繼續", next: "scene4B_1B_1", effect: 0 },
+          {
+            text: "繼續",
+            next: "scene4_2",
+            effect: 0,
+          },
         ],
       },
-      scene4B_1B_1: {
-        text: "選B",
+      scene4_2: {
+        text: "繼續",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
         lines: [
           {
             speaker: "旁白",
-            text: "數日後元妃賞了端午兒的節禮，你和寶釵的一樣，黛玉同三姐妹的較少，你聽了，笑道：「怎麼林姑娘的倒不和我的一樣？」襲人道拿出來都寫著籤子不會錯。",
+            text: "數日後元妃賞了端午兒的節禮，你和寶釵的一樣，黛玉同三姐妹的較少，你聽了，笑道：「怎麼林姑娘的倒不和我的一樣？」\n襲人道拿出來都寫著籤子不會錯。",
             img: "daiyu.png",
           },
         ],
@@ -446,79 +542,80 @@ const GAME_DATA = {
         options: [
           {
             text: "叫了紫鵑來，「你們姑娘那裡去，就說這是我得的，愛什麼便留下。」",
-            next: "scene4B_1B_1A",
+            next: "scene4_2A",
             effect: -2,
           },
           {
             text: "堅持不收",
-            next: "scene4B_1B_1B",
+            next: "scene4_2B",
             effect: 2,
             increment: { daiyuEvent4BCount: 1 },
           },
         ],
       },
-      scene4B_1B_1A: {
+      scene4_2A: {
         text: "選A",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
         lines: [
           {
             speaker: "旁白",
-            text: "你往賈母那裡請安去，只見黛玉來了，趕上去笑道：「你怎麼不揀我的東西？」黛玉說道：「比不得什麼金哪玉的，不過是個草木人兒罷了。」你說道：「除了別人說什麼金什麼玉，我心裡沒有這個想頭。」黛玉聽聞與你吵起來，後兩人見寶釵來便走開了。",
+            text: "你往賈母那裡請安去，只見黛玉來了，趕上去笑道：「你怎麼不揀我的東西？」\n黛玉說道：「比不得什麼金哪玉的，不過是個草木人兒罷了。」\n你說道：「除了別人說什麼金什麼玉，我心裡沒有這個想頭。」\n黛玉聽聞與你吵起來，後兩人見寶釵來便走開了。",
             img: "daiyu.png",
           },
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene5", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene5",
+            effect: 0,
           },
         ],
       },
-      scene4B_1B_1B: {
+      scene4_2B: {
         text: "選B",
         bg: "images/dakuanyuan.png",
         img: "daiyu.png",
         lines: [
           {
             speaker: "旁白",
-            text: "你道：「既然和妹妹的不一樣，那我就不要了。」黛玉聽聞笑道：「有什麼好不收下的？」",
+            text: "你道：「既然和妹妹的不一樣，那我就不要了。」\n黛玉聽聞笑道：「有什麼好不收下的？」",
             img: "daiyu.png",
           },
         ],
         img: "daiyu.png",
         options: [
-          { 
-            text: "繼續", 
-            next: "scene5", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene5",
+            effect: 0,
           },
         ],
       },
       scene5: {
         text: "寶黛定情",
-        bg:"images/yihungyuan.png",
+        bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "一日黛玉走來正聽見湘雲說經濟一事，你又說：「林妹妹要說這話，我也和他生分了！」黛玉想你縱為我的知己，奈我薄命何！\n這裡你忽見黛玉似乎有拭淚之狀，便忙趕著上來，抬起手來替他拭淚。你瞅了半天，方說道：「你放心！」\n黛玉聽了，怔了半天，說道：「我有什麼不放心的？」\n你點頭嘆道：「好妹妹！你真不明白這話，不但我素日白用了心，且連你素日待我的心也都辜負了。你皆因總是不放心的原故，才弄了一身的病了。但凡寬慰些，這病也不得一日重似一日了！」\n黛玉細細思之，竟比自己肺腑中掏出來的還覺懇切。兩個人怔了半天，黛玉只眼中淚直流下來，回身便走。", 
-            img: "daiyu.png" 
+          {
+            speaker: "旁白",
+            text: "一日黛玉走來正聽見湘雲說經濟一事，你又說：「林妹妹要說這話，我也和他生分了！」黛玉想你縱為我的知己，奈我薄命何！\n這裡你忽見黛玉似乎有拭淚之狀，便忙趕著上來，抬起手來替他拭淚。你瞅了半天，方說道：「你放心！」\n黛玉聽了，怔了半天，說道：「我有什麼不放心的？」\n你點頭嘆道：「好妹妹！你真不明白這話，不但我素日白用了心，且連你素日待我的心也都辜負了。你皆因總是不放心的原故，才弄了一身的病了。但凡寬慰些，這病也不得一日重似一日了！」\n黛玉細細思之，竟比自己肺腑中掏出來的還覺懇切。兩個人怔了半天，黛玉只眼中淚直流下來，回身便走。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene5_result" 
-          }
+          {
+            text: "繼續",
+            next: "scene5_result",
+          },
         ],
       },
       scene5_result: {
         isEnding: true,
-        decide: function() {
-          const event2AllB = storyFlags.daiyuEvent2FirstB && storyFlags.daiyuEvent2SecondB;
+        decide: function () {
+          const event2AllB =
+            storyFlags.daiyuEvent2FirstB && storyFlags.daiyuEvent2SecondB;
           const event4EnoughB = (storyFlags.daiyuEvent4BCount || 0) >= 2;
           if (event2AllB && event4EnoughB) {
             storyFlags.daiyuEvent5Confess = true;
@@ -532,77 +629,77 @@ const GAME_DATA = {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "你", 
-            text: "你忙上前拉住道：「好妹妹，且略站住，我說一句話再走。」\n黛玉一面拭淚，一面將手推開，竟去了。你望著只管發起呆來。見襲人和他說話，並未看出是誰。\n襲人想他方才之言必是因黛玉而起，如此看來，倒怕將來難免不才之事。", 
-            img: "daiyu.png"
+          {
+            speaker: "你",
+            text: "你忙上前拉住道：「好妹妹，且略站住，我說一句話再走。」\n黛玉一面拭淚，一面將手推開，竟去了。你望著只管發起呆來。見襲人和他說話，並未看出是誰。\n襲人想他方才之言必是因黛玉而起，如此看來，倒怕將來難免不才之事。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene6_start", 
-            effect: 0 
-          }
+          {
+            text: "繼續",
+            next: "scene6_start",
+            effect: 0,
+          },
         ],
       },
       scene5_confess: {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "你", 
-            text: "你忙上前拉住，只道：「好妹妹！我的這個心，從來也不敢說；今日膽大說出來，就是死了也是甘心的！我為你，也弄了一身的病，又不敢告訴人，只好捱著。等你的病好了，只怕我的病才得好呢。－－睡裡夢裡也忘不了你！」\n黛玉聽聞回頭，兩人怔了半天，動也不動，後襲人見狀不對叫紫鵑來帶黛玉離開。", 
-            img: "daiyu.png"
+          {
+            speaker: "你",
+            text: "你忙上前拉住，只道：「好妹妹！我的這個心，從來也不敢說；今日膽大說出來，就是死了也是甘心的！我為你，也弄了一身的病，又不敢告訴人，只好捱著。等你的病好了，只怕我的病才得好呢。－－睡裡夢裡也忘不了你！」\n黛玉聽聞回頭，兩人怔了半天，動也不動，後襲人見狀不對叫紫鵑來帶黛玉離開。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene6_start", 
-            effect: 0 
-          }
+          {
+            text: "繼續",
+            next: "scene6_start",
+            effect: 0,
+          },
         ],
       },
       scene6_start: {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "黛玉聽聞回頭，兩人怔了半天，動也不動，後襲人見狀不對叫紫鵑來帶黛玉離開。\n不久你惦記黛玉，你會怎麼做？", 
-            img: "daiyu.png"
+          {
+            speaker: "旁白",
+            text: "黛玉聽聞回頭，兩人怔了半天，動也不動，後襲人見狀不對叫紫鵑來帶黛玉離開。\n不久你惦記黛玉，你會怎麼做？",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "喚晴雯去看黛玉", 
-            next: "scene6_A", 
-            effect: 2, 
-            flag: "daiyuEvent6A" 
+          {
+            text: "喚晴雯去看黛玉",
+            next: "scene6_A",
+            effect: 2,
+            flag: "daiyuEvent6A",
           },
-          { 
-            text: "喚襲人去看黛玉", 
-            next: "scene6_B", 
-            effect: -1 
-          }
+          {
+            text: "喚襲人去看黛玉",
+            next: "scene6_B",
+            effect: -1,
+          },
         ],
       },
       scene6_A: {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "你拿了兩條舊絹子撂與晴雯送過去。這黛玉體貼出絹子的意思來，便向那兩塊舊帕上寫三首詩表達對你的感情。", 
-            img: "daiyu.png"
+          {
+            speaker: "旁白",
+            text: "你拿了兩條舊絹子撂與晴雯送過去。這黛玉體貼出絹子的意思來，便向那兩塊舊帕上寫三首詩表達對你的感情。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene7", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene7",
+            effect: 0,
           },
         ],
       },
@@ -610,21 +707,21 @@ const GAME_DATA = {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "襲人進了屋子，見黛玉在睡覺便離去，走後便將這事上報王夫人。", 
-            img: "daiyu.png" 
+          {
+            speaker: "旁白",
+            text: "襲人進了屋子，見黛玉在睡覺便離去，走後便將這事上報王夫人。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene7", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene7",
+            effect: 0,
           },
         ],
       },
-      scene7:{
+      scene7: {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
@@ -632,21 +729,25 @@ const GAME_DATA = {
             speaker: "旁白",
             text: "一日黛玉和湘雲來至怡紅院中，見靜悄悄的，黛玉來至窗外，往裡一看，只見你隨便睡著在床上，寶釵坐在身旁做針線。\n黛玉見了這個景況，招手兒叫湘雲。湘雲見他這般，只當有什麼新聞，忙也來看。才要笑，忽然想起黛玉口裡不讓人，怕他取笑，便忙拉走他。這裡寶釵只剛做了兩三個花瓣，忽見你在夢中喊罵，說：「和尚道士的話如何信得？什麼『金玉姻緣』！我偏說『木石姻緣』！」",
             img: "daiyu.png",
-          }
+          },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene7_result", 
-            effect: 0 
+          {
+            text: "繼續",
+            next: "scene7_result",
+            effect: 0,
           },
         ],
       },
       scene7_result: {
         isEnding: true,
-        decide: function() {
-          const event1AllB = storyFlags.daiyuEvent1FirstB && storyFlags.daiyuEvent1SecondB;
-          const canHear = storyFlags.daiyuEvent5Confess && event1AllB && storyFlags.daiyuEvent6A;
+        decide: function () {
+          const event1AllB =
+            storyFlags.daiyuEvent1FirstB && storyFlags.daiyuEvent1SecondB;
+          const canHear =
+            storyFlags.daiyuEvent5Confess &&
+            event1AllB &&
+            storyFlags.daiyuEvent6A;
           if (canHear) {
             storyFlags.daiyuEvent7Heard = true;
             return "scene7_heard";
@@ -659,41 +760,44 @@ const GAME_DATA = {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "黛玉剛要被拉走時在窗外聽見了，雖不解「木石姻緣」為何，卻也留心了。", 
-            img: "daiyu.png" 
+          {
+            speaker: "旁白",
+            text: "黛玉剛要被拉走時在窗外聽見了，雖不解「木石姻緣」為何，卻也留心了。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "final_check" }
+          {
+            text: "繼續",
+            next: "final_check",
+          },
         ],
       },
       scene7_missed: {
         bg: "images/yihungyuan.png",
         img: "daiyu.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "湘雲拉著黛玉走了，那幾個字便隨風散去，黛玉什麼都沒聽見。", 
-            img: "daiyu.png" 
+          {
+            speaker: "旁白",
+            text: "湘雲拉著黛玉走了，那幾個字便隨風散去，黛玉什麼都沒聽見。",
+            img: "daiyu.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "final_check" 
-          }
+          {
+            text: "繼續",
+            next: "final_check",
+          },
         ],
       },
       final_check: {
         isEnding: true,
-        decide: function() {
+        decide: function () {
           if (favorability <= 0) return "ending_bad1";
-          if (storyFlags.daiyuEvent7Heard && favorability >= 12) return "ending_true";
-          if (storyFlags.daiyuEvent5Confess && !storyFlags.daiyuEvent7Heard) return "ending_another";
+          if (storyFlags.daiyuEvent7Heard && favorability >= 12)
+            return "ending_true";
+          if (storyFlags.daiyuEvent5Confess && !storyFlags.daiyuEvent7Heard)
+            return "ending_another";
           if (storyFlags.daiyuEvent5Miss) return "ending_bad2";
           return "ending_bad1";
         },
@@ -702,65 +806,63 @@ const GAME_DATA = {
         bg: "images/johnbian.png",
         img: "daiyucry.png",
         lines: [
-          { 
-            speaker: "結局", 
-            text: "你的結局：冷月葬花魂\n賈母等人開始商量你的終身大事，此事趙姨娘認為你若被迫與寶釵成婚，他將離家出走，而賈環出人頭地之日將臨，遂以重金賄賂榮府藥房管事的賈菖、賈菱二賊，於黛玉的藥方中加減些令其反復的藥材，致其病常年纏綿於病恙之間。\n襲人則認為若你和黛玉成婚，他便做不成姨娘，遂夜訪王夫人，道：你成婚，唯一有權的便是您的長女元妃娘娘，此時，唯一有資格入宮請求貴妃下旨賜婚於你、寶釵的便是您了，屆時難道眾人抗旨忤逆不成？一語驚醒夢中人，次日一早，王夫人便整裝入宮。午後，宮中太監前來宣諭元妃禦旨。\n年邁的賈母聞此噩耗，驚、怒、氣、痛交迫之下，不久，撒手人寰。賈母病逝後，黛玉自感日漸孤危，又因中賈菖、賈菱所下之毒，於在那年的中秋之夜，淚盡後沈湖，半日尋不著玉體，眾人皆道林姑娘生得仙子一般，如今飛回天上罷。", 
-            img: "daiyucry.png"
+          {
+            speaker: "結局",
+            text: "你的結局：冷月葬花魂\n賈母等人開始商量你的終身大事，此事趙姨娘認為你若被迫與寶釵成婚，他將離家出走，而賈環出人頭地之日將臨，遂以重金賄賂榮府藥房管事的賈菖、賈菱二賊，於黛玉的藥方中加減些令其反復的藥材，致其病常年纏綿於病恙之間。\n襲人則認為若你和黛玉成婚，他便做不成姨娘，遂夜訪王夫人，道：你成婚，唯一有權的便是您的長女元妃娘娘，此時，唯一有資格入宮請求貴妃下旨賜婚於你、寶釵的便是您了，屆時難道眾人抗旨忤逆不成？一語驚醒夢中人，次日一早，王夫人便整裝入宮。午後，宮中太監前來宣諭元妃禦旨。\n年邁的賈母聞此噩耗，驚、怒、氣、痛交迫之下，不久，撒手人寰。賈母病逝後，黛玉自感日漸孤危，又因中賈菖、賈菱所下之毒，於在那年的中秋之夜，淚盡後沈湖，半日尋不著玉體，眾人皆道林姑娘生得仙子一般，如今飛回天上罷。",
+            img: "daiyucry.png",
           },
         ],
-        options: [
-          { text: "重新遊戲", 
-            next: "restart" 
-          }
-        ],
+        options: [{ text: "重新遊戲", next: "restart" }],
       },
       ending_bad2: {
         bg: "images/dakuanyuan.png",
         img: "daiyusick.png",
         lines: [
-          { speaker: "結局", 
-            text: "你的結局：黛玉嫁北靜王\n太上皇知當今皇帝欲抄賈家，為保下往日重臣林如海之女，給他一個交代，便下旨將黛玉指婚與北靜王。\n北靜王曾藉你之口得知這名女子的才華，愛慕她的才華，故在不知道你和黛玉的感情的狀況下，也就欣然答應。\n你聽聞，自是到北靜王府大鬧，恐負違逆之罪，拖累賈府。黛玉為救你不得不嫁，後於大婚前夕淚盡而逝。", 
-            img: "daiyusick.png"
+          {
+            speaker: "結局",
+            text: "你的結局：黛玉嫁北靜王\n太上皇知當今皇帝欲抄賈家，為保下往日重臣林如海之女，給他一個交代，便下旨將黛玉指婚與北靜王。\n北靜王曾藉你之口得知這名女子的才華，愛慕她的才華，故在不知道你和黛玉的感情的狀況下，也就欣然答應。\n你聽聞，自是到北靜王府大鬧，恐負違逆之罪，拖累賈府。黛玉為救你不得不嫁，後於大婚前夕淚盡而逝。",
+            img: "daiyusick.png",
           },
         ],
         options: [
-          { 
-            text: "重新遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重新遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_another: {
         bg: "images/hsiaohsiangguan.png",
         img: "daiyucry.png",
         lines: [
-          { speaker: "結局", 
-            text: "你的結局：但得長相思，便是長相見\n你數次反抗命運，終讓眾人同意他和黛玉訂婚，然你因北靜王之事被迫離開賈府一會。黛玉日日夜夜的思念你，盼著你歸來的一日，最終淚盡而逝，沒能等到你回家。\n\n數年後\n你回來，聽聞黛玉已逝，便出家做和尚，費餘生替她守墓。你日夜想著二人離別前夕所做的約定：「但得長相思，便是長相見」，本是為重逢所立之約定，怎料這相思真的無盡，那相見真的無緣。\n一日，一僧一道至你跟前，你見其心知自己命數已盡，隨之離去。", 
-            img: "daiyucry.png"
+          {
+            speaker: "結局",
+            text: "你的結局：但得長相思，便是長相見\n你數次反抗命運，終讓眾人同意他和黛玉訂婚，然你因北靜王之事被迫離開賈府一會。黛玉日日夜夜的思念你，盼著你歸來的一日，最終淚盡而逝，沒能等到你回家。\n\n數年後\n你回來，聽聞黛玉已逝，便出家做和尚，費餘生替她守墓。你日夜想著二人離別前夕所做的約定：「但得長相思，便是長相見」，本是為重逢所立之約定，怎料這相思真的無盡，那相見真的無緣。\n一日，一僧一道至你跟前，你見其心知自己命數已盡，隨之離去。",
+            img: "daiyucry.png",
           },
         ],
         options: [
-          { 
-            text: "重新遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重新遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_true: {
         bg: "images/chinfangchia.PNG",
         img: "daiyuhaha.png",
         lines: [
-          { 
-            speaker: "結局", 
-            text: "你的結局：兩人殉情歸天，再續木石前盟\n黛玉聽聞賈母等人正商量你的終身大事，突然想起前日子聽到你喊「木石姻緣」之事，心想既是與金玉姻緣對立，那木石姻緣自是指她和你，思索半日仍沒主意，問你去。\n今兒你悶悶不樂，在葬花塚拾花解悶，黛玉見你獨自一人，笑道：「你在做什麼呢？」\n你回頭見是黛玉，笑道：「葬花罷，好妹妹有什麼事嗎？」\n黛玉道：「你可知『木石姻緣』為何？」\n你聽聞，忽覺心頭一緊，眼前一片模糊，耳中傳來神瑛侍者、絳珠仙子、青梗峰、還淚等詞，頭痛的在地上打滾，停下後一動也不動。黛玉見狀哇的一聲，氣咽不上，昏倒在你身旁。\n不久後黛玉清醒，只見你在一旁守著她，周遭逕是不曾見過之物，卻覺得一切是如此自然，好似這便是他們的棲身之所。\n你：「你可知此為何處？」\n黛玉：「雖未曾見過，卻十分熟悉，此處與木石姻緣有干？」\n你點頭，一邊細說他在黛玉昏迷時所憶起之事，黛玉聽聞後便欣然接受了，她心知你所述方為二人前世，不曾懷疑。\n你：「好妹妹，今兒我們的身體因魂魄出竅命在旦夕，有二方法，一是強行脫離此處，重回大觀園，二是與我留於此處，待一僧一道攜回警幻仙子案前，一了前世風流公案。」\n黛玉：「你去哪，我同你一起去。你好便是我好。」\n你笑道：「如今回去也只得一金玉良緣之命，倒不如留在此處罷。」\n此時紫鵑欲找黛玉而尋到此處，只見你同黛玉攜手，倒臥在花塚旁，皆沒了呼吸，急忙報賈母，眾人趕到此處時只見桃花突然盛開，接著全數飄落於二人身上，賈母命人將兩人抬出來，撥開花瓣後哪裡有他們的身體。\n賈母一夜痛失兩個玉兒，當夜翻轉數個更次，方睡時只見你同黛玉從外走來，仍是往日行景，進來向賈母道：「老太太好生過罷。我們原是天上來的，今兒只是回去罷，我們就此別過了！」\n兩人於警幻仙子案前消號後，重回神瑛侍者和絳珠仙子的身份，逍遙自在，再續木石前盟。", 
-            img: "daiyuhaha.png" 
+          {
+            speaker: "結局",
+            text: "你的結局：兩人殉情歸天，再續木石前盟\n黛玉聽聞賈母等人正商量你的終身大事，突然想起前日子聽到你喊「木石姻緣」之事，心想既是與金玉姻緣對立，那木石姻緣自是指她和你，思索半日仍沒主意，問你去。\n今兒你悶悶不樂，在葬花塚拾花解悶，黛玉見你獨自一人，笑道：「你在做什麼呢？」\n你回頭見是黛玉，笑道：「葬花罷，好妹妹有什麼事嗎？」\n黛玉道：「你可知『木石姻緣』為何？」\n你聽聞，忽覺心頭一緊，眼前一片模糊，耳中傳來神瑛侍者、絳珠仙子、青梗峰、還淚等詞，頭痛的在地上打滾，停下後一動也不動。黛玉見狀哇的一聲，氣咽不上，昏倒在你身旁。\n不久後黛玉清醒，只見你在一旁守著她，周遭逕是不曾見過之物，卻覺得一切是如此自然，好似這便是他們的棲身之所。\n你：「你可知此為何處？」\n黛玉：「雖未曾見過，卻十分熟悉，此處與木石姻緣有干？」\n你點頭，一邊細說他在黛玉昏迷時所憶起之事，黛玉聽聞後便欣然接受了，她心知你所述方為二人前世，不曾懷疑。\n你：「好妹妹，今兒我們的身體因魂魄出竅命在旦夕，有二方法，一是強行脫離此處，重回大觀園，二是與我留於此處，待一僧一道攜回警幻仙子案前，一了前世風流公案。」\n黛玉：「你去哪，我同你一起去。你好便是我好。」\n你笑道：「如今回去也只得一金玉良緣之命，倒不如留在此處罷。」\n此時紫鵑欲找黛玉而尋到此處，只見你同黛玉攜手，倒臥在花塚旁，皆沒了呼吸，急忙報賈母，眾人趕到此處時只見桃花突然盛開，接著全數飄落於二人身上，賈母命人將兩人抬出來，撥開花瓣後哪裡有他們的身體。\n賈母一夜痛失兩個玉兒，當夜翻轉數個更次，方睡時只見你同黛玉從外走來，仍是往日行景，進來向賈母道：「老太太好生過罷。我們原是天上來的，今兒只是回去罷，我們就此別過了！」\n兩人於警幻仙子案前消號後，重回神瑛侍者和絳珠仙子的身份，逍遙自在，再續木石前盟。",
+            img: "daiyuhaha.png",
           },
         ],
         options: [
-          { 
-            text: "重新遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重新遊戲",
+            next: "restart",
+          },
         ],
       },
     },
@@ -768,8 +870,27 @@ const GAME_DATA = {
     xiren: {
       name: "襲人",
       music: "music.mp3",
+      pre: {
+        text: "前導",
+        bg: "images/yihongyuan.png",
+        img: "xiren.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你是賈寶玉\n你將和襲人互動",
+            img: "xiren.png",
+          },
+        ],
+        options: [
+          {
+            text: "繼續",
+            next: "start",
+            effect: 0,
+          },
+        ],
+      },
       start: {
-        text: "你纔合上眼，便恍惚的睡去。自太虛幻境醒來後，襲人起身替你解懷整衣，無意間發現你的秘密，遂與你同領警幻所訊雲雨之事。",
+        text: "你纔合上眼，便恍惚的睡去。\n自太虛幻境醒來後，襲人起身替你解懷整衣，無意間發現你的秘密，遂與你同領警幻所訊雲雨之事。",
         bg: "images/yihongyuan.png",
         img: "xiren.png",
         options: [
@@ -788,7 +909,7 @@ const GAME_DATA = {
         ],
       },
       scene2: {
-        text: "某日，襲人向你提到：「如今我們家要來贖我，正是該叫去的，我去了，仍舊又有好的來，不是沒了我就使不得的。」，聽完她說的一席話，你心裏越發急了，淚痕滿面地說道：",
+        text: "某日，襲人向你提到：「如今我們家要來贖我，正是該叫去的，我去了，仍舊又有好的來，不是沒了我就使不得的。」\n聽完她說的一席話，你心裏越發急了，淚痕滿面地說道：",
         bg: "images/yihongyuan.png",
         img: "xirenworry.png",
         options: [
@@ -948,6 +1069,25 @@ const GAME_DATA = {
     baocha: {
       name: "薛寶釵",
       music: "music.mp3",
+      pre: {
+        text: "前導",
+        bg: "images/hangwuyuan.png",
+        img: "baocha.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你是賈寶玉\n你將和薛寶釵互動",
+            img: "baocha.png",
+          },
+        ],
+        options: [
+          {
+            text: "繼續",
+            next: "start",
+            effect: 0,
+          },
+        ],
+      },
       start: {
         text: "寶釵解開衣服的排扣，從大紅襖兒上取下瓔珞，你看著那璀璨的金鎖。",
         bg: "images/hangwuyuan.png",
@@ -1128,6 +1268,25 @@ const GAME_DATA = {
     xiangyun: {
       name: "史湘雲",
       music: "music.mp3",
+      pre: {
+        text: "前導",
+        bg: "images/dakuanyuan.png",
+        img: "xianyun.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你是賈寶玉\n你將和史湘雲互動",
+            img: "xianyun.png",
+          },
+        ],
+        options: [
+          {
+            text: "繼續",
+            next: "start",
+            effect: 0,
+          },
+        ],
+      },
       start: {
         text: "你在清虛觀打醮，看中了一隻金麒麟，心裏想著：「正好與湘雲那只湊成一對。」",
         bg: "images/goodmiau.png",
@@ -1308,26 +1467,46 @@ const GAME_DATA = {
     qingwen: {
       name: "晴雯",
       music: "music.mp3",
+      pre: {
+        text: "前導",
+        bg: "images/yihungyuan.png",
+        img: "qingwen.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你是賈寶玉\n你將和晴雯互動",
+            img: "qingwen.png",
+          },
+        ],
+        options: [
+          {
+            text: "繼續",
+            next: "start",
+            effect: 0,
+          },
+        ],
+      },
       start: {
         text: "事件一：貼字",
         bg: "images/dakuanyuan.png",
         img: "qingwen.png",
         lines: [
-          { 
-            speaker: "旁白", text: "今兒你吃早飯，有一碟子豆腐皮兒的包子，想著晴雯愛吃。", 
-            // img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "今兒你吃早飯，有一碟子豆腐皮兒的包子，想著晴雯愛吃。",
+            // img: "qingwen.png"
           },
         ],
         options: [
-          { 
-            text: "和珍大奶奶要了說晚上吃", 
-            next: "scene1_after", 
-            effect: 1 
+          {
+            text: "和珍大奶奶要了說晚上吃",
+            next: "scene1_after",
+            effect: 1,
           },
-          { 
-            text: "不留", 
-            next: "scene1_after", 
-            effect: 0 
+          {
+            text: "不留",
+            next: "scene1_after",
+            effect: 0,
           },
         ],
       },
@@ -1336,37 +1515,37 @@ const GAME_DATA = {
         bg: "images/dakuanyuan.png",
         img: "qingwenhehe.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "在薛姨媽那吃酒後回房，只見筆墨在案。", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "在薛姨媽那吃酒後回房，只見筆墨在案。",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "晴雯", 
-            text: "晴雯笑道：「好啊，叫我研了墨，早起高興，只寫了三個字，扔下筆就走了，哄我等了這一天。快來給我寫完了這些墨才算呢！」", 
-            img: "qingwen.png" 
+          {
+            speaker: "晴雯",
+            text: "晴雯笑道：「好啊，叫我研了墨，早起高興，只寫了三個字，扔下筆就走了，哄我等了這一天。快來給我寫完了這些墨才算呢！」",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "你", 
-            text: "你笑道：「我寫的那三個字在那裡呢？」", 
-            img: "qingwen.png"
+          {
+            speaker: "你",
+            text: "你笑道：「我寫的那三個字在那裡呢？」",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "晴雯", 
-            text: "晴雯笑道：「這個人可醉了。你頭裡過那府裡去，囑咐我貼在門斗兒上的。我恐怕別人貼壞了，親自爬高上梯，貼了半天，這會子還凍的手僵著呢！」此時你會", 
-            img: "qingwen.png" 
+          {
+            speaker: "晴雯",
+            text: "晴雯笑道：「這個人可醉了。你頭裡過那府裡去，囑咐我貼在門斗兒上的。我恐怕別人貼壞了，親自爬高上梯，貼了半天，這會子還凍的手僵著呢！」此時你會",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "你笑道：「我忘了你手冷，我替你握著。」便伸手拉著晴雯的手。", 
-            next: "scene2", 
-            effect: 1 
+          {
+            text: "你笑道：「我忘了你手冷，我替你握著。」便伸手拉著晴雯的手。",
+            next: "scene2",
+            effect: 1,
           },
-          { 
-            text: "沒反應", 
-            next: "scene2", 
-            effect: 0 
+          {
+            text: "沒反應",
+            next: "scene2",
+            effect: 0,
           },
         ],
       },
@@ -1375,42 +1554,42 @@ const GAME_DATA = {
         bg: "images/yihongyuan.png",
         img: "qingwenangry.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "你因金釧兒之事心中悶悶不樂，回至房中，長吁短嘆。偏偏晴雯上來換衣裳，不防又把扇子失了手，掉在地下，將骨子跌折。你道：「蠢才，蠢才！將來怎麼樣？明日你自己當家立業，難道也是這麼顧前不顧後的？」，二人大吵一架。", 
-            img: "qingwenveryangry.png" 
+          {
+            speaker: "旁白",
+            text: "你因金釧兒之事心中悶悶不樂，回至房中，長吁短嘆。偏偏晴雯上來換衣裳，不防又把扇子失了手，掉在地下，將骨子跌折。你道：「蠢才，蠢才！將來怎麼樣？明日你自己當家立業，難道也是這麼顧前不顧後的？」，二人大吵一架。",
+            img: "qingwenveryangry.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "二人氣消後，你笑道：「洗洗手給我拿果子來吃罷。」晴雯笑道：「可是說的，我一個蠢才，連扇子還跌折了，那裡還配打發吃果子呢？倘或再砸了盤子，更了不得了！」", 
-            img: "qingwenangry.png" 
+          {
+            speaker: "旁白",
+            text: "二人氣消後，你笑道：「洗洗手給我拿果子來吃罷。」晴雯笑道：「可是說的，我一個蠢才，連扇子還跌折了，那裡還配打發吃果子呢？倘或再砸了盤子，更了不得了！」",
+            img: "qingwenangry.png",
           },
-          { 
-            speaker: "你", 
-            text: "你笑道：「你愛砸就砸。這些東西原不過是借人所用，你愛這樣，我愛那樣，各自性情。比如那扇子，原是搧的，你要撕著頑兒也可以使得，只是別生氣時拿他出氣；就如杯盤，原是盛東西的，你歡喜聽那一聲響，就故意砸了，也是使得的，只別在氣頭兒上拿他出氣。－－這就是愛物了。」", 
-            // img: "qingwenangry.png" 
+          {
+            speaker: "你",
+            text: "你笑道：「你愛砸就砸。這些東西原不過是借人所用，你愛這樣，我愛那樣，各自性情。比如那扇子，原是搧的，你要撕著頑兒也可以使得，只是別生氣時拿他出氣；就如杯盤，原是盛東西的，你歡喜聽那一聲響，就故意砸了，也是使得的，只別在氣頭兒上拿他出氣。－－這就是愛物了。」",
+            // img: "qingwenangry.png"
           },
-          { 
-            speaker: "晴雯", 
-            text: "晴雯聽了，笑道：「既這麼說，你就拿扇子來我撕。我最喜歡聽撕的聲兒。」", 
-            img: "qingwenhehe.png" 
+          {
+            speaker: "晴雯",
+            text: "晴雯聽了，笑道：「既這麼說，你就拿扇子來我撕。我最喜歡聽撕的聲兒。」",
+            img: "qingwenhehe.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "你聽了，便笑著遞給他。晴雯果然接過來，嗤的一聲，撕了兩半；接著又聽嗤，嗤幾聲。此時你會", 
-            img: "qingwenangry.png" 
+          {
+            speaker: "旁白",
+            text: "你聽了，便笑著遞給他。晴雯果然接過來，嗤的一聲，撕了兩半；接著又聽嗤，嗤幾聲。此時你會",
+            img: "qingwenangry.png",
           },
         ],
         options: [
-          { 
-            text: "在旁笑著說：「撕的好。再撕響些。」", 
-            next: "scene2A", 
-            effect: 4 
+          {
+            text: "在旁笑著說：「撕的好。再撕響些。」",
+            next: "scene2A",
+            effect: 4,
           },
-          { 
-            text: "看著她沒什麼反應", 
-            next: "scene2B", 
-            effect: -4 
+          {
+            text: "看著她沒什麼反應",
+            next: "scene2B",
+            effect: -4,
           },
         ],
       },
@@ -1418,43 +1597,44 @@ const GAME_DATA = {
         bg: "images/yihongyuan.png",
         img: "qingwen.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "正說著，只見麝月走過來，你趕上來，一把將她手裡的扇子也奪了遞給晴雯。晴雯接了，也撕作幾半子，二人都大笑起來。麝月道：「這是怎麼說？拿我的東西開心兒？」把扇子搬出來，讓他盡力撕不好嗎？」", 
-            img: "qingwenhehe.png" 
+          {
+            speaker: "旁白",
+            text: "正說著，只見麝月走過來，你趕上來，一把將她手裡的扇子也奪了遞給晴雯。晴雯接了，也撕作幾半子，二人都大笑起來。麝月道：「這是怎麼說？拿我的東西開心兒？」把扇子搬出來，讓他盡力撕不好嗎？」",
+            img: "qingwenhehe.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "晴雯笑著，便倚在床上，說道：「我也乏了，明兒再撕罷。」", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "晴雯笑著，便倚在床上，說道：「我也乏了，明兒再撕罷。」",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "你", 
-            text: "你笑道：「古人云：『千金難買一笑』，幾把扇子，能值幾何？」", 
-            img: "qingwen.png"
+          {
+            speaker: "你",
+            text: "你笑道：「古人云：『千金難買一笑』，幾把扇子，能值幾何？」",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene3_start" 
-          }
+          {
+            text: "繼續",
+            next: "scene3_start",
+          },
         ],
       },
       scene2B: {
         bg: "images/yihongyuan.png",
         img: "qingwenangry.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "你叫襲人喚人來收拾。", 
-            img: "qingwen.png" },
+          {
+            speaker: "旁白",
+            text: "你叫襲人喚人來收拾。",
+            img: "qingwen.png",
+          },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene3_start" 
-          }
+          {
+            text: "繼續",
+            next: "scene3_start",
+          },
         ],
       },
       scene3_start: {
@@ -1462,22 +1642,22 @@ const GAME_DATA = {
         bg: "images/yihongyuan.png",
         img: "qingwendie.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "一夜，晴雯欲裝鬼嚇麝月，結果著涼感冒。你吃完飯，惦記著晴雯等事。", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "一夜，晴雯欲裝鬼嚇麝月，結果著涼感冒。你吃完飯，惦記著晴雯等事。",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "先回房", 
-            next: "scene3A", 
-            effect: 1 
+          {
+            text: "先回房",
+            next: "scene3A",
+            effect: 1,
           },
-          { 
-            text: "心想其他丫頭會處理", 
-            next: "scene3_after", 
-            effect: 0 
+          {
+            text: "心想其他丫頭會處理",
+            next: "scene3_after",
+            effect: 0,
           },
         ],
       },
@@ -1485,59 +1665,59 @@ const GAME_DATA = {
         bg: "images/yihongyuan.png",
         img: "qingwendie.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "你命麝月取鼻菸來給他聞些，痛打幾個嚏噴，就通快了。麝月果真去取了遞給你。你便揭開盒蓋，你道：「聞些，走了氣就不好了。」", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "你命麝月取鼻菸來給他聞些，痛打幾個嚏噴，就通快了。麝月果真去取了遞給你。你便揭開盒蓋，你道：「聞些，走了氣就不好了。」",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "scene3_after" 
-          }
+          {
+            text: "繼續",
+            next: "scene3_after",
+          },
         ],
       },
       scene3_after: {
         bg: "images/yihongyuan.png",
         img: "qingwen.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "賈母喜歡的褂子燒了一塊，用包袱包了送出去，但織補匠、能幹裁縫、繡匠並做女工的都不敢攬。", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "賈母喜歡的褂子燒了一塊，用包袱包了送出去，但織補匠、能幹裁縫、繡匠並做女工的都不敢攬。",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "你", 
-            text: "你道：「明兒是正日子，老太太、太太說了，還叫穿過這個去呢！偏頭一日就燒了，豈不掃興！」", 
-            // img: "qingwen.png" 
+          {
+            speaker: "你",
+            text: "你道：「明兒是正日子，老太太、太太說了，還叫穿過這個去呢！偏頭一日就燒了，豈不掃興！」",
+            // img: "qingwen.png"
           },
-          { 
-            speaker: "晴雯", 
-            text: "晴雯聽了半日，忍不住翻身說道：「拿來我瞧瞧罷沒那福氣穿就罷了！這會子又著急！」晴雯道：「這是孔雀金線的。如今咱們也拿孔雀金線，就像界線似的界密了，只怕還可混的過去。我掙命罷了！」", 
-            img: "qingwen.png" 
+          {
+            speaker: "晴雯",
+            text: "晴雯聽了半日，忍不住翻身說道：「拿來我瞧瞧罷沒那福氣穿就罷了！這會子又著急！」晴雯道：「這是孔雀金線的。如今咱們也拿孔雀金線，就像界線似的界密了，只怕還可混的過去。我掙命罷了！」",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "你", 
-            text: "你忙道：「這如何使得？才好了些，如何做得活？」晴雯道：「不用你蠍蠍螫螫的，我自知道。」", 
-            // img: "qingwen.png" 
+          {
+            speaker: "你",
+            text: "你忙道：「這如何使得？才好了些，如何做得活？」晴雯道：「不用你蠍蠍螫螫的，我自知道。」",
+            // img: "qingwen.png"
           },
-          { 
-            speaker: "旁白", 
-            text: "晴雯坐起挽了一挽頭髮，披了衣裳，只覺頭重身輕，滿眼金星亂迸，實實掌不住。待不做，又怕你著急，少不得狠命咬牙捱著，便命麝月只幫著拈線。晴雯織補不上三五針，便得伏在枕上歇一會。此時你會", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "晴雯坐起挽了一挽頭髮，披了衣裳，只覺頭重身輕，滿眼金星亂迸，實實掌不住。待不做，又怕你著急，少不得狠命咬牙捱著，便命麝月只幫著拈線。晴雯織補不上三五針，便得伏在枕上歇一會。此時你會",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "在旁一時又問吃些滾水不吃，一時又命歇一歇，一時又拿一件灰鼠斗篷替他披在背上，一時又拿個枕頭給他靠著。", 
-            next: "scene4", 
-            effect: 3 
+          {
+            text: "在旁一時又問吃些滾水不吃，一時又命歇一歇，一時又拿一件灰鼠斗篷替他披在背上，一時又拿個枕頭給他靠著。",
+            next: "scene4",
+            effect: 3,
           },
-          { 
-            text: "心想幫忙會被唸，索性看著便是。", 
-            next: "scene4", 
-            effect: -3 
+          {
+            text: "心想幫忙會被唸，索性看著便是。",
+            next: "scene4",
+            effect: -3,
           },
         ],
       },
@@ -1546,22 +1726,22 @@ const GAME_DATA = {
         bg: "images/yihongyuan.png",
         img: "qingwenanger.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "王善保家的向王夫人讒言晴雯與你行不才之事，王夫人回報賈母欲攆晴雯出去，隔日你一聞得王夫人進來親查，便料道晴雯也保不住了。此時你會", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "王善保家的向王夫人讒言晴雯與你行不才之事，王夫人回報賈母欲攆晴雯出去，隔日你一聞得王夫人進來親查，便料道晴雯也保不住了。此時你會",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "早飛也似的趕了去怡紅院", 
-            next: "scene4A", 
-            flag: "qingwenEvent4A" 
+          {
+            text: "早飛也似的趕了去怡紅院",
+            next: "scene4A",
+            flag: "qingwenEvent4A",
           },
-          { 
-            text: "急忙去找賈母求情", 
-            next: "scene4B", 
-            flag: "qingwenEvent4B" 
+          {
+            text: "急忙去找賈母求情",
+            next: "scene4B",
+            flag: "qingwenEvent4B",
           },
         ],
       },
@@ -1569,39 +1749,39 @@ const GAME_DATA = {
         bg: "images/yihongyuan.png",
         img: "qingwen.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "你及到了怡紅院，只見一群人在那裡。王夫人在屋裡坐著，一臉怒色，見你也不理。晴雯四五日水米不曾沾牙，如今現打炕上拉下來，蓬頭垢面的，兩個女人攙架起來去了。", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "你及到了怡紅院，只見一群人在那裡。王夫人在屋裡坐著，一臉怒色，見你也不理。晴雯四五日水米不曾沾牙，如今現打炕上拉下來，蓬頭垢面的，兩個女人攙架起來去了。",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "final_check" 
-          }
+          {
+            text: "繼續",
+            next: "final_check",
+          },
         ],
       },
       scene4B: {
         bg: "images/jiamuroom.png",
         img: "qingwen.png",
         lines: [
-          { 
-            speaker: "旁白", 
-            text: "你急忙跪到賈母跟前，細說晴雯補裘之事，又道賈母的針線活全由晴雯負責，欲求賈母保住晴雯。你又欲磕頭撞地，賈母見狀急哭了，趕緊扶你起來。", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "你急忙跪到賈母跟前，細說晴雯補裘之事，又道賈母的針線活全由晴雯負責，欲求賈母保住晴雯。你又欲磕頭撞地，賈母見狀急哭了，趕緊扶你起來。",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "final_check" 
-          }
+          {
+            text: "繼續",
+            next: "final_check",
+          },
         ],
       },
       final_check: {
         isEnding: true,
-        decide: function() {
+        decide: function () {
           if (storyFlags.qingwenEvent4A) {
             return favorability >= 9 ? "ending_true" : "ending_bad2";
           }
@@ -1615,125 +1795,128 @@ const GAME_DATA = {
         bg: "images/chingwenpius.PNG",
         img: "qingwenveryangry.png",
         lines: [
-          { 
-            speaker: "結局", text: "你的結局：配與鄉民", 
-            img: "qingwenveryangry.png" 
+          {
+            speaker: "結局",
+            text: "你的結局：配與鄉民",
+            img: "qingwenveryangry.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "賈母見你拼命，十分的捨不得，忙喚人叫王夫人帶晴雯回來，待她養好病再商量去留。數日後晴雯漸漸好起來，王夫人賞他家配人去。然晴雯自幼嬌生慣養的，何嘗受過一日委屈？遂於一日自縊。", 
-            img: "qingwenveryangry.png" 
+          {
+            speaker: "旁白",
+            text: "賈母見你拼命，十分的捨不得，忙喚人叫王夫人帶晴雯回來，待她養好病再商量去留。數日後晴雯漸漸好起來，王夫人賞他家配人去。然晴雯自幼嬌生慣養的，何嘗受過一日委屈？遂於一日自縊。",
+            img: "qingwenveryangry.png",
           },
         ],
         options: [
-          { 
-            text: "重玩遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重玩遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_bad2: {
         bg: "images/chingwenpius.PNG",
         img: "qingwendie.png",
         lines: [
-          { 
-            speaker: "結局", 
-            text: "你的結局：抱憾病逝", 
-            img: "qingwendie.png"
+          {
+            speaker: "結局",
+            text: "你的結局：抱憾病逝",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "晴雯一時被攆出來，住在他姑舅哥哥家，那媳婦那裡有心腸照管，只剩下晴雯一人在外間屋內爬著。將死之際，晴雯哭喊著「我不甘心」，嚥下最後一口氣時也沒能盼到你的到來，就此別過人間。", 
-            img: "qingwendie.png" },
+          {
+            speaker: "旁白",
+            text: "晴雯一時被攆出來，住在他姑舅哥哥家，那媳婦那裡有心腸照管，只剩下晴雯一人在外間屋內爬著。將死之際，晴雯哭喊著「我不甘心」，嚥下最後一口氣時也沒能盼到你的到來，就此別過人間。",
+            img: "qingwendie.png",
+          },
         ],
         options: [
-          { 
-            text: "重玩遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重玩遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_another: {
         bg: "images/yihongyuan.png",
         img: "qingwen.png",
         lines: [
-          { 
-            speaker: "結局", 
-            text: "你得結局：江南繡娘", 
-            img: "qingwen.png" 
+          {
+            speaker: "結局",
+            text: "你得結局：江南繡娘",
+            img: "qingwen.png",
           },
-          { 
-            speaker: "旁白", text: "賈母見你拼命，十分的捨不得，忙喚人叫王夫人帶晴雯回來，待她養好病再商量去留。數日後晴雯漸漸好起來，賈母感念過去種種付出，介紹一繡匠與她，命晴雯跟著他做活，條件是你不許再去見她。晴雯告別賈府當日，你被軟禁於怡紅院中，沒能見此生最後一面。數年後，江南謠傳有一可補萬物的繡娘，忽於十七歲時重病身亡，人人都道此乃紅顏薄命，天妒英才啊！", 
-            img: "qingwen.png" 
+          {
+            speaker: "旁白",
+            text: "賈母見你拼命，十分的捨不得，忙喚人叫王夫人帶晴雯回來，待她養好病再商量去留。數日後晴雯漸漸好起來，賈母感念過去種種付出，介紹一繡匠與她，命晴雯跟著他做活，條件是你不許再去見她。晴雯告別賈府當日，你被軟禁於怡紅院中，沒能見此生最後一面。數年後，江南謠傳有一可補萬物的繡娘，忽於十七歲時重病身亡，人人都道此乃紅顏薄命，天妒英才啊！",
+            img: "qingwen.png",
           },
         ],
         options: [
-          { 
-            text: "重玩遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重玩遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_true: {
         bg: "images/yihongyuan.png",
         img: "qingwendie.png",
         lines: [
-          { 
-            speaker: "結局", 
-            text: "你的結局：痴公子杜撰芙蓉誄", 
-            img: "qingwendie.png" 
+          {
+            speaker: "結局",
+            text: "你的結局：痴公子杜撰芙蓉誄",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "你央一個老婆子帶他到晴雯家去。晴雯朦朧睡了，忽聞有人喚她，一見是你，一把死攥住他的手，哽咽了半日，方說道：「我只道不得見你了！」接著便嗽個不住。你看著，眼中淚直流下來，連自己的身子都不知為何物了", 
-            img: "qingwendie.png" 
+          {
+            speaker: "旁白",
+            text: "你央一個老婆子帶他到晴雯家去。晴雯朦朧睡了，忽聞有人喚她，一見是你，一把死攥住他的手，哽咽了半日，方說道：「我只道不得見你了！」接著便嗽個不住。你看著，眼中淚直流下來，連自己的身子都不知為何物了",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "你", 
-            text: "你問道：「你有什麼說的？趁著沒人告訴我。」", 
-            img: "qingwendie.png" 
+          {
+            speaker: "你",
+            text: "你問道：「你有什麼說的？趁著沒人告訴我。」",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "晴雯", 
-            text: "晴雯嗚咽道：「有什麼可說的！不過是挨一刻是一刻，挨一日是一日！我已知橫豎不過三五日的光景，我就好回去了。只是一件，我死也不甘心。我雖生得比別人好些，並沒有私情勾引你，怎麼一口死咬定了我是個狐狸精！我今兒既擔了虛名，況且沒了遠限，不是我說一句後悔的話：早知如此，我當日－－」", 
-            img: "qingwendie.png" 
+          {
+            speaker: "晴雯",
+            text: "晴雯嗚咽道：「有什麼可說的！不過是挨一刻是一刻，挨一日是一日！我已知橫豎不過三五日的光景，我就好回去了。只是一件，我死也不甘心。我雖生得比別人好些，並沒有私情勾引你，怎麼一口死咬定了我是個狐狸精！我今兒既擔了虛名，況且沒了遠限，不是我說一句後悔的話：早知如此，我當日－－」",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "說到這裡，氣往上咽，便說不出來，兩手已經冰涼。你一隻手攥著他的手，一隻手輕輕的給他搥打著。又不敢大聲的叫，真真萬箭攢心。兩三句話時，晴雯才哭出來。你拉著他的手，只覺瘦如枯柴，腕上猶戴著四個銀鐲，因哭道：「除下來，等好了再戴上去罷。」又說：「這一病好了，又傷好些。」", 
-            img: "qingwendie.png" 
+          {
+            speaker: "旁白",
+            text: "說到這裡，氣往上咽，便說不出來，兩手已經冰涼。你一隻手攥著他的手，一隻手輕輕的給他搥打著。又不敢大聲的叫，真真萬箭攢心。兩三句話時，晴雯才哭出來。你拉著他的手，只覺瘦如枯柴，腕上猶戴著四個銀鐲，因哭道：「除下來，等好了再戴上去罷。」又說：「這一病好了，又傷好些。」",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "晴雯拭淚，把那手用力拳回，擱在口邊，狠命一咬，只聽咯吱一聲，把兩根蔥管一般的指甲齊根咬下，拉了你的手，將指甲擱在他手裡。又在被窩內，將貼身穿著的一件舊紅絞小襖兒脫下，遞給你。你見他這般，已經會意，連忙解開外衣，將自己的襖兒褪下來蓋在他身上，卻把這件穿上。剛繫腰時，只見晴雯睜眼道：「你扶起我來坐坐。」你只得扶他，好容易欠起半身，晴雯伸手把你的襖兒往自己身上拉。你連忙給他披上，拖著肐膊，然後將他的指甲裝在荷包裡。", 
-            img: "qingwendie.png" 
+          {
+            speaker: "旁白",
+            text: "晴雯拭淚，把那手用力拳回，擱在口邊，狠命一咬，只聽咯吱一聲，把兩根蔥管一般的指甲齊根咬下，拉了你的手，將指甲擱在他手裡。又在被窩內，將貼身穿著的一件舊紅絞小襖兒脫下，遞給你。你見他這般，已經會意，連忙解開外衣，將自己的襖兒褪下來蓋在他身上，卻把這件穿上。剛繫腰時，只見晴雯睜眼道：「你扶起我來坐坐。」你只得扶他，好容易欠起半身，晴雯伸手把你的襖兒往自己身上拉。你連忙給他披上，拖著肐膊，然後將他的指甲裝在荷包裡。",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "晴雯", 
-            text: "晴雯哭道：「你去罷！這裡腌臢，你那裡受得！你的身子要緊。今日這一來，我就死了，也不枉擔了虛名！」", 
-            img: "qingwendie.png" 
+          {
+            speaker: "晴雯",
+            text: "晴雯哭道：「你去罷！這裡腌臢，你那裡受得！你的身子要緊。今日這一來，我就死了，也不枉擔了虛名！」",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "你回去後，當晚翻轉了一個更次，至五更方睡去時，只見晴雯從外走來，仍是往日行景，進來向你道：「你們好生過罷。我從此就別過了！」說畢，翻身就走。你忙叫時，又將襲人叫醒。襲人還只當他慣了口亂叫，卻見你哭了，說道：「晴雯死了！」", 
-            img: "qingwendie.png" 
+          {
+            speaker: "旁白",
+            text: "你回去後，當晚翻轉了一個更次，至五更方睡去時，只見晴雯從外走來，仍是往日行景，進來向你道：「你們好生過罷。我從此就別過了！」說畢，翻身就走。你忙叫時，又將襲人叫醒。襲人還只當他慣了口亂叫，卻見你哭了，說道：「晴雯死了！」",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "襲人打發人去瞧，那人回來說：「晴雯姐姐直著脖子叫了一夜，今日早起就閉了眼住了口，世事不知，只有倒氣的分兒了。」你忙道：「一夜叫的是誰？」小丫頭道：「一夜叫的是娘。」你拭淚道：「還叫誰？」小丫頭說：「沒有聽見叫別人了。」你道：「你胡塗。想必沒有聽真。」小ㄚ頭又道：「他笑道：『你們不知道，我不是死。如今天上少了一個花神，玉皇爺叫我去管花兒。你只可告訴你一人，除他之外，不可洩了天機。』就告訴我說，他就是專管芙蓉花的。」", 
-            img: "qingwendie.png" 
+          {
+            speaker: "旁白",
+            text: "襲人打發人去瞧，那人回來說：「晴雯姐姐直著脖子叫了一夜，今日早起就閉了眼住了口，世事不知，只有倒氣的分兒了。」你忙道：「一夜叫的是誰？」小丫頭道：「一夜叫的是娘。」你拭淚道：「還叫誰？」小丫頭說：「沒有聽見叫別人了。」你道：「你胡塗。想必沒有聽真。」小ㄚ頭又道：「他笑道：『你們不知道，我不是死。如今天上少了一個花神，玉皇爺叫我去管花兒。你只可告訴你一人，除他之外，不可洩了天機。』就告訴我說，他就是專管芙蓉花的。」",
+            img: "qingwendie.png",
           },
-          { 
-            speaker: "旁白", 
-            text: "你一心悽楚，回至園中，猛見池上芙蓉，想起小丫鬟說晴雯做了芙蓉之神，不覺又喜歡起來，乃看著芙蓉嗟嘆了一會。因用晴雯素日所喜之冰鮫縠一幅，楷字寫成，名曰《芙蓉女兒誄》，－－前序後歌－－又備了晴雯素喜的四樣吃食。於是黃昏人靜之時，命那小丫頭捧至芙蓉前，先行禮畢，將那誄文即掛於芙蓉枝上，乃泣涕唸。", 
-            img: "qingwendie.png" 
+          {
+            speaker: "旁白",
+            text: "你一心悽楚，回至園中，猛見池上芙蓉，想起小丫鬟說晴雯做了芙蓉之神，不覺又喜歡起來，乃看著芙蓉嗟嘆了一會。因用晴雯素日所喜之冰鮫縠一幅，楷字寫成，名曰《芙蓉女兒誄》，－－前序後歌－－又備了晴雯素喜的四樣吃食。於是黃昏人靜之時，命那小丫頭捧至芙蓉前，先行禮畢，將那誄文即掛於芙蓉枝上，乃泣涕唸。",
+            img: "qingwendie.png",
           },
         ],
         options: [
-          { 
-            text: "重玩遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重玩遊戲",
+            next: "restart",
+          },
         ],
       },
     },
@@ -1741,6 +1924,25 @@ const GAME_DATA = {
     miaoyu: {
       name: "妙玉",
       music: "music.mp3",
+      pre: {
+        text: "前導",
+        bg: "images/lungtsuian.png",
+        img: "miaoyu.png",
+        lines: [
+          {
+            speaker: "旁白",
+            text: "你是賈寶玉\n你將和妙玉互動",
+            img: "miaoyu.png",
+          },
+        ],
+        options: [
+          {
+            text: "繼續",
+            next: "start",
+            effect: 0,
+          },
+        ],
+      },
       // 事件一：品茶
       start: {
         text: "賈你品茶櫳翠庵",
@@ -1840,12 +2042,13 @@ const GAME_DATA = {
           {
             text: "那茶杯雖然腌臢了，白撩了豈不可惜？依我說，不如就給了那貧婆子罷，他賣了也可以度日。你說使得麼？",
             next: "cup_eventA",
-            effect:  3 ,
+            effect: 3,
+            flag: "cupA",
           },
-          { 
-            text: "那茶杯雖然腌臢了，白撩了豈不可惜？依我說，不如就給我罷", 
-            next: "cup_eventB", 
-            effect: 0 
+          {
+            text: "那茶杯雖然腌臢了，白撩了豈不可惜？依我說，不如就給我罷",
+            next: "cup_eventB",
+            effect: 0,
           },
         ],
       },
@@ -1863,7 +2066,7 @@ const GAME_DATA = {
         options: [
           {
             text: "繼續",
-            next: "plum_event"
+            next: "plum_event",
           },
         ],
       },
@@ -1881,7 +2084,7 @@ const GAME_DATA = {
         options: [
           {
             text: "繼續",
-            next: "plum_event"
+            next: "plum_event",
           },
         ],
       },
@@ -1898,14 +2101,14 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "你步至櫳翠庵門前喚人向妙玉傳達來意", 
-            next: "plum_a", 
-            effect: 1 ,
+          {
+            text: "你步至櫳翠庵門前喚人向妙玉傳達來意",
+            next: "plum_a",
+            effect: 1,
           },
-          { 
-            text: "你步至櫳翠庵門前直接進入", 
-            next: "plum_b", 
+          {
+            text: "你步至櫳翠庵門前直接進入",
+            next: "plum_b",
             effect: 0,
           },
         ],
@@ -1922,10 +2125,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "如實交代", 
-            next: "plum_resultA", 
-            effect: 0
+          {
+            text: "如實交代",
+            next: "plum_resultA",
+            effect: 0,
           },
           {
             text: "今早看見十數枝紅梅，如胭脂一般，映著雪色，分外顯的精神，好不有趣。",
@@ -1946,10 +2149,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "birthday_event", 
-            effect: 0
+          {
+            text: "繼續",
+            next: "birthday_event",
+            effect: 0,
           },
         ],
       },
@@ -1965,10 +2168,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "birthday_event", 
-            effect: 0
+          {
+            text: "繼續",
+            next: "birthday_event",
+            effect: 0,
           },
         ],
       },
@@ -1984,10 +2187,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "如實交代", 
-            next: "plum_b_A", 
-            effect: 0
+          {
+            text: "如實交代",
+            next: "plum_b_A",
+            effect: 0,
           },
           {
             text: "今早看見十數枝紅梅，如胭脂一般，映著雪色，分外顯的精神，好不有趣。",
@@ -2008,10 +2211,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "birthday_event", 
-            effect: 0
+          {
+            text: "繼續",
+            next: "birthday_event",
+            effect: 0,
           },
         ],
       },
@@ -2027,10 +2230,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "birthday_event", 
-            effect: 0
+          {
+            text: "繼續",
+            next: "birthday_event",
+            effect: 0,
           },
         ],
       },
@@ -2076,10 +2279,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "final_check" 
-          }
+          {
+            text: "繼續",
+            next: "final_check",
+          },
         ],
       },
       birthday_replyB: {
@@ -2094,10 +2297,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "繼續", 
-            next: "final_check" 
-          }
+          {
+            text: "繼續",
+            next: "final_check",
+          },
         ],
       },
       final_check: {
@@ -2128,10 +2331,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "重新遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重新遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_2: {
@@ -2144,10 +2347,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "重新遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重新遊戲",
+            next: "restart",
+          },
         ],
       },
       ending_3: {
@@ -2160,10 +2363,10 @@ const GAME_DATA = {
           },
         ],
         options: [
-          { 
-            text: "重新遊戲", 
-            next: "restart" 
-          }
+          {
+            text: "重新遊戲",
+            next: "restart",
+          },
         ],
       },
     },
@@ -2351,7 +2554,7 @@ function determineRole() {
   }
 
   changeMusic(GAME_DATA.stories[finalRole].music);
-  renderStory(finalRole, "start");
+  renderStory(finalRole, "pre");
 }
 
 // --- 對話框模式狀態 ---
@@ -2428,7 +2631,11 @@ function renderDialogLine() {
   if (!node) return;
 
   // 只有一個空白選項時，自動跳下一節點
-  if (node.options && node.options.length === 1 && node.options[0].text === "") {
+  if (
+    node.options &&
+    node.options.length === 1 &&
+    node.options[0].text === ""
+  ) {
     const opt = node.options[0];
     applyOptionEffects(opt);
     setTimeout(() => renderStory(currentRole, opt.next), 800);
@@ -2485,7 +2692,11 @@ function renderInlineEnding(role, ending) {
   const story = GAME_DATA.stories[role];
   story.__inline_ending__ = {
     lines: [
-      { speaker: "✦ 結局", text: `【${ending.title || "結局"}】`, img: ending.img || null },
+      {
+        speaker: "✦ 結局",
+        text: `【${ending.title || "結局"}】`,
+        img: ending.img || null,
+      },
       { speaker: "旁白", text: ending.text || "", img: ending.img || null },
     ],
     options: [{ text: "重玩遊戲", next: "restart" }],
@@ -2535,7 +2746,10 @@ function renderStory(role, nodeKey) {
         try {
           const names = Object.keys(roleScores);
           const values = Object.values(roleScores);
-          const passed = Function(...names, `return (${e.condition});`)(...values);
+          const passed = Function(
+            ...names,
+            `return (${e.condition});`,
+          )(...values);
           if (passed) {
             selectedEnding = e;
             break;
