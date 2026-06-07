@@ -872,7 +872,7 @@ const GAME_DATA = {
       music: "music.mp3",
       pre: {
         text: "前導",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xiren.png",
         lines: [
           {
@@ -891,7 +891,7 @@ const GAME_DATA = {
       },
       start: {
         text: "你纔合上眼，便恍惚的睡去。\n自太虛幻境醒來後，襲人起身替你解懷整衣，無意間發現你的秘密，遂與你同領警幻所訊雲雨之事。",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xiren.png",
         options: [
           {
@@ -910,7 +910,7 @@ const GAME_DATA = {
       },
       scene2: {
         text: "某日，襲人向你提到：「如今我們家要來贖我，正是該叫去的，我去了，仍舊又有好的來，不是沒了我就使不得的。」\n聽完她說的一席話，你心裏越發急了，淚痕滿面地說道：",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xirenworry.png",
         options: [
           {
@@ -929,7 +929,7 @@ const GAME_DATA = {
       },
       scene3: {
         text: "這時，襲人接著說道：「我說出三件事來，你依了，那我便不走。其一，不許你毀僧謗道。第二，不許你信口胡說。第三，不許你再吃人嘴上胭脂。」聽完這番規勸，你說道：",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xirensmile.png",
         options: [
           {
@@ -948,7 +948,7 @@ const GAME_DATA = {
       },
       scene4: {
         text: "這日，姐妹們聚在怡紅院閒聊，襲人私下對湘雲和寶釵稱讚你，轉頭，卻正經地向你說道：「你也該常常會會這些為官作臣的，也好將來應酬事務。」說完，便憂心忡忡地看著你。此時你說到:",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xirenveryworry.png",
         options: [
           {
@@ -967,7 +967,7 @@ const GAME_DATA = {
       },
       scene5: {
         text: "端陽佳節，你心中悶悶不樂，忽見晴雯不小心跌折了扇子，你便發了脾氣，在一旁的襲人連连忙趕了過來勸架，你卻將怒氣發在她身上",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xirencry.png",
         options: [
           {
@@ -986,7 +986,7 @@ const GAME_DATA = {
       },
       scene6: {
         text: "一日，你被老爺訓斥一番，被打得皮開肉綻，襲人含淚坐在你床邊經心服侍，整夜不敢闔眼。當你醒後，看到襲人在身旁，你虛弱地說：",
-        bg: "images/yihongyuan.png",
+        bg: "images/yihungyuan.png",
         img: "xirencry.png",
         options: [
           {
